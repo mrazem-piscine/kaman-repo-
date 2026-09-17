@@ -1,0 +1,6 @@
+.idea/
+*.bak
+.DS_Store
+Thumbs.db
+.tmp-kaman/cloudflared.exe
+.tmp-kaman/*.png
