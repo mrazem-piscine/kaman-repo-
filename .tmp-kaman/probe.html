@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>probe</title>
+<style>
+  html,body{margin:0;background:#e6dac4}
+  #frame{border:0;display:block}
+  #log{position:fixed;left:0;bottom:0;right:0;max-height:28vh;overflow:auto;font:12px/1.45 ui-monospace,monospace;background:#1b1a18;color:#ffd9a8;padding:8px 10px;white-space:pre-wrap;z-index:9}
+</style>
+</head>
+<body>
+<iframe id="frame" src="/kaman-export/kaman-prototype.html"></iframe>
+<div id="log"></div>
+<script>
+const params = new URLSearchParams(location.search);
+const steps = (params.get('s') || '').split(',').map(t => t.trim()).filter(Boolean);
+const W = parseInt(params.get('w') || '480', 10);
+const H = parseInt(params.get('h') || '1130', 10);
+const frame = document.getElementById('frame');
+const logEl = document.getElementById('log');
+frame.style.width = W + 'px';
+frame.style.height = H + 'px';
+const log = m => { logEl.textContent += m + '\n'; };
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+function doc() {
+  return frame.contentDocument;
+}
+function win() {
+  return frame.contentWindow;
+}
+function scroller() {
+  const d = doc();
+  const nodes = d.querySelectorAll('div');
+  let best = null, bestH = 0;
+  nodes.forEach(n => {
+    const s = win().getComputedStyle(n);
+    if ((s.overflowY === 'auto' || s.overflowY === 'scroll') && n.clientHeight > 400 && n.clientHeight < 900) {
+      if (n.clientHeight > bestH) { best = n; bestH = n.clientHeight; }
+    }
+  });
+  return best || d.scrollingElement;
+}
+function buttons() {
+  return Array.from(doc().querySelectorAll('button'));
+}
+function clickText(label) {
+  const norm = t => (t || '').replace(/\s+/g,' ').trim();
+  const all = buttons();
+  let b = all.find(x => norm(x.innerText) === label);
+  if (!b) b = all.find(x => norm(x.innerText).includes(label));
+  if (!b) throw new Error('no button ' + label);
+  b.click();
+  return b;
+}
+function clickAria(label) {
+  const b = buttons().find(x => x.getAttribute('aria-label') === label);
+  if (!b) throw new Error('no aria ' + label);
+  b.click();
+  return b;
+}
+function clickNth(sel, n) {
+  const all = Array.from(doc().querySelectorAll(sel));
+  if (!all[n]) throw new Error('no ' + sel + ' #' + n);
+  all[n].click();
+  return all[n];
+}
+async function run() {
+  log('buttons: ' + buttons().length);
+  for (const step of steps) {
+    try {
+      if (step === 'report') {
+        log('report ok');
+      } else if (step.startsWith('wait:')) {
+        await sleep(parseInt(step.slice(5), 10));
+        log('wait ' + step.slice(5));
+      } else if (step.startsWith('scroll:')) {
+        const y = parseInt(step.slice(7), 10);
+        const sc = scroller();
+        sc.scrollTop = y;
+        sc.dispatchEvent(new Event('scroll'));
+        log('scroll ' + y);
+      } else if (step === 'labels') {
+        log(buttons().map((b,i) => i + ':' + (b.innerText||b.getAttribute('aria-label')||'').replace(/\s+/g,' ').trim().slice(0,40)).join(' | '));
+      } else if (step.startsWith('type:')) {
+        const text = step.slice(5);
+        const inp = doc().querySelector('input');
+        if (!inp) throw new Error('no input');
+        const proto = Object.getOwnPropertyDescriptor(win().HTMLInputElement.prototype, 'value');
+        proto.set.call(inp, text);
+        inp.dispatchEvent(new Event('input', { bubbles: true }));
+        inp.dispatchEvent(new Event('change', { bubbles: true }));
+        log('type "' + text + '"');
+      } else if (step.startsWith('sel:')) {
+        const spec = step.slice(4);
+        const m = spec.match(/^([^\s#]+)#(\d+)$/);
+        if (!m) throw new Error('bad sel ' + spec);
+        clickNth(m[1], parseInt(m[2], 10));
+        log('click sel ' + spec);
+      } else if (step.startsWith('aria:')) {
+        clickAria(step.slice(5));
+        log('click aria ' + step.slice(5));
+      } else {
+        clickText(step);
+        log('click "' + step + '"');
+      }
+    } catch (e) {
+      log('ERR ' + step + ': ' + e.message);
+    }
+    await sleep(280);
+  }
+  log('DONE');
+  document.title = 'PROBE_DONE';
+}
+frame.addEventListener('load', () => setTimeout(run, 900));
+</script>
+</body>
+</html>

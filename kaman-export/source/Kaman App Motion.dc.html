@@ -1,0 +1,2213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FAF8F4">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#201e1d"/><text x="50" y="66" font-family="Georgia,serif" font-size="46" fill="#f5ead8" text-anchor="middle">K</text><rect x="62" y="24" width="9" height="9" fill="#c67139" transform="rotate(45 66.5 28.5)"/></svg></template>
+<helmet data-dc-atomics>
+<link rel="stylesheet" href="_ds/organic-e5931efd-cd72-4d91-9175-e431e039d173/styles.css">
+<script src="_ds/organic-e5931efd-cd72-4d91-9175-e431e039d173/_ds_bundle.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+html,body{margin:0;height:100%;height:100dvh;overflow:hidden;background:var(--bg-primary);font-family:var(--font-body);color:var(--text-primary);-webkit-font-smoothing:antialiased;overscroll-behavior:none}
+*{box-sizing:border-box}
+a,a:link,a:visited,a:hover,a:active{color:var(--text-primary);text-decoration:none}
+button{font-family:inherit;color:inherit}input,textarea{font-family:inherit;color:var(--text-primary)}
+input::placeholder,textarea::placeholder{color:var(--text-muted)}
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+::-webkit-scrollbar{width:0;height:0}
+@keyframes kmShim{0%{background-position:-180% 0}100%{background-position:180% 0}}
+@keyframes kmPulse{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes kmIn{from{transform:translateY(16px) scale(.985);opacity:0}to{transform:none;opacity:1}}
+@keyframes kmSheet{from{transform:translateY(100%)}to{transform:translateY(0)}}
+@keyframes kmFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes kmRingSpin{to{transform:rotate(360deg)}}
+@keyframes kmStagger{from{transform:translateY(18px);opacity:0}to{transform:none;opacity:1}}
+@keyframes kmBar{from{width:0}to{width:100%}}
+@keyframes kmPop{0%{transform:scale(1)}40%{transform:scale(1.12)}100%{transform:scale(1)}}
+@keyframes kmSteam{0%{transform:translateY(0) scaleX(1);opacity:0}30%{opacity:.5}100%{transform:translateY(-18px) scaleX(1.4);opacity:0}}
+@keyframes kmReelDrift{0%{transform:scale(1.02) translate3d(0,0,0)}50%{transform:scale(1.08) translate3d(-2.4%,1.2%,0)}100%{transform:scale(1.02) translate3d(0,0,0)}}
+</style>
+</helmet>
+
+<div dir="{{ dirVal }}" style="position:fixed;inset:0;overflow:hidden;background:var(--bg-primary)" data-km-theme="{{ theme }}">
+<style>
+:root,html[data-km-theme="light"]{
+  --bg-primary:#faf8f4;--bg-secondary:#f4f2ed;--surface:#efece6;--surface-elevated:#fff;--surface-strong:#151515;
+  --text-primary:#111;--text-secondary:#666663;--text-muted:#8a8a86;--text-inverse:#f7f7f5;--text-on-brand:#fff;--text-on-media:#f7f7f5;
+  --border:#e8e6e0;--divider:#e8e6e0;
+  --brand:#c67139;--brand-hover:#b2622d;--brand-pressed:#8c491a;--brand-soft:#fff1e8;--brand-glass:rgba(198,113,57,.22);--brand-glow:rgba(198,113,57,.22);
+  --overlay:#101010;--scrim:rgba(16,16,16,.42);--scrim-media:linear-gradient(to top,rgba(16,16,16,.88) 0%,rgba(16,16,16,.34) 42%,transparent 68%);
+  --bg-sticky:rgba(250,248,244,.78);--surface-glass:rgba(255,255,255,.72);--surface-hover:rgba(255,241,232,.7);
+  --placeholder-a:#eceae4;--placeholder-b:#e2dfd8;--skeleton-base:#eceae4;--skeleton-shine:#fff6ee;
+  --danger:#a8332a;--danger-bg:#fbe6e3;
+  --shadow-sm:0 1px 2px rgba(32,24,16,.06);--shadow-md:0 3px 10px rgba(32,24,16,.08);--shadow-lg:0 12px 28px rgba(32,24,16,.14);
+  --glass-bg:rgba(250,248,244,.62);--glass-bg-stuck:rgba(250,248,244,.86);--glass-fallback:#faf8f4;
+  --glass-border:rgba(255,255,255,.58);--glass-edge:rgba(32,24,16,.08);--glass-highlight:rgba(255,255,255,.72);--glass-tint:rgba(198,113,57,.1);
+  --glass-blur:18px;--glass-blur-stuck:28px;
+  --glass-shadow:0 10px 28px rgba(32,24,16,.12),0 1px 0 rgba(255,255,255,.7) inset;
+  --glass-shadow-stuck:0 14px 34px rgba(32,24,16,.16),0 1px 0 rgba(255,255,255,.82) inset;
+  --glass-bar-shadow:0 8px 22px rgba(32,24,16,.07);
+  --color-bg:var(--bg-primary);--color-surface:var(--bg-secondary);--color-text:var(--text-primary);--color-accent:var(--brand);--color-divider:var(--divider);
+  --color-neutral-100:var(--text-inverse);--color-neutral-200:var(--bg-secondary);--color-neutral-300:var(--border);--color-neutral-400:#c8c8c3;--color-neutral-500:var(--text-muted);--color-neutral-600:var(--text-secondary);--color-neutral-700:var(--text-secondary);--color-neutral-800:var(--text-primary);--color-neutral-900:var(--surface-strong);
+  --color-accent-100:var(--brand-soft);--color-accent-200:#ffe1d0;--color-accent-300:#ffc6a5;--color-accent-400:#f6a06b;--color-accent-500:#d67f48;--color-accent-600:var(--brand-hover);--color-accent-700:var(--brand-pressed);--color-accent-800:#643312;--color-accent-900:#402310;
+  --color-accent-2:#7a8a5e;--color-accent-2-100:#f0fae1;--color-accent-2-200:#e1eecc;--color-accent-2-300:#ccdbb2;--color-accent-2-400:#aebf92;--color-accent-2-500:#8fa073;--color-accent-2-600:#728157;--color-accent-2-700:#56633f;--color-accent-2-800:#3d472b;--color-accent-2-900:#272e1b;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  html:not([data-km-theme="light"]){
+    --bg-primary:#101010;--bg-secondary:#181818;--surface:#202020;--surface-elevated:#202020;--surface-strong:#282828;
+    --text-primary:#f7f7f5;--text-secondary:#b8b8b3;--text-muted:#8c8c87;--text-inverse:#101010;--text-on-brand:#fff;--text-on-media:#f7f7f5;
+    --border:#30302e;--divider:#30302e;
+    --brand:#c67139;--brand-hover:#d67f48;--brand-pressed:#f6a06b;--brand-soft:#2a1c14;--brand-glass:rgba(198,113,57,.28);--brand-glow:rgba(198,113,57,.32);
+    --overlay:#101010;--scrim:rgba(10,10,10,.52);--scrim-media:linear-gradient(to top,rgba(10,10,10,.92) 0%,rgba(10,10,10,.4) 42%,transparent 68%);
+    --bg-sticky:rgba(16,16,16,.78);--surface-glass:rgba(32,32,32,.62);--surface-hover:rgba(42,28,20,.72);
+    --placeholder-a:#2a2a28;--placeholder-b:#1c1c1a;--skeleton-base:#1c1c1a;--skeleton-shine:#2a221c;
+    --danger:#e07068;--danger-bg:#3a1c1a;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.35);--shadow-md:0 4px 14px rgba(0,0,0,.32);--shadow-lg:0 12px 32px rgba(0,0,0,.42);
+    --glass-bg:rgba(28,26,24,.48);--glass-bg-stuck:rgba(22,20,18,.78);--glass-fallback:#181818;
+    --glass-border:rgba(255,255,255,.14);--glass-edge:rgba(0,0,0,.35);--glass-highlight:rgba(255,255,255,.12);--glass-tint:rgba(198,113,57,.16);
+    --glass-blur:18px;--glass-blur-stuck:28px;
+    --glass-shadow:0 10px 28px rgba(0,0,0,.42),0 1px 0 rgba(255,255,255,.1) inset;
+    --glass-shadow-stuck:0 14px 34px rgba(0,0,0,.5),0 1px 0 rgba(255,255,255,.14) inset;
+    --glass-bar-shadow:0 8px 22px rgba(0,0,0,.38);
+    --color-bg:var(--bg-primary);--color-surface:var(--bg-secondary);--color-text:var(--text-primary);--color-accent:var(--brand);--color-divider:var(--divider);
+    --color-neutral-100:var(--text-inverse);--color-neutral-200:var(--bg-secondary);--color-neutral-300:var(--border);--color-neutral-400:#5c5c57;--color-neutral-500:var(--text-muted);--color-neutral-600:var(--text-secondary);--color-neutral-700:var(--text-secondary);--color-neutral-800:var(--text-primary);--color-neutral-900:var(--surface-strong);
+    --color-accent-100:var(--brand-soft);--color-accent-200:#3a2418;--color-accent-300:#5c3824;--color-accent-400:#f6a06b;--color-accent-500:#d67f48;--color-accent-600:var(--brand-hover);--color-accent-700:#f6a06b;--color-accent-800:#f6a06b;
+    --color-accent-2-200:#24301c;--color-accent-2-700:#c5d4a8;--color-accent-2-800:#d4e0bc;
+    color-scheme:dark;
+  }
+}
+html[data-km-theme="dark"],[data-km-theme="dark"]{
+  --bg-primary:#101010;--bg-secondary:#181818;--surface:#202020;--surface-elevated:#202020;--surface-strong:#282828;
+  --text-primary:#f7f7f5;--text-secondary:#b8b8b3;--text-muted:#8c8c87;--text-inverse:#101010;--text-on-brand:#fff;--text-on-media:#f7f7f5;
+  --border:#30302e;--divider:#30302e;
+  --brand:#c67139;--brand-hover:#d67f48;--brand-pressed:#f6a06b;--brand-soft:#2a1c14;--brand-glass:rgba(198,113,57,.28);--brand-glow:rgba(198,113,57,.32);
+  --overlay:#101010;--scrim:rgba(10,10,10,.52);--scrim-media:linear-gradient(to top,rgba(10,10,10,.92) 0%,rgba(10,10,10,.4) 42%,transparent 68%);
+  --bg-sticky:rgba(16,16,16,.78);--surface-glass:rgba(32,32,32,.62);--surface-hover:rgba(42,28,20,.72);
+  --placeholder-a:#2a2a28;--placeholder-b:#1c1c1a;--skeleton-base:#1c1c1a;--skeleton-shine:#2a221c;
+  --danger:#e07068;--danger-bg:#3a1c1a;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.35);--shadow-md:0 4px 14px rgba(0,0,0,.32);--shadow-lg:0 12px 32px rgba(0,0,0,.42);
+  --glass-bg:rgba(28,26,24,.48);--glass-bg-stuck:rgba(22,20,18,.78);--glass-fallback:#181818;
+  --glass-border:rgba(255,255,255,.14);--glass-edge:rgba(0,0,0,.35);--glass-highlight:rgba(255,255,255,.12);--glass-tint:rgba(198,113,57,.16);
+  --glass-blur:18px;--glass-blur-stuck:28px;
+  --glass-shadow:0 10px 28px rgba(0,0,0,.42),0 1px 0 rgba(255,255,255,.1) inset;
+  --glass-shadow-stuck:0 14px 34px rgba(0,0,0,.5),0 1px 0 rgba(255,255,255,.14) inset;
+  --glass-bar-shadow:0 8px 22px rgba(0,0,0,.38);
+  --color-bg:var(--bg-primary);--color-surface:var(--bg-secondary);--color-text:var(--text-primary);--color-accent:var(--brand);--color-divider:var(--divider);
+  --color-neutral-100:var(--text-inverse);--color-neutral-200:var(--bg-secondary);--color-neutral-300:var(--border);--color-neutral-400:#5c5c57;--color-neutral-500:var(--text-muted);--color-neutral-600:var(--text-secondary);--color-neutral-700:var(--text-secondary);--color-neutral-800:var(--text-primary);--color-neutral-900:var(--surface-strong);
+  --color-accent-100:var(--brand-soft);--color-accent-200:#3a2418;--color-accent-300:#5c3824;--color-accent-400:#f6a06b;--color-accent-500:#d67f48;--color-accent-600:var(--brand-hover);--color-accent-700:#f6a06b;--color-accent-800:#f6a06b;
+  --color-accent-2-200:#24301c;--color-accent-2-700:#c5d4a8;--color-accent-2-800:#d4e0bc;
+  color-scheme:dark;
+}
+html,body{background:var(--bg-primary);color:var(--text-primary)}
+a,a:link,a:visited,a:hover,a:active,a:focus{color:var(--text-primary);text-decoration:none}
+button{color:inherit;-webkit-tap-highlight-color:transparent}
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px}
+.km-mark{position:relative;display:grid;place-items:center;width:42px;height:42px;padding:0;border:0;border-radius:999px;background:var(--surface-strong);color:var(--text-on-media);font-family:var(--font-heading);font-size:20px;line-height:1}
+.km-mark::after{content:"";position:absolute;top:8px;inset-inline-end:8px;width:6px;height:6px;background:var(--brand);transform:rotate(45deg)}
+.km-glass{position:relative;isolation:isolate;background:var(--glass-bg);border:1px solid var(--glass-border);box-shadow:var(--glass-shadow);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(1.35);backdrop-filter:blur(var(--glass-blur)) saturate(1.35)}
+.km-glass::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(180deg,var(--glass-highlight),transparent 46%),var(--glass-tint)}
+.km-glass > *{position:relative;z-index:1}
+.km-glass-round,.km-search{overflow:hidden}
+.km-glass-stuck{background:var(--glass-bg-stuck);box-shadow:var(--glass-shadow-stuck);-webkit-backdrop-filter:blur(var(--glass-blur-stuck)) saturate(1.48);backdrop-filter:blur(var(--glass-blur-stuck)) saturate(1.48)}
+.km-bar{border:0;border-bottom:1px solid var(--glass-border);border-radius:0;box-shadow:var(--glass-bar-shadow)}
+.km-head{border:0;transition:background 220ms cubic-bezier(.2,.8,.2,1),box-shadow 220ms cubic-bezier(.2,.8,.2,1),-webkit-backdrop-filter 220ms cubic-bezier(.2,.8,.2,1),backdrop-filter 220ms cubic-bezier(.2,.8,.2,1)}
+.km-head:not(.km-glass){background:transparent;box-shadow:none}
+.km-search{appearance:none;-webkit-appearance:none;height:50px;padding:0 10px 0 8px;border-radius:999px;color:var(--text-primary);display:flex;align-items:center;gap:8px;cursor:pointer;transition:height 220ms cubic-bezier(.2,.8,.2,1),padding 220ms cubic-bezier(.2,.8,.2,1),background 220ms cubic-bezier(.2,.8,.2,1),box-shadow 220ms cubic-bezier(.2,.8,.2,1),border-color 180ms cubic-bezier(.2,.8,.2,1),transform 180ms cubic-bezier(.2,.8,.2,1),-webkit-backdrop-filter 220ms cubic-bezier(.2,.8,.2,1),backdrop-filter 220ms cubic-bezier(.2,.8,.2,1)}
+.km-orb{width:34px;height:34px;border-radius:999px;display:grid;place-items:center;flex:none;background:color-mix(in srgb,var(--brand) 14%,transparent);box-shadow:0 1px 0 var(--glass-highlight) inset;transition:width 220ms cubic-bezier(.2,.8,.2,1),height 220ms cubic-bezier(.2,.8,.2,1),background 180ms cubic-bezier(.2,.8,.2,1)}
+.km-search svg{stroke:var(--brand);transition:stroke 180ms cubic-bezier(.2,.8,.2,1)}
+.km-search:hover{border-color:color-mix(in srgb,var(--brand) 42%,var(--glass-border));box-shadow:var(--glass-shadow-stuck)}
+.km-search:hover .km-orb,.km-search:focus-visible .km-orb{background:color-mix(in srgb,var(--brand) 26%,transparent)}
+.km-search:hover svg,.km-search:focus-visible svg{stroke:var(--brand-hover)}
+.km-search:active{transform:translateY(1px);border-color:color-mix(in srgb,var(--brand) 55%,var(--glass-border))}
+.km-search:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+.km-search-stuck{height:46px;padding:0 10px 0 6px}
+.km-search-stuck .km-orb{width:30px;height:30px}
+.km-glass-round{border-radius:999px}
+.km-fab-brand{box-shadow:0 10px 26px var(--brand-glow),0 1px 0 rgba(255,255,255,.18) inset}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .km-glass,.km-glass-stuck{background:var(--glass-fallback)}
+  .km-glass::before{opacity:.35}
+}
+@media (prefers-reduced-motion:reduce){
+  .km-head,.km-search,.km-search svg,.km-orb,.km-glass{transition:none}
+}
+</style>
+
+  <div ref="{{ scrollRef }}" onScroll="{{ onScroll }}" style="position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain">
+  <div style="min-height:100%;display:flex;flex-direction:column;padding-top:{{ statusH }};padding-bottom:{{ bottomPad }}">
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <div style="animation:kmIn 300ms cubic-bezier(.2,.8,.2,1)">
+    <div class="{{ homeHeadClass }}" style="position:sticky;top:{{ statusH }};z-index:48;padding:6px 14px 10px">
+      <div style="display:flex;align-items:center;gap:6px">
+        <button onClick="{{ openProfile }}" class="km-mark" aria-label="Kaman account" style="flex:none;border:0;cursor:pointer;transition:transform 140ms cubic-bezier(.2,.8,.2,1)" style-active="transform:scale(.92)">K</button>
+        <button onClick="{{ openAddress }}" style="flex:1;min-width:0;height:42px;border:0;border-radius:999px;background:transparent;display:flex;align-items:center;justify-content:center;gap:5px;padding:0 4px;cursor:pointer;transition:transform 140ms cubic-bezier(.2,.8,.2,1),background 200ms" style-hover="background:var(--surface-hover)" style-active="transform:scale(.96)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0ZM9 10a3 3 0 1 0 6 0 3 3 0 1 0-6 0"/></svg>
+          <span style="font:700 12.5px/1 var(--font-body);color:var(--color-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0">Haifa · Al-Mahoul St</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-neutral-700)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <button onClick="{{ openOrders }}" style="width:42px;height:42px;flex:none;border:0;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm);display:grid;place-items:center;cursor:pointer;position:relative;transition:transform 140ms cubic-bezier(.2,.8,.2,1)" style-active="transform:scale(.92)">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l2 6H4Zm-1 6h14v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1Z"/></svg>
+          <span style="position:absolute;top:6px;inset-inline-end:7px;width:9px;height:9px;border-radius:999px;background:var(--brand);box-shadow:0 0 0 2px var(--surface-elevated)"></span>
+        </button>
+        <button onClick="{{ openNotifications }}" style="width:42px;height:42px;flex:none;border:0;border-radius:999px;background:var(--surface-strong);display:grid;place-items:center;cursor:pointer;position:relative;transition:transform 140ms cubic-bezier(.2,.8,.2,1)" style-active="transform:scale(.92)">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--text-on-media)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 9a6 6 0 1 0-12 0c0 5-2 6-2 6h16s-2-1-2-6M10.5 20a2 2 0 0 0 3 0"/></svg>
+          <span style="position:absolute;top:7px;inset-inline-end:8px;width:9px;height:9px;border-radius:999px;background:var(--color-accent);box-shadow:0 0 0 2px var(--surface-strong)"></span>
+        </button>
+      </div>
+    </div>
+
+    <div style="padding:8px 0 0;overflow-x:auto"><div style="display:flex;gap:14px;padding:6px 18px 4px">
+      <sc-for list="{{ stories }}" as="s" hint-placeholder-count="5">
+        <button onClick="{{ s.open }}" style="border:0;background:transparent;padding:0;cursor:pointer;flex:none;width:74px;text-align:center;transition:transform 160ms cubic-bezier(.2,.8,.2,1)" style-active="transform:scale(.94)">
+          <div style="position:relative;width:74px;height:74px;display:grid;place-items:center">
+            <div style="position:absolute;inset:0;border-radius:999px;background:{{ s.ring }};animation:{{ s.ringAnim }}"></div>
+            <div style="position:absolute;inset:3px;border-radius:999px;background:var(--color-bg)"></div>
+            <div data-shared="{{ s.id }}" style="position:relative;width:62px;height:62px;border-radius:999px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 7px,var(--placeholder-b) 7px 14px);display:grid;place-items:center;font:500 7.5px/1.2 'JetBrains Mono',monospace;color:var(--color-neutral-600)">{{ s.ph }}</div>
+            <sc-if value="{{ s.live }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;bottom:-1px;inset-inline-end:-1px;font:800 8px/1 var(--font-body);color:var(--text-on-brand);background:var(--color-accent);padding:4px 6px;border-radius:999px;box-shadow:0 0 0 2px var(--color-bg)">LIVE</div></sc-if>
+          </div>
+          <div style="font:600 11px/1.2 var(--font-body);margin-top:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ s.name }}</div>
+        </button>
+      </sc-for>
+    </div></div>
+
+    <div style="padding:16px 0 0">
+      <style>@keyframes kmReelDrift{0%{transform:scale(1.02) translate3d(0,0,0)}50%{transform:scale(1.08) translate3d(-2.4%,1.2%,0)}100%{transform:scale(1.02) translate3d(0,0,0)}}</style>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0 18px 12px">
+        <div style="font:800 16px/1.2 var(--font-body)">Reels for you</div>
+        <button onClick="{{ openReelsAll }}" style="border:0;background:transparent;padding:0;cursor:pointer;font:700 13px/1 var(--font-body);color:var(--brand);flex:none;transition:opacity 160ms,transform 140ms cubic-bezier(.2,.8,.2,1)" style-active="transform:scale(.96);opacity:.7">See all</button>
+      </div>
+      <div style="overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;overscroll-behavior-x:contain">
+        <div style="display:flex;gap:10px;padding:0 18px 2px;width:max-content">
+          <sc-for list="{{ reels }}" as="r" hint-placeholder-count="5">
+            <button onClick="{{ r.open }}" style="flex:none;width:{{ reelW }};height:{{ reelH }};padding:0;border:0;border-radius:22px;overflow:hidden;cursor:pointer;position:relative;text-align:start;box-shadow:var(--shadow-md);scroll-snap-align:start;animation:{{ r.anim }};transition:transform 160ms cubic-bezier(.2,.8,.2,1)" style-active="transform:scale(.96)">
+              <div data-shared="{{ r.sid }}" style="position:absolute;inset:0;overflow:hidden;background:{{ r.stripe }}">
+                <div style="position:absolute;inset:-12%;background:{{ r.stripe }};animation:kmReelDrift 18s ease-in-out infinite"></div>
+                <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font:500 8px/1 'JetBrains Mono',monospace;color:var(--color-neutral-600);opacity:.55;white-space:nowrap">{{ r.ph }}</span>
+              </div>
+              <div style="position:absolute;inset:0;background:var(--scrim-media);pointer-events:none"></div>
+              <div style="position:absolute;inset-inline:0;bottom:0;padding:12px 12px 13px;display:flex;flex-direction:column;gap:8px;z-index:1">
+                <div style="display:flex;align-items:center;gap:8px;min-width:0">
+                  <div style="width:26px;height:26px;flex:none;border-radius:999px;background:var(--surface-glass);display:grid;place-items:center;font:800 9px/1 var(--font-body);color:var(--color-accent-800);box-shadow:0 0 0 1px rgba(247,247,245,.35)">{{ r.logo }}</div>
+                  <div style="min-width:0;flex:1;font:700 11.5px/1.2 var(--font-body);color:var(--text-on-media);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.restName }}</div>
+                </div>
+                <div style="font:800 13.5px/1.25 var(--font-body);color:var(--text-on-media);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">{{ r.title }}</div>
+                <sc-if value="{{ r.hasItem }}" hint-placeholder-val="{{ false }}">
+                <div style="align-self:flex-start;max-width:100%;padding:5px 8px;border-radius:999px;background:var(--brand-glass);font:700 10.5px/1 var(--font-body);color:var(--text-on-media);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.itemLabel }}</div>
+                </sc-if>
+              </div>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:16px 18px 0">
+      <div style="border-radius:26px;overflow:hidden;background:{{ atmosBg }};transition:background 420ms cubic-bezier(.2,.8,.2,1);padding:18px 0 16px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:0 18px">
+          <div style="font:800 16px/1.2 var(--font-body);color:{{ atmosFg }}">{{ cravingHead }}</div>
+          <div style="font:600 11px/1 var(--font-body);color:{{ atmosSub }}">{{ cravingCount }}</div>
+        </div>
+        <div style="overflow-x:auto;margin-top:14px"><div style="display:flex;gap:8px;padding:0 18px">
+          <sc-for list="{{ cravings }}" as="c" hint-placeholder-count="5">
+            <button onClick="{{ c.pick }}" style="flex:none;border:0;cursor:pointer;font:{{ c.font }};padding:11px 16px;border-radius:999px;background:{{ c.bg }};color:{{ c.fg }};transition:transform 160ms cubic-bezier(.2,.8,.2,1),background 220ms,color 220ms" style-active="transform:scale(.95)">{{ c.label }}</button>
+          </sc-for>
+        </div></div>
+        <div style="padding:16px 18px 0;display:flex;flex-direction:column;gap:12px">
+          <sc-for list="{{ cravingDishes }}" as="d" hint-placeholder-count="2">
+            <div style="background:var(--surface-elevated);border-radius:22px;overflow:hidden;box-shadow:var(--shadow-sm);animation:{{ d.anim }}">
+              <button onClick="{{ d.open }}" style="display:block;width:100%;border:0;padding:0;background:transparent;cursor:pointer;text-align:start;transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-active="transform:scale(.982)">
+                <div data-shared="{{ d.sid }}" style="position:relative;height:150px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 9px,var(--placeholder-b) 9px 18px);display:grid;place-items:center">
+                  <span style="font:500 10px/1 'JetBrains Mono',monospace;color:var(--color-neutral-600)">dish photo 3:2</span>
+                  <sc-if value="{{ d.hot }}" hint-placeholder-val="{{ false }}">
+                  <div style="position:absolute;bottom:10px;inset-inline-start:10px;display:flex;align-items:center;gap:6px;font:700 10px/1 var(--font-body);padding:7px 10px;border-radius:999px;background:var(--overlay);color:var(--text-on-media)">
+                    <span style="position:relative;width:5px;height:5px;border-radius:999px;background:var(--color-accent-400);animation:kmPulse 1.2s infinite"></span>Just off the grill
+                  </div>
+                  </sc-if>
+                </div>
+                <div style="padding:13px 15px 15px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px">
+                  <div style="min-width:0">
+                    <div style="font:700 16px/1.2 var(--font-body)">{{ d.name }}</div>
+                    <div style="font:600 11.5px/1 var(--font-body);color:var(--color-neutral-600);margin-top:7px">{{ d.byline }}</div>
+                  </div>
+                  <div style="flex:none;font:800 16.5px/1 var(--font-body)">{{ d.price }}</div>
+                </div>
+              </button>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:22px 18px 0">
+      <div style="font:800 17px/1.2 var(--font-body);margin-bottom:12px">Order again</div>
+      <sc-for list="{{ again }}" as="a" hint-placeholder-count="2">
+        <div style="background:var(--surface-elevated);border-radius:22px;padding:12px;display:flex;align-items:center;gap:13px;box-shadow:var(--shadow-sm);margin-bottom:10px;transform:{{ a.lift }};transition:transform 260ms cubic-bezier(.2,.8,.2,1)">
+          <div data-shared="{{ a.sid }}" style="width:52px;height:52px;flex:none;border-radius:16px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 6px,var(--placeholder-b) 6px 12px)"></div>
+          <div style="min-width:0;flex:1">
+            <div style="font:700 14px/1.2 var(--font-body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ a.name }}</div>
+            <div style="font:600 11.5px/1 var(--font-body);color:var(--color-neutral-600);margin-top:5px">{{ a.sub }}</div>
+          </div>
+          <button onClick="{{ a.reorder }}" style="height:40px;padding:0 16px;flex:none;border:0;border-radius:999px;background:var(--surface-strong);color:var(--text-on-media);font:700 12.5px/1 var(--font-body);cursor:pointer;transition:transform 140ms cubic-bezier(.2,.8,.2,1)" style-active="transform:scale(.93)">{{ a.cta }}</button>
+        </div>
+      </sc-for>
+    </div>
+
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isCategory }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:8px 18px 0;animation:kmIn 260ms cubic-bezier(.2,.8,.2,1)">
+    <div style="display:flex;align-items:center;gap:12px">
+      <button onClick="{{ back }}" style="width:42px;height:42px;flex:none;border:0;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm);display:grid;place-items:center;cursor:pointer;transition:transform 140ms" style-active="transform:scale(.92)">
+        <sc-if value="{{ isLTR }}" hint-placeholder-val="{{ true }}"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></sc-if>
+        <sc-if value="{{ isRTL }}" hint-placeholder-val="{{ false }}"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></sc-if>
+      </button>
+      <div style="min-width:0;flex:1">
+        <div style="font-family:var(--font-heading);font-size:24px;line-height:1.06">{{ catTitle }}</div>
+        <div style="font:600 11.5px/1 var(--font-body);color:var(--color-neutral-600);margin-top:7px">{{ catCount }}</div>
+      </div>
+      <div style="width:54px;height:54px;flex:none;border-radius:17px;background:{{ catTint }};display:grid;place-items:center">
+        <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="{{ catInk }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="{{ catIcon }}"/></svg>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ showRestList }}" hint-placeholder-val="{{ true }}">
+  <div style="padding:16px 18px 0;animation:kmIn 300ms cubic-bezier(.2,.8,.2,1)">
+    <sc-if value="{{ showRestListHead }}" hint-placeholder-val="{{ true }}"><div style="font:800 17px/1.2 var(--font-body);margin-bottom:12px">{{ restListHead }}</div></sc-if>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ restList }}" as="r" hint-placeholder-count="4">
+        <button onClick="{{ r.open }}" style="background:var(--surface-elevated);border:0;border-radius:24px;padding:12px;display:flex;gap:13px;align-items:center;box-shadow:var(--shadow-sm);cursor:pointer;text-align:start;animation:{{ r.anim }};transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-active="transform:scale(.985)">
+          <div data-shared="{{ r.sid }}" style="width:80px;height:80px;flex:none;border-radius:18px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 7px,var(--placeholder-b) 7px 14px);display:grid;place-items:center;font:500 9px/1 'JetBrains Mono',monospace;color:var(--color-neutral-600)">photo</div>
+          <div style="min-width:0;flex:1">
+            <div style="font:700 15.5px/1.2 var(--font-body)">{{ r.name }}</div>
+            <div style="font:600 11.5px/1 var(--font-body);color:var(--color-neutral-600);margin-top:6px">{{ r.cuisine }}</div>
+            <div style="font:600 11.5px/1 var(--font-body);color:var(--color-neutral-800);margin-top:7px">{{ r.meta }}</div>
+          </div>
+          <div style="font:800 12.5px/1 var(--font-body);flex:none">★ {{ r.rating }}</div>
+        </button>
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isExplore }}" hint-placeholder-val="{{ false }}">
+  <div style="animation:kmIn 260ms cubic-bezier(.2,.8,.2,1)">
+    <div style="padding:8px 18px 12px;display:flex;gap:10px;align-items:center">
+      <div class="km-glass km-glass-round" style="flex:1;min-width:0;height:52px;display:flex;align-items:center;gap:10px;padding:0 8px 0 8px">
+        <span class="km-orb" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.75" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+        <input value="{{ query }}" onChange="{{ onQuery }}" placeholder="Search restaurants, stores, items" style="flex:1;min-width:0;border:0;background:transparent;font:600 14.5px/1 var(--font-body);color:var(--color-text);padding-inline-end:10px" />
+      </div>
+      <button onClick="{{ back }}" class="km-glass km-glass-round" style="width:52px;height:52px;flex:none;display:grid;place-items:center;cursor:pointer;transition:transform 140ms" style-active="transform:scale(.92)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--color-neutral-800)" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+
+    <sc-if value="{{ browseMode }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <div style="padding:2px 18px 0">
+        <div style="font-family:var(--font-heading);font-size:21px;line-height:1.08;margin-bottom:14px">Explore Kaman</div>
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px 9px">
+          <sc-for list="{{ categories }}" as="c" hint-placeholder-count="12">
+            <button onClick="{{ c.open }}" style="min-width:0;border:0;background:transparent;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:7px;animation:{{ c.anim }};transition:transform 160ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-2px)" style-active="transform:scale(.92)">
+              <div style="width:100%;aspect-ratio:1;border-radius:18px;background:{{ c.tint }};display:grid;place-items:center;box-shadow:var(--shadow-sm)">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="{{ c.ink }}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="{{ c.icon }}"/></svg>
+              </div>
+              <span style="font:700 10.5px/1.25 var(--font-body);color:var(--color-neutral-800);text-align:center">{{ c.label }}</span>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;margin-top:24px"><div style="display:flex;gap:8px;padding:0 18px 4px">
+        <sc-for list="{{ cravings }}" as="c" hint-placeholder-count="5">
+          <button onClick="{{ c.pick }}" style="flex:none;border:0;cursor:pointer;font:{{ c.font }};padding:11px 16px;border-radius:999px;background:{{ c.bg2 }};color:{{ c.fg2 }};transition:transform 160ms cubic-bezier(.2,.8,.2,1),background 220ms" style-active="transform:scale(.95)">{{ c.label }}</button>
+        </sc-for>
+      </div></div>
+    </div>
+    </sc-if>
+
+    <div style="padding:18px 18px 0">
+      <div style="font:700 10.5px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:12px">{{ suggestHead }}</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <sc-for list="{{ suggestions }}" as="s" hint-placeholder-count="4">
+          <button onClick="{{ s.go }}" style="background:var(--surface-elevated);border:0;border-radius:20px;padding:11px;display:flex;gap:12px;align-items:center;box-shadow:var(--shadow-sm);cursor:pointer;text-align:start;animation:{{ s.anim }};transition:transform 160ms cubic-bezier(.2,.8,.2,1)" style-active="transform:scale(.985)">
+            <div style="width:56px;height:56px;flex:none;border-radius:15px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 6px,var(--placeholder-b) 6px 12px);display:grid;place-items:center;font:500 8px/1 'JetBrains Mono',monospace;color:var(--color-neutral-600)">{{ s.ph }}</div>
+            <div style="min-width:0;flex:1">
+              <div style="font:700 14.5px/1.2 var(--font-body)">{{ s.title }}</div>
+              <div style="font:600 11.5px/1.3 var(--font-body);color:var(--color-neutral-600);margin-top:5px">{{ s.sub }}</div>
+            </div>
+            <div style="flex:none;font:800 13.5px/1 var(--font-body);color:var(--color-accent-700)">{{ s.tail }}</div>
+          </button>
+        </sc-for>
+      </div>
+      <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:44px 16px;text-align:center">
+        <div style="width:76px;height:76px;margin:0 auto;border-radius:999px;background:var(--color-neutral-200);display:grid;place-items:center;animation:kmPop 500ms cubic-bezier(.2,.8,.2,1)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-neutral-400)" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+        <div style="font:800 17px/1.3 var(--font-body);margin-top:18px">Nothing called "{{ query }}" nearby</div>
+        <div style="font:400 13.5px/1.55 var(--font-body);color:var(--color-neutral-700);margin-top:8px;text-wrap:pretty">Kaman searched 46 kitchens within 4 km. Try a shorter word.</div>
+      </div>
+      </sc-if>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isRestaurant }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <sc-if value="{{ menuSearch }}" hint-placeholder-val="{{ false }}">
+    <div>
+      <div style="position:sticky;top:{{ statusH }};z-index:52;background:var(--bg-sticky);backdrop-filter:blur(12px);padding:8px 14px 10px">
+        <div style="display:flex;align-items:center;gap:8px">
+          <button onClick="{{ closeMenuSearch }}" style="width:42px;height:42px;flex:none;border:0;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm);display:grid;place-items:center;cursor:pointer;transition:transform 140ms" style-active="transform:scale(.92)">
+            <sc-if value="{{ isLTR }}" hint-placeholder-val="{{ true }}"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></sc-if>
+            <sc-if value="{{ isRTL }}" hint-placeholder-val="{{ false }}"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></sc-if>
+          </button>
+          <div style="flex:1;min-width:0;height:42px;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:9px;padding:0 6px 0 14px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-neutral-600)" stroke-width="2.75" stroke-linecap="round" style="flex:none"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input ref="{{ menuSearchRef }}" value="{{ menuQ }}" onChange="{{ onMenuQ }}" placeholder="Search this menu" style="flex:1;min-width:0;border:0;background:transparent;font:600 14px/1 var(--font-body);color:var(--color-text)" />
+            <sc-if value="{{ menuQOn }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ clearMenuQ }}" style="width:30px;height:30px;flex:none;border:0;border-radius:999px;background:var(--color-neutral-200);display:grid;place-items:center;cursor:pointer" style-active="transform:scale(.9)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+      <sc-if value="{{ menuHitsOn }}" hint-placeholder-val="{{ true }}">
+      <div style="padding:14px 14px 0">
+        <div style="font:700 12px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:12px">{{ menuHitsLabel }}</div>
+        <div style="display:grid;grid-template-columns:repeat({{ menuColCount }},minmax(0,1fr));gap:0 20px">
+          <sc-for list="{{ menuHits }}" as="m" hint-placeholder-count="6">
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--divider);min-width:0;opacity:{{ m.cardOp }}">
+              <button onClick="{{ m.open }}" style="flex:1;min-width:0;border:0;background:transparent;padding:0;cursor:pointer;text-align:start">
+                <sc-if value="{{ m.best }}" hint-placeholder-val="{{ false }}"><div style="font:700 10px/1 var(--font-body);color:var(--color-accent-700);margin-bottom:5px">Bestseller</div></sc-if>
+                <div style="font:700 15px/1.25 var(--font-body);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">{{ m.name }}</div>
+                <div style="display:flex;align-items:baseline;gap:7px;margin-top:6px">
+                  <span style="font:800 14px/1 var(--font-body);color:var(--color-accent)">{{ m.price }}</span>
+                  <sc-if value="{{ m.wasShown }}" hint-placeholder-val="{{ false }}"><span style="font:600 12px/1 var(--font-body);color:var(--color-neutral-500);text-decoration:line-through">{{ m.was }}</span></sc-if>
+                </div>
+              </button>
+              <div style="position:relative;width:74px;height:74px;flex:none">
+                <button onClick="{{ m.open }}" data-shared="{{ m.sid }}" style="width:74px;height:74px;border:0;padding:0;border-radius:14px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 7px,var(--placeholder-b) 7px 14px);display:grid;place-items:center;font:500 9px/1 'JetBrains Mono',monospace;color:var(--color-neutral-600);cursor:pointer" style-active="transform:scale(.96)">dish</button>
+                <div style="position:absolute;bottom:-5px;inset-inline-end:-5px;z-index:2">
+                  <sc-if value="{{ m.quickOff }}" hint-placeholder-val="{{ true }}">
+                  <button onClick="{{ m.quick }}" style="width:30px;height:30px;border:0;border-radius:999px;background:var(--color-accent);color:var(--text-on-brand);font:700 18px/1 var(--font-body);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow-md)" style-active="transform:scale(.9)">+</button>
+                  </sc-if>
+                  <sc-if value="{{ m.quickOn }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex;align-items:center;gap:1px;height:30px;padding:0 3px;border-radius:999px;background:var(--color-accent);box-shadow:var(--shadow-md);animation:kmPop 260ms cubic-bezier(.2,.8,.2,1)">
+                    <button onClick="{{ m.dec }}" style="width:22px;height:22px;border:0;border-radius:999px;background:var(--brand-glass);color:var(--text-on-brand);font:700 14px/1 var(--font-body);cursor:pointer">−</button>
+                    <div style="min-width:14px;text-align:center;font:800 11px/1 var(--font-body);color:var(--text-on-brand)">{{ m.qty }}</div>
+                    <button onClick="{{ m.inc }}" style="width:22px;height:22px;border:0;border-radius:999px;background:var(--brand-glass);color:var(--text-on-brand);font:700 14px/1 var(--font-body);cursor:pointer">+</button>
+                  </div>
+                  </sc-if>
+                  <sc-if value="{{ m.out }}" hint-placeholder-val="{{ false }}">
+                  <span style="display:block;font:700 9px/1 var(--font-body);color:var(--color-neutral-700);padding:6px 7px;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm)">Out</span>
+                  </sc-if>
+                </div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      </sc-if>
+      <sc-if value="{{ menuHitsOff }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:48px 28px;text-align:center">
+        <div style="width:64px;height:64px;margin:0 auto;border-radius:999px;background:var(--color-neutral-200);display:grid;place-items:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-neutral-600)" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+        <div style="font:800 17px/1.3 var(--font-body);margin-top:16px">Nothing matches "{{ menuQ }}"</div>
+        <div style="font:400 13px/1.5 var(--font-body);color:var(--color-neutral-700);margin-top:8px">Try a shorter word, or clear search to browse categories.</div>
+        <button onClick="{{ closeMenuSearch }}" style="height:44px;padding:0 18px;margin-top:16px;border:0;border-radius:999px;background:var(--surface-strong);color:var(--text-on-media);font:700 13.5px/1 var(--font-body);cursor:pointer">Back to menu</button>
+      </div>
+      </sc-if>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ browseMenu }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <div style="position:relative;height:{{ heroH }};background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 11px,var(--placeholder-b) 11px 22px);display:grid;place-items:center;overflow:visible">
+        <span style="font:500 10.5px/1 'JetBrains Mono',monospace;color:var(--color-neutral-600)">restaurant cover</span>
+        <div style="position:absolute;top:10px;inset-inline-start:12px;inset-inline-end:12px;display:flex;align-items:center;gap:8px;z-index:3">
+          <button onClick="{{ back }}" class="km-glass km-glass-round" style="width:40px;height:40px;flex:none;display:grid;place-items:center;cursor:pointer;transition:transform 140ms" style-active="transform:scale(.92)">
+            <sc-if value="{{ isLTR }}" hint-placeholder-val="{{ true }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></sc-if>
+            <sc-if value="{{ isRTL }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></sc-if>
+          </button>
+          <div style="flex:1"></div>
+          <button onClick="{{ openMenuSearch }}" aria-label="Search menu" class="km-glass km-glass-round" style="width:40px;height:40px;flex:none;display:grid;place-items:center;cursor:pointer;transition:transform 140ms" style-active="transform:scale(.92)">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.75" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </button>
+          <button onClick="{{ favCurrent }}" class="km-glass km-glass-round" style="width:40px;height:40px;flex:none;display:grid;place-items:center;cursor:pointer;transition:transform 160ms" style-active="transform:scale(.88)">
+            <sc-if value="{{ curFav }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="var(--color-accent)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></sc-if>
+            <sc-if value="{{ curNotFav }}" hint-placeholder-val="{{ true }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></sc-if>
+          </button>
+        </div>
+        <div style="position:absolute;left:16px;bottom:-22px;width:58px;height:58px;border-radius:18px;background:var(--surface-elevated);box-shadow:var(--shadow-md);display:grid;place-items:center;z-index:4;overflow:hidden">
+          <div style="width:50px;height:50px;border-radius:14px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 6px,var(--placeholder-b) 6px 12px);display:grid;place-items:center;font:800 16px/1 var(--font-body);color:var(--color-accent-800)">{{ rLogo }}</div>
+        </div>
+      </div>
+
+      <div style="padding:30px 16px 12px">
+        <div style="font-family:var(--font-heading);font-size:22px;line-height:1.08">{{ rName }}</div>
+        <div style="font:600 12px/1 var(--font-body);color:var(--color-neutral-600);margin-top:6px">{{ rCuisine }}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
+          <div style="background:var(--surface-elevated);border-radius:999px;padding:7px 11px;font:800 12px/1 var(--font-body);box-shadow:var(--shadow-sm)">★ {{ rRating }} <span style="font-weight:600;color:var(--color-neutral-600)">{{ rReviews }}</span></div>
+          <div style="background:{{ rOpenBg }};color:{{ rOpenFg }};border-radius:999px;padding:7px 11px;font:700 12px/1 var(--font-body);box-shadow:var(--shadow-sm)">{{ rHours }}</div>
+          <div style="background:var(--surface-elevated);border-radius:999px;padding:7px 11px;font:700 12px/1 var(--font-body);box-shadow:var(--shadow-sm)">{{ rTime }}</div>
+          <div style="background:var(--surface-elevated);border-radius:999px;padding:7px 11px;font:700 12px/1 var(--font-body);color:var(--color-accent-2-700);box-shadow:var(--shadow-sm)">{{ rFee }}</div>
+          <div style="background:var(--surface-elevated);border-radius:999px;padding:7px 11px;font:700 12px/1 var(--font-body);box-shadow:var(--shadow-sm)">{{ rMin }}</div>
+        </div>
+        <div style="margin-top:10px;background:var(--surface-strong);border-radius:14px;padding:11px 13px">
+          <div style="font:700 12px/1.3 var(--font-body);color:var(--text-on-media)">{{ progressText }}</div>
+          <div style="height:4px;border-radius:999px;background:var(--brand-soft);margin-top:8px;overflow:hidden"><div style="height:100%;width:{{ progressPct }};border-radius:999px;background:var(--brand);transition:width 420ms cubic-bezier(.2,.8,.2,1)"></div></div>
+        </div>
+      </div>
+
+      <div ref="{{ stickyRef }}" class="km-glass km-glass-stuck km-bar" style="position:sticky;top:{{ statusH }};z-index:52">
+        <sc-if value="{{ restCollapsed }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;align-items:center;gap:8px;padding:8px 12px 0">
+          <button onClick="{{ back }}" style="width:38px;height:38px;flex:none;border:0;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm);display:grid;place-items:center;cursor:pointer" style-active="transform:scale(.92)">
+            <sc-if value="{{ isLTR }}" hint-placeholder-val="{{ true }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></sc-if>
+            <sc-if value="{{ isRTL }}" hint-placeholder-val="{{ false }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></sc-if>
+          </button>
+          <div style="flex:1;min-width:0;font:800 14.5px/1.15 var(--font-body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ rName }}</div>
+          <button onClick="{{ openMenuSearch }}" style="width:38px;height:38px;flex:none;border:0;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm);display:grid;place-items:center;cursor:pointer" style-active="transform:scale(.92)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </button>
+          <sc-if value="{{ showHeadCart }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ cartBarAction }}" style="width:38px;height:38px;flex:none;border:0;border-radius:999px;background:var(--surface-strong);display:grid;place-items:center;cursor:pointer;position:relative" style-active="transform:scale(.92)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-on-media)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l2 6H4Zm-1 6h14v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1Z"/></svg>
+            <span style="position:absolute;top:4px;inset-inline-end:4px;min-width:14px;height:14px;padding:0 3px;border-radius:999px;background:var(--color-accent);color:var(--text-on-brand);font:800 9px/14px var(--font-body);text-align:center">{{ cartCount }}</span>
+          </button>
+          </sc-if>
+        </div>
+        </sc-if>
+        <div ref="{{ railRef }}" style="overflow-x:auto;padding:8px 0 10px"><div style="display:flex;gap:7px;padding:0 14px">
+          <sc-for list="{{ menuCats }}" as="c" hint-placeholder-count="8">
+            <button data-km-chip="{{ c.name }}" ref="{{ c.chipRef }}" onClick="{{ c.pick }}" style="flex:none;border:0;cursor:pointer;font:{{ c.font }};padding:9px 14px;border-radius:999px;background:{{ c.bg }};color:{{ c.fg }};white-space:nowrap;box-shadow:{{ c.shadow }};transition:background 220ms cubic-bezier(.2,.8,.2,1),color 220ms,transform 160ms" style-active="transform:scale(.95)">{{ c.name }}</button>
+          </sc-for>
+        </div></div>
+      </div>
+
+      <div style="padding:14px 14px 0;display:flex;flex-direction:column;gap:22px">
+        <sc-for list="{{ menuSections }}" as="sec" hint-placeholder-count="3">
+          <div data-km-cat="{{ sec.cat }}" ref="{{ sec.ref }}">
+            <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:10px">
+              <span style="font:800 16px/1 var(--font-body)">{{ sec.cat }}</span>
+              <span style="font:600 11.5px/1 var(--font-body);color:var(--color-neutral-600)">{{ sec.count }}</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat({{ menuColCount }},minmax(0,1fr));gap:0 20px">
+              <sc-for list="{{ sec.items }}" as="m" hint-placeholder-count="4">
+                <div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--divider);min-width:0;opacity:{{ m.cardOp }}">
+                  <button onClick="{{ m.open }}" style="flex:1;min-width:0;border:0;background:transparent;padding:0;cursor:pointer;text-align:start">
+                    <sc-if value="{{ m.best }}" hint-placeholder-val="{{ false }}"><div style="font:700 10px/1 var(--font-body);color:var(--color-accent-700);margin-bottom:5px">Bestseller</div></sc-if>
+                    <div style="font:700 15px/1.25 var(--font-body);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">{{ m.name }}</div>
+                    <div style="display:flex;align-items:baseline;gap:7px;margin-top:6px">
+                      <span style="font:800 14px/1 var(--font-body);color:var(--color-accent)">{{ m.price }}</span>
+                      <sc-if value="{{ m.wasShown }}" hint-placeholder-val="{{ false }}"><span style="font:600 12px/1 var(--font-body);color:var(--color-neutral-500);text-decoration:line-through">{{ m.was }}</span></sc-if>
+                    </div>
+                  </button>
+                  <div style="position:relative;width:74px;height:74px;flex:none">
+                    <button onClick="{{ m.open }}" data-shared="{{ m.sid }}" style="width:74px;height:74px;border:0;padding:0;border-radius:14px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 7px,var(--placeholder-b) 7px 14px);display:grid;place-items:center;font:500 9px/1 'JetBrains Mono',monospace;color:var(--color-neutral-600);cursor:pointer" style-active="transform:scale(.96)">dish</button>
+                    <div style="position:absolute;bottom:-5px;inset-inline-end:-5px;z-index:2">
+                      <sc-if value="{{ m.quickOff }}" hint-placeholder-val="{{ true }}">
+                      <button onClick="{{ m.quick }}" style="width:30px;height:30px;border:0;border-radius:999px;background:var(--color-accent);color:var(--text-on-brand);font:700 18px/1 var(--font-body);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow-md)" style-active="transform:scale(.9)">+</button>
+                      </sc-if>
+                      <sc-if value="{{ m.quickOn }}" hint-placeholder-val="{{ false }}">
+                      <div style="display:flex;align-items:center;gap:1px;height:30px;padding:0 3px;border-radius:999px;background:var(--color-accent);box-shadow:var(--shadow-md);animation:kmPop 260ms cubic-bezier(.2,.8,.2,1)">
+                        <button onClick="{{ m.dec }}" style="width:22px;height:22px;border:0;border-radius:999px;background:var(--brand-glass);color:var(--text-on-brand);font:700 14px/1 var(--font-body);cursor:pointer">−</button>
+                        <div style="min-width:14px;text-align:center;font:800 11px/1 var(--font-body);color:var(--text-on-brand)">{{ m.qty }}</div>
+                        <button onClick="{{ m.inc }}" style="width:22px;height:22px;border:0;border-radius:999px;background:var(--brand-glass);color:var(--text-on-brand);font:700 14px/1 var(--font-body);cursor:pointer">+</button>
+                      </div>
+                      </sc-if>
+                      <sc-if value="{{ m.out }}" hint-placeholder-val="{{ false }}">
+                      <span style="display:block;font:700 9px/1 var(--font-body);color:var(--color-neutral-700);padding:6px 7px;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm)">Out</span>
+                      </sc-if>
+                    </div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isCart }}" hint-placeholder-val="{{ false }}">
+  <div style="animation:kmIn 260ms cubic-bezier(.2,.8,.2,1);padding:8px 18px 0">
+    <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+      <button onClick="{{ back }}" style="width:42px;height:42px;flex:none;border:0;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm);display:grid;place-items:center;cursor:pointer;transition:transform 140ms" style-active="transform:scale(.92)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></button>
+      <div style="font:800 19px/1.2 var(--font-body)">Your order</div>
+    </div>
+    <sc-if value="{{ cartEmpty }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:48px 18px;text-align:center">
+      <div style="width:76px;height:76px;margin:0 auto;border-radius:999px;background:var(--color-accent-200);display:grid;place-items:center;animation:kmPop 460ms cubic-bezier(.2,.8,.2,1)"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l2 6H4Zm-1 6h14v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1Z"/></svg></div>
+      <div style="font:800 18px/1.3 var(--font-body);margin-top:18px">Nothing in the bag yet</div>
+      <div style="font:400 13.5px/1.55 var(--font-body);color:var(--color-neutral-700);margin-top:8px">Last Thursday it was a shawarma wrap from Abu Kamel.</div>
+      <button onClick="{{ reorderLast }}" style="height:48px;padding:0 24px;margin-top:18px;border:0;border-radius:999px;background:var(--color-accent);color:var(--text-on-brand);font:700 14.5px/1 var(--font-body);cursor:pointer;transition:transform 140ms" style-active="transform:scale(.96)">Order that again</button>
+    </div>
+    </sc-if>
+    <sc-if value="{{ cartFull }}" hint-placeholder-val="{{ true }}">
+    <div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <sc-for list="{{ cart }}" as="c" hint-placeholder-count="2">
+          <div style="background:var(--surface-elevated);border-radius:22px;padding:13px;box-shadow:var(--shadow-sm);animation:kmStagger 280ms cubic-bezier(.2,.8,.2,1)">
+            <div style="display:flex;gap:12px">
+              <div style="width:62px;height:62px;flex:none;border-radius:16px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 6px,var(--placeholder-b) 6px 12px)"></div>
+              <div style="min-width:0;flex:1">
+                <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px">
+                  <div style="font:700 15px/1.25 var(--font-body);min-width:0">{{ c.name }}</div>
+                  <div style="font:800 14.5px/1 var(--font-body);flex:none">{{ c.total }}</div>
+                </div>
+                <div style="font:500 12px/1.4 var(--font-body);color:var(--color-neutral-700);margin-top:6px">{{ c.opts }}</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px">
+              <div style="display:flex;align-items:center;gap:4px;background:var(--color-bg);border-radius:999px;padding:4px">
+                <button onClick="{{ c.dec }}" style="width:34px;height:34px;border:0;border-radius:999px;background:var(--surface-elevated);font:700 17px/1 var(--font-body);color:var(--color-neutral-800);cursor:pointer;transition:transform 140ms" style-active="transform:scale(.9)">−</button>
+                <div style="min-width:28px;text-align:center;font:800 14.5px/1 var(--font-body);animation:{{ c.qtyAnim }}">{{ c.qty }}</div>
+                <button onClick="{{ c.inc }}" style="width:34px;height:34px;border:0;border-radius:999px;background:var(--color-accent);font:700 17px/1 var(--font-body);color:var(--text-on-brand);cursor:pointer;transition:transform 140ms" style-active="transform:scale(.9)">+</button>
+              </div>
+              <button onClick="{{ c.remove }}" style="height:34px;padding:0 14px;border:0;border-radius:999px;background:var(--danger-bg);font:700 12px/1 var(--font-body);color:var(--danger);cursor:pointer">Remove</button>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="background:var(--surface-elevated);border-radius:22px;padding:17px;margin-top:14px;box-shadow:var(--shadow-sm)">
+        <sc-for list="{{ priceRows }}" as="p" hint-placeholder-count="3">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:5px 0">
+            <span style="font:500 13.5px/1.3 var(--font-body);color:var(--color-neutral-700)">{{ p.label }}</span>
+            <span style="font:700 13.5px/1 var(--font-body);color:{{ p.color }}">{{ p.value }}</span>
+          </div>
+        </sc-for>
+        <div style="height:1px;background:var(--border);margin:11px 0"></div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between">
+          <span style="font:800 16px/1.2 var(--font-body)">Total</span>
+          <span style="font:800 19px/1 var(--font-body)">{{ totalText }}</span>
+        </div>
+      </div>
+    </div>
+    </sc-if>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isCheckout }}" hint-placeholder-val="{{ false }}">
+  <div style="animation:kmIn 260ms cubic-bezier(.2,.8,.2,1);padding:8px 18px 0">
+    <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+      <button onClick="{{ back }}" style="width:42px;height:42px;flex:none;border:0;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm);display:grid;place-items:center;cursor:pointer" style-active="transform:scale(.92)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></button>
+      <div style="font:800 19px/1.2 var(--font-body)">Checkout</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="background:var(--surface-elevated);border-radius:22px;padding:17px;box-shadow:var(--shadow-sm)">
+        <div style="font:700 10.5px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Deliver to</div>
+        <div style="font:700 15px/1.3 var(--font-body);margin-top:10px">Home · Al-Mahoul St 1-3</div>
+        <div style="font:500 12.5px/1.4 var(--font-body);color:var(--color-neutral-700);margin-top:5px">Third floor, blue door</div>
+      </div>
+      <div style="background:var(--surface-elevated);border-radius:22px;padding:17px;box-shadow:var(--shadow-sm)">
+        <div style="font:800 15px/1.2 var(--font-body);margin-bottom:12px">Payment</div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <sc-for list="{{ payments }}" as="p" hint-placeholder-count="3">
+            <button onClick="{{ p.pick }}" style="width:100%;border:1.5px solid {{ p.border }};background:{{ p.bg }};border-radius:16px;padding:13px 15px;display:flex;align-items:center;gap:12px;cursor:pointer;text-align:start;transition:background 200ms,border-color 200ms,transform 140ms" style-active="transform:scale(.99)">
+              <div style="width:38px;height:38px;flex:none;border-radius:12px;background:{{ p.tagBg }};display:grid;place-items:center;font:800 12px/1 var(--font-body);color:{{ p.tagFg }}">{{ p.tag }}</div>
+              <div style="min-width:0;flex:1"><div style="font:700 14px/1.2 var(--font-body)">{{ p.label }}</div><div style="font:500 11.5px/1.3 var(--font-body);color:var(--color-neutral-700);margin-top:4px">{{ p.sub }}</div></div>
+              <div style="width:20px;height:20px;flex:none;border-radius:999px;background:{{ p.dotBg }};border:2px solid {{ p.dotBorder }};display:grid;place-items:center;transition:background 200ms">
+                <sc-if value="{{ p.on }}" hint-placeholder-val="{{ true }}"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--text-on-brand)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></sc-if>
+              </div>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="background:var(--surface-elevated);border-radius:22px;padding:17px;box-shadow:var(--shadow-sm)">
+        <sc-for list="{{ priceRows }}" as="p" hint-placeholder-count="3">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:5px 0">
+            <span style="font:500 13.5px/1.3 var(--font-body);color:var(--color-neutral-700)">{{ p.label }}</span>
+            <span style="font:700 13.5px/1 var(--font-body);color:{{ p.color }}">{{ p.value }}</span>
+          </div>
+        </sc-for>
+        <div style="height:1px;background:var(--border);margin:11px 0"></div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between">
+          <span style="font:800 16px/1.2 var(--font-body)">Total</span><span style="font:800 19px/1 var(--font-body)">{{ totalText }}</span>
+        </div>
+      </div>
+      <div style="font:400 12px/1.5 var(--font-body);color:var(--color-neutral-600);text-wrap:pretty">Placing the order runs the handover transition — the order card lifts out of your hands and lands in the restaurant's queue on the tracking screen.</div>
+      <button onClick="{{ placeOrder }}" style="width:100%;height:56px;border:0;border-radius:999px;background:var(--color-accent);color:var(--text-on-brand);font:800 16px/1 var(--font-body);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:var(--shadow-md);transition:background 200ms,transform 140ms cubic-bezier(.2,.8,.2,1)" style-hover="background:var(--color-accent-600)" style-active="transform:scale(.98)">
+        <span>{{ placeLabel }}</span><span style="opacity:.5">•</span><span>{{ totalText }}</span>
+      </button>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isTracking }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <div style="position:relative;height:186px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 11px,var(--placeholder-b) 11px 22px);display:grid;place-items:center">
+      <span style="font:500 10.5px/1 'JetBrains Mono',monospace;color:var(--color-accent-2-600)">live map</span>
+      <button onClick="{{ goHome }}" style="position:absolute;top:12px;inset-inline-start:12px;width:42px;height:42px;border:0;border-radius:999px;background:var(--surface-glass);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow-md)" style-active="transform:scale(.92)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div style="background:var(--color-bg);border-radius:28px 28px 0 0;margin-top:-24px;position:relative;padding:22px 18px 0;animation:kmIn 360ms cubic-bezier(.2,.8,.2,1)">
+      <div style="position:relative;background:var(--surface-strong);border-radius:24px;padding:20px;overflow:hidden;transform:{{ handoverT }};transition:transform 520ms cubic-bezier(.2,.8,.2,1)">
+        <div style="position:absolute;inset-inline-end:-26px;top:-26px;width:120px;height:120px;border-radius:999px;background:var(--color-accent);opacity:.85"></div>
+        <div style="position:absolute;inset-inline-start:40%;bottom:8px;width:26px;height:26px;border-radius:999px;background:var(--brand-glass);animation:kmSteam 2.6s ease-out infinite"></div>
+        <div style="position:relative">
+          <div style="font:700 10.5px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent-400)">{{ trackTitle }}</div>
+          <div style="display:flex;align-items:baseline;gap:9px;margin-top:11px">
+            <div style="font-family:var(--font-heading);font-size:38px;line-height:1;color:var(--text-on-media)">{{ eta }}</div>
+            <div style="font:600 12.5px/1 var(--font-body);color:var(--text-muted)">{{ etaNote }}</div>
+          </div>
+          <div style="font:500 13px/1.5 var(--font-body);color:var(--text-secondary);margin-top:10px;text-wrap:pretty">{{ trackSub }}</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:5px;margin-top:16px">
+        <sc-for list="{{ trackBars }}" as="b" hint-placeholder-count="6">
+          <div style="flex:1;height:6px;border-radius:999px;background:{{ b.color }};transition:background 420ms cubic-bezier(.2,.8,.2,1)"></div>
+        </sc-for>
+      </div>
+      <div style="display:flex;flex-direction:column;margin-top:20px">
+        <sc-for list="{{ trackSteps }}" as="s" hint-placeholder-count="6">
+          <div style="display:flex;gap:13px;align-items:flex-start">
+            <div style="width:26px;flex:none;display:flex;flex-direction:column;align-items:center">
+              <div style="width:26px;height:26px;border-radius:999px;background:{{ s.dotBg }};border:2px solid {{ s.dotBorder }};display:grid;place-items:center;flex:none;animation:{{ s.dotAnim }};transition:background 300ms">
+                <sc-if value="{{ s.done }}" hint-placeholder-val="{{ true }}"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--text-on-brand)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></sc-if>
+                <sc-if value="{{ s.now }}" hint-placeholder-val="{{ false }}"><div style="width:8px;height:8px;border-radius:999px;background:var(--surface-elevated)"></div></sc-if>
+              </div>
+              <sc-if value="{{ s.tail }}" hint-placeholder-val="{{ true }}"><div style="width:2px;height:24px;background:{{ s.tailColor }};transition:background 300ms"></div></sc-if>
+            </div>
+            <div style="padding-bottom:12px;flex:1;min-width:0">
+              <div style="font:700 14px/1.25 var(--font-body);color:{{ s.color }}">{{ s.name }}</div>
+              <div style="font:600 11.5px/1.3 var(--font-body);color:var(--color-neutral-600);margin-top:4px">{{ s.time }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <button onClick="{{ nextStep }}" style="width:100%;height:44px;border:1.5px dashed var(--color-neutral-400);border-radius:999px;background:transparent;font:600 12.5px/1 var(--font-body);color:var(--color-neutral-700);cursor:pointer;margin-bottom:8px" style-hover="background:var(--color-neutral-200)">Demo: advance status</button>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isStates }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:10px 18px 0;animation:kmIn 260ms cubic-bezier(.2,.8,.2,1)">
+    <div style="display:flex;align-items:center;gap:11px;margin-bottom:12px">
+      <button onClick="{{ back }}" style="width:42px;height:42px;flex:none;border:0;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm);display:grid;place-items:center;cursor:pointer;transition:transform 140ms" style-active="transform:scale(.92)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></button>
+      <div style="font-family:var(--font-heading);font-size:24px;line-height:1.1">States</div>
+    </div>
+    <div style="font:400 12.5px/1.5 var(--font-body);color:var(--color-neutral-700);margin-bottom:18px;text-wrap:pretty">Skeletons mirror the layout they replace and cross-fade into content over 200ms, so nothing jumps.</div>
+
+    <div style="font:700 10.5px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:11px">Dish feed · skeleton</div>
+    <div style="background:var(--surface-elevated);border-radius:22px;overflow:hidden;box-shadow:var(--shadow-sm)">
+      <div style="height:130px;background:linear-gradient(90deg,var(--skeleton-base) 25%,var(--skeleton-shine) 42%,var(--skeleton-base) 60%);background-size:280% 100%;animation:kmShim 1.4s linear infinite"></div>
+      <div style="padding:14px;display:flex;flex-direction:column;gap:8px"><div style="height:14px;width:58%;border-radius:999px;background:var(--color-neutral-200)"></div><div style="height:10px;width:40%;border-radius:999px;background:var(--color-neutral-200)"></div></div>
+    </div>
+
+    <div style="font:700 10.5px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600);margin:22px 0 11px">Menu · skeleton</div>
+    <div style="background:var(--surface-elevated);border-radius:22px;padding:13px;display:flex;gap:13px;box-shadow:var(--shadow-sm)">
+      <div style="flex:1;display:flex;flex-direction:column;gap:8px"><div style="height:13px;width:70%;border-radius:999px;background:var(--color-neutral-200)"></div><div style="height:10px;width:90%;border-radius:999px;background:var(--color-neutral-200)"></div><div style="height:12px;width:28%;border-radius:999px;background:var(--color-neutral-200)"></div></div>
+      <div style="width:86px;height:86px;flex:none;border-radius:16px;background:linear-gradient(90deg,var(--skeleton-base) 25%,var(--skeleton-shine) 42%,var(--skeleton-base) 60%);background-size:280% 100%;animation:kmShim 1.4s linear infinite"></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px">
+      <sc-for list="{{ stateCards }}" as="s" hint-placeholder-count="6">
+        <div style="background:{{ s.bg }};border-radius:22px;padding:18px;box-shadow:var(--shadow-sm)">
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:40px;height:40px;flex:none;border-radius:999px;background:{{ s.iconBg }};display:grid;place-items:center;font:800 15px/1 var(--font-body);color:{{ s.iconFg }}">{{ s.glyph }}</div>
+            <div style="font:800 15px/1.25 var(--font-body);flex:1;min-width:0">{{ s.title }}</div>
+          </div>
+          <div style="font:400 13px/1.5 var(--font-body);color:var(--color-neutral-700);margin-top:11px;text-wrap:pretty">{{ s.body }}</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:13px">
+            <div style="font:700 12.5px/1 var(--font-body);padding:10px 15px;border-radius:999px;background:var(--surface-strong);color:var(--text-on-media)">{{ s.cta }}</div>
+            <sc-if value="{{ s.hasAlt }}" hint-placeholder-val="{{ false }}"><div style="font:700 12.5px/1 var(--font-body);padding:10px 15px;border-radius:999px;border:1.5px solid var(--color-neutral-300);color:var(--color-neutral-800)">{{ s.alt }}</div></sc-if>
+          </div>
+          <div style="font:500 10.5px/1.4 'JetBrains Mono',monospace;color:var(--color-accent-700);margin-top:12px">{{ s.motion }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isNotes }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:10px 18px 0;animation:kmIn 260ms cubic-bezier(.2,.8,.2,1)">
+    <div style="display:flex;align-items:center;gap:11px">
+      <button onClick="{{ back }}" style="width:42px;height:42px;flex:none;border:0;border-radius:999px;background:var(--surface-elevated);box-shadow:var(--shadow-sm);display:grid;place-items:center;cursor:pointer;transition:transform 140ms" style-active="transform:scale(.92)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></button>
+      <div style="font-family:var(--font-heading);font-size:24px;line-height:1.1">Motion language</div>
+    </div>
+    <div style="font:400 12.5px/1.5 var(--font-body);color:var(--color-neutral-700);margin:9px 0 18px;text-wrap:pretty">One easing curve, three durations, one rule: motion only runs when state changes. Everything here is an implicit animation, a shared-element flight, or a transform — all cheap in Flutter on mid-range Android.</div>
+
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <sc-for list="{{ motionTiers }}" as="m" hint-placeholder-count="3">
+        <div style="background:var(--surface-elevated);border-radius:20px;padding:16px;box-shadow:var(--shadow-sm)">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px">
+            <div style="font:800 14.5px/1.2 var(--font-body)">{{ m.name }}</div>
+            <div style="font:500 11.5px/1 'JetBrains Mono',monospace;color:var(--color-accent-700)">{{ m.ms }}</div>
+          </div>
+          <div style="font:400 12.5px/1.5 var(--font-body);color:var(--color-neutral-700);margin-top:8px">{{ m.use }}</div>
+          <div style="font:500 10.5px/1.4 'JetBrains Mono',monospace;color:var(--color-neutral-600);margin-top:8px">{{ m.flutter }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="font:700 10.5px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600);margin:22px 0 11px">Rules</div>
+    <div style="background:var(--surface-elevated);border-radius:20px;padding:16px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ motionRules }}" as="r" hint-placeholder-count="5">
+        <div><div style="font:700 13px/1.25 var(--font-body)">{{ r.title }}</div><div style="font:400 12.5px/1.5 var(--font-body);color:var(--color-neutral-700);margin-top:5px;text-wrap:pretty">{{ r.body }}</div></div>
+      </sc-for>
+    </div>
+
+    <div style="font:700 10.5px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600);margin:22px 0 11px">Signature interactions</div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ signatures }}" as="s" hint-placeholder-count="3">
+        <div style="background:var(--surface-strong);border-radius:22px;padding:18px;color:var(--text-on-media)">
+          <div style="display:flex;align-items:baseline;gap:9px">
+            <span style="font:500 10px/1 'JetBrains Mono',monospace;color:var(--color-accent-400)">{{ s.num }}</span>
+            <span style="font-family:var(--font-heading);font-size:19px;line-height:1.15">{{ s.name }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:11px;margin-top:14px">
+            <div><div style="font:700 10px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">What happens</div><div style="font:400 12.5px/1.55 var(--font-body);color:var(--text-secondary);margin-top:5px;text-wrap:pretty">{{ s.what }}</div></div>
+            <div><div style="font:700 10px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">Why it helps</div><div style="font:400 12.5px/1.55 var(--font-body);color:var(--text-secondary);margin-top:5px;text-wrap:pretty">{{ s.why }}</div></div>
+            <div><div style="font:700 10px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">Where</div><div style="font:400 12.5px/1.55 var(--font-body);color:var(--text-secondary);margin-top:5px">{{ s.where }}</div></div>
+            <div><div style="font:700 10px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">Backend</div><div style="font:400 12.5px/1.55 var(--font-body);color:var(--text-secondary);margin-top:5px;text-wrap:pretty">{{ s.backend }}</div></div>
+            <div style="background:{{ s.statusBg }};border-radius:12px;padding:11px 13px;font:700 11.5px/1.4 var(--font-body);color:{{ s.statusFg }}">{{ s.status }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="font:700 10.5px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600);margin:22px 0 11px">Haptics</div>
+    <div style="background:var(--surface-elevated);border-radius:20px;padding:16px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:10px">
+      <sc-for list="{{ haptics }}" as="h" hint-placeholder-count="6">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+          <span style="font:600 12.5px/1.35 var(--font-body);flex:1;min-width:0">{{ h.when }}</span>
+          <span style="font:500 10.5px/1 'JetBrains Mono',monospace;color:var(--text-primary);flex:none">{{ h.kind }}</span>
+        </div>
+      </sc-for>
+      <div style="font:400 11.5px/1.5 var(--font-body);color:var(--color-neutral-600);margin-top:4px;text-wrap:pretty">Nothing else vibrates. Scrolling, chip taps and card presses stay silent so the six events above keep their meaning.</div>
+    </div>
+  </div>
+  </sc-if>
+
+  </div>
+  </div>
+
+  <sc-if value="{{ itemOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:absolute;inset:0;z-index:70;display:flex;flex-direction:column">
+    <button onClick="{{ closeItem }}" style="height:22px;border:0;background:var(--scrim);cursor:pointer;flex:none;animation:kmFadeIn 200ms linear"></button>
+    <div style="flex:1;min-height:0;background:var(--surface-elevated);border-radius:30px 30px 0 0;overflow:hidden;animation:kmSheet 340ms cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column">
+      <div ref="{{ itemScrollRef }}" onScroll="{{ onItemScroll }}" style="flex:1;min-height:0;overflow-y:auto">
+        <div style="position:relative;height:{{ itemHeroH }};background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 11px,var(--placeholder-b) 11px 22px);display:grid;place-items:center;overflow:hidden">
+          <span style="font:500 10.5px/1 'JetBrains Mono',monospace;color:var(--color-neutral-600);opacity:{{ itemHeroLabelOp }}">dish photo 4:3</span>
+        </div>
+        <div style="position:sticky;top:0;z-index:20;background:{{ itemBarBg }};backdrop-filter:blur(10px);display:flex;align-items:center;gap:11px;padding:10px 16px;transition:background 180ms linear">
+          <div style="flex:1;min-width:0;font:800 15.5px/1.2 var(--font-body);opacity:{{ itemBarOp }};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity 160ms linear">{{ itemName }}</div>
+          <button onClick="{{ closeItem }}" style="width:38px;height:38px;flex:none;border:0;border-radius:999px;background:var(--surface-glass);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow-sm)" style-active="transform:scale(.9)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-text)" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        </div>
+        <div style="padding:16px 18px 0">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+            <div style="font:800 21px/1.2 var(--font-body);min-width:0">{{ itemName }}</div>
+            <div style="font:800 18px/1 var(--font-body);flex:none">{{ itemBase }}</div>
+          </div>
+          <div style="font:400 13.5px/1.55 var(--font-body);color:var(--color-neutral-700);margin-top:9px;text-wrap:pretty">{{ itemDesc }}</div>
+        </div>
+        <div style="padding:20px 18px 20px;display:flex;flex-direction:column;gap:20px">
+          <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+            <div>
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px">
+                <div style="font:800 15.5px/1.2 var(--font-body)">{{ g.title }}</div>
+                <div style="font:700 10.5px/1 var(--font-body);padding:7px 10px;border-radius:999px;background:{{ g.badgeBg }};color:{{ g.badgeFg }};flex:none;animation:{{ g.badgeAnim }};transition:background 240ms,color 240ms">{{ g.badge }}</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:9px">
+                <sc-for list="{{ g.opts }}" as="o" hint-placeholder-count="3">
+                  <button onClick="{{ o.pick }}" style="width:100%;border:1.5px solid {{ o.border }};background:{{ o.bg }};border-radius:16px;padding:13px 15px;display:flex;align-items:center;gap:12px;cursor:pointer;text-align:start;opacity:{{ o.opacity }};transition:background 220ms cubic-bezier(.2,.8,.2,1),border-color 220ms,opacity 220ms,transform 140ms" style-active="transform:scale(.99)">
+                    <div style="width:21px;height:21px;flex:none;border-radius:{{ o.markRadius }};background:{{ o.markBg }};border:2px solid {{ o.markBorder }};display:grid;place-items:center;transition:background 200ms,border-color 200ms">
+                      <sc-if value="{{ o.on }}" hint-placeholder-val="{{ false }}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--text-on-brand)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" style="animation:kmPop 240ms cubic-bezier(.2,.8,.2,1)"><path d="M20 6 9 17l-5-5"/></svg></sc-if>
+                    </div>
+                    <span style="font:{{ o.font }};flex:1;min-width:0">{{ o.name }}</span>
+                    <span style="font:700 13px/1 var(--font-body);color:{{ o.deltaColor }};flex:none">{{ o.delta }}</span>
+                  </button>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:14px">
+            <div style="font:800 15.5px/1.2 var(--font-body)">Quantity</div>
+            <div style="display:flex;align-items:center;gap:4px;background:var(--surface-elevated);border-radius:999px;padding:5px;box-shadow:var(--shadow-sm)">
+              <button onClick="{{ decQty }}" style="width:38px;height:38px;border:0;border-radius:999px;background:var(--color-bg);font:700 19px/1 var(--font-body);color:var(--color-neutral-800);cursor:pointer;transition:transform 140ms" style-active="transform:scale(.9)">−</button>
+              <div style="min-width:32px;text-align:center;font:800 16px/1 var(--font-body);animation:{{ qtyAnim }}">{{ qty }}</div>
+              <button onClick="{{ incQty }}" style="width:38px;height:38px;border:0;border-radius:999px;background:var(--color-accent);font:700 19px/1 var(--font-body);color:var(--text-on-brand);cursor:pointer;transition:transform 140ms" style-active="transform:scale(.9)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:none;padding:12px 16px 20px;border-top:1px solid var(--border);background:var(--bg-sticky)">
+        <button onClick="{{ addToCart }}" style="width:100%;height:54px;border:0;border-radius:999px;background:{{ addBg }};color:var(--text-on-brand);font:800 16px/1 var(--font-body);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:var(--shadow-md);transition:background 200ms,transform 140ms cubic-bezier(.2,.8,.2,1)" style-active="transform:scale(.98)">
+          <span>{{ addLabel }}</span>
+          <sc-if value="{{ addHasPrice }}" hint-placeholder-val="{{ true }}"><span style="opacity:.5">•</span><span style="animation:{{ addPriceAnim }}">{{ addPrice }}</span></sc-if>
+        </button>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ storyOpen }}" hint-placeholder-val="{{ false }}">
+  <div onPointerDown="{{ holdStart }}" onPointerUp="{{ holdEnd }}" style="position:absolute;inset:0;z-index:80;background:var(--overlay);animation:kmFadeIn 200ms linear;overflow:hidden">
+    <div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,#3a352e 0 14px,#332e28 14px 28px);animation:kmIn 380ms cubic-bezier(.2,.8,.2,1);display:grid;place-items:center">
+      <span style="font:500 11px/1 'JetBrains Mono',monospace;color:rgba(247,247,245,.42)">story media · full bleed</span>
+    </div>
+    <div style="position:absolute;top:0;left:0;right:0;padding:14px 16px 0;z-index:3">
+      <div style="display:flex;gap:4px">
+        <sc-for list="{{ storyBars }}" as="b" hint-placeholder-count="3">
+          <div style="flex:1;height:3px;border-radius:999px;background:rgba(247,247,245,.28);overflow:hidden">
+            <div style="height:100%;background:var(--brand);width:{{ b.w }};animation:{{ b.anim }};animation-play-state:{{ b.play }}"></div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;align-items:center;gap:11px;margin-top:14px">
+        <div style="width:38px;height:38px;flex:none;border-radius:999px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 6px,var(--placeholder-b) 6px 12px);box-shadow:0 0 0 2px rgba(247,247,245,.5)"></div>
+        <div style="min-width:0;flex:1">
+          <div style="font:700 14px/1.2 var(--font-body);color:var(--text-on-media)">{{ storyName }}</div>
+          <div style="font:600 11px/1 var(--font-body);color:rgba(247,247,245,.65);margin-top:4px">{{ storyWhen }}</div>
+        </div>
+        <button onClick="{{ closeStory }}" class="km-glass km-glass-round" style="width:38px;height:38px;flex:none;display:grid;place-items:center;cursor:pointer" style-active="transform:scale(.9)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-on-media)" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      </div>
+    </div>
+    <button onClick="{{ storyPrev }}" style="position:absolute;top:96px;bottom:150px;inset-inline-start:0;width:34%;border:0;background:transparent;cursor:pointer;z-index:2"></button>
+    <button onClick="{{ storyNext }}" style="position:absolute;top:96px;bottom:150px;inset-inline-end:0;width:66%;border:0;background:transparent;cursor:pointer;z-index:2"></button>
+    <div style="position:absolute;left:0;right:0;bottom:0;z-index:3;padding:24px 16px 26px;background:var(--scrim-media)">
+      <div style="font:400 15px/1.45 var(--font-body);color:var(--text-on-media);text-wrap:pretty">{{ storyCaption }}</div>
+      <button onClick="{{ storyToItem }}" style="width:100%;height:52px;margin-top:16px;border:0;border-radius:999px;background:var(--color-accent);color:var(--text-on-brand);font:800 15.5px/1 var(--font-body);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:transform 140ms" style-active="transform:scale(.98)">
+        <span>{{ storyCta }}</span><span style="opacity:.55">•</span><span>{{ storyCtaPrice }}</span>
+      </button>
+      <div style="font:500 10px/1.4 'JetBrains Mono',monospace;color:rgba(247,247,245,.5);margin-top:11px;text-align:center">story → menu item link · needs backend association</div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ hasGhost }}" hint-placeholder-val="{{ false }}">
+  <div style="position:absolute;z-index:88;pointer-events:none;left:{{ ghostL }};top:{{ ghostT }};width:{{ ghostW }};height:{{ ghostH }};border-radius:{{ ghostR }};background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 9px,var(--placeholder-b) 9px 18px);opacity:{{ ghostOp }};transition:left 420ms cubic-bezier(.2,.8,.2,1),top 420ms cubic-bezier(.2,.8,.2,1),width 420ms cubic-bezier(.2,.8,.2,1),height 420ms cubic-bezier(.2,.8,.2,1),border-radius 420ms cubic-bezier(.2,.8,.2,1),opacity 180ms linear 300ms"></div>
+  </sc-if>
+
+  <sc-if value="{{ hasFly }}" hint-placeholder-val="{{ false }}">
+  <div style="position:absolute;z-index:89;pointer-events:none;left:{{ flyL }};top:{{ flyT }};width:34px;height:34px;border-radius:999px;background:repeating-linear-gradient(135deg,var(--placeholder-a) 0 5px,var(--placeholder-b) 5px 10px);box-shadow:var(--shadow-lg);transform:scale({{ flyScale }});transition:left 460ms cubic-bezier(.4,0,.2,1),top 460ms cubic-bezier(.2,.9,.2,1),transform 460ms cubic-bezier(.2,.8,.2,1)"></div>
+  </sc-if>
+
+  <sc-if value="{{ showSearchPill }}" hint-placeholder-val="{{ true }}">
+  <div style="position:absolute;left:0;right:0;bottom:{{ searchPillBottom }};z-index:64;display:flex;justify-content:center;align-items:center;gap:10px;pointer-events:none;transition:bottom 260ms cubic-bezier(.2,.8,.2,1)">
+    <button onClick="{{ openSearch }}" class="km-glass km-glass-round km-search {{ searchStuckCls }}" style="pointer-events:auto;font:800 14.5px/1 var(--font-body)">
+      <span class="km-orb" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.75" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+      <span style="padding-inline-end:14px">Search</span>
+    </button>
+    <button onClick="{{ openAiChat }}" class="km-fab-brand" style="pointer-events:auto;width:50px;height:50px;flex:none;border:0;border-radius:999px;background:var(--brand);display:grid;place-items:center;cursor:pointer;animation:kmIn 320ms cubic-bezier(.2,.8,.2,1) 60ms both;transition:transform 180ms cubic-bezier(.2,.8,.2,1),background 200ms" style-hover="transform:translateY(-1px);background:var(--brand-hover)" style-active="transform:translateY(1px)">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="var(--text-on-brand)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 14.5a2.5 2.5 0 0 1-2.5 2.5H9l-4.5 4V6.5A2.5 2.5 0 0 1 7 4h10.5A2.5 2.5 0 0 1 20 6.5Z"/>
+        <path d="m12.2 7.4.9 2.05 2.05.9-2.05.9-.9 2.05-.9-2.05-2.05-.9 2.05-.9Z"/>
+      </svg>
+    </button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ showCartBar }}" hint-placeholder-val="{{ false }}">
+  <div style="position:absolute;left:12px;right:12px;bottom:{{ cartBarBottom }};z-index:66;transform:{{ cartBarT }};transition:transform 320ms cubic-bezier(.2,.8,.2,1),bottom 260ms cubic-bezier(.2,.8,.2,1)">
+    <button onClick="{{ cartBarAction }}" style="width:100%;height:58px;border:0;border-radius:999px;background:var(--surface-strong);color:var(--text-on-media);display:flex;align-items:center;gap:12px;padding:0 10px 0 20px;cursor:pointer;box-shadow:var(--shadow-lg);animation:{{ cartBarAnim }};transition:transform 140ms" style-active="transform:scale(.985)">
+      <div style="display:flex;align-items:center;gap:9px;flex:1;min-width:0">
+        <div style="position:relative;width:26px;height:26px;flex:none;border-radius:999px;background:var(--color-accent);display:grid;place-items:center;font:800 12px/1 var(--font-body);animation:{{ cartBadgeAnim }}">{{ cartCount }}</div>
+        <span style="font:800 14.5px/1.2 var(--font-body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ cartBarLabel }}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;flex:none">
+        <span style="font:800 15px/1 var(--font-body);animation:{{ cartTotalAnim }}">{{ totalText }}</span>
+        <span style="width:40px;height:40px;border-radius:999px;background:var(--color-accent);display:grid;place-items:center">
+          <sc-if value="{{ isLTR }}" hint-placeholder-val="{{ true }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-on-brand)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></sc-if>
+          <sc-if value="{{ isRTL }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-on-brand)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></sc-if>
+        </span>
+      </div>
+    </button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+  <div style="position:absolute;left:12px;right:12px;bottom:{{ toastBottom }};z-index:67;background:var(--surface-strong);border-radius:16px;padding:13px 15px;display:flex;align-items:center;gap:11px;box-shadow:var(--shadow-lg);animation:kmIn 220ms cubic-bezier(.2,.8,.2,1)">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-2-300)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"/></svg>
+    <span style="font:600 13px/1.3 var(--font-body);color:var(--text-on-media);flex:1;min-width:0">{{ toast }}</span>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ annotate }}" hint-placeholder-val="{{ false }}">
+  <div style="position:absolute;inset:0;z-index:95;pointer-events:none">
+    <sc-for list="{{ notes }}" as="n" hint-placeholder-count="3">
+      <div style="position:absolute;left:{{ n.l }};top:{{ n.t }};max-width:210px;background:var(--surface-strong);border-radius:12px;padding:9px 11px;box-shadow:var(--shadow-lg)">
+        <div style="font:700 9.5px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-400)">{{ n.tag }}</div>
+        <div style="font:500 11px/1.4 var(--font-body);color:var(--text-on-media);margin-top:5px">{{ n.body }}</div>
+      </div>
+    </sc-for>
+  </div>
+  </sc-if>
+
+  <div style="position:absolute;inset-inline-start:10px;bottom:{{ themeSwitchBottom }};z-index:97;pointer-events:none">
+    <div class="km-glass km-glass-round" style="pointer-events:auto;display:flex;gap:2px;padding:3px">
+      <button onClick="{{ setLightTheme }}" aria-label="Light theme" title="Light" style="width:32px;height:32px;border:0;border-radius:999px;background:{{ themeLightBg }};color:var(--text-primary);display:grid;place-items:center;cursor:pointer;font-size:13px;line-height:1;opacity:{{ themeLightOp }};position:relative;transition:background 180ms,opacity 180ms" style-active="transform:scale(.92)">☀️<span style="position:absolute;bottom:4px;width:5px;height:5px;border-radius:1px;background:{{ themeLightDot }};transform:rotate(45deg)"></span></button>
+      <button onClick="{{ setDarkTheme }}" aria-label="Dark theme" title="Dark" style="width:32px;height:32px;border:0;border-radius:999px;background:{{ themeDarkBg }};color:var(--text-primary);display:grid;place-items:center;cursor:pointer;font-size:13px;line-height:1;opacity:{{ themeDarkOp }};position:relative;transition:background 180ms,opacity 180ms" style-active="transform:scale(.92)">🌙<span style="position:absolute;bottom:4px;width:5px;height:5px;border-radius:1px;background:{{ themeDarkDot }};transform:rotate(45deg)"></span></button>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;platform&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;iPhone&quot;,&quot;Android&quot;],&quot;default&quot;:&quot;iPhone&quot;,&quot;tsType&quot;:&quot;'iPhone' | 'Android'&quot;},&quot;direction&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;LTR&quot;,&quot;RTL&quot;],&quot;default&quot;:&quot;LTR&quot;,&quot;tsType&quot;:&quot;'LTR' | 'RTL'&quot;,&quot;section&quot;:&quot;Localization&quot;},&quot;annotations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Spec&quot;}}">
+const NIS = n => '₪' + (Math.round(n * 100) / 100).toFixed(n % 1 === 0 ? 0 : 2);
+const EASE = 'cubic-bezier(.2,.8,.2,1)';
+const KM_THEME_KEY = 'kaman-theme';
+const kmSystemTheme = () => { try { return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { return 'light'; } };
+const kmStoredTheme = () => { try { const v = localStorage.getItem(KM_THEME_KEY); return v === 'light' || v === 'dark' ? v : null; } catch (e) { return null; } };
+const kmResolvedTheme = () => kmStoredTheme() || kmSystemTheme();
+const kmApplyTheme = (mode, persist) => {
+  document.documentElement.setAttribute('data-km-theme', mode);
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute('content', mode === 'dark' ? '#101010' : '#FAF8F4');
+  if (persist) { try { localStorage.setItem(KM_THEME_KEY, mode); } catch (e) {} }
+};
+kmApplyTheme(kmResolvedTheme(), false);
+
+// Restaurant header geometry, shared by the collapse maths, the shared-element
+// flight target and the category rail's anchor line so they cannot drift apart.
+// HERO_H is deliberately short — the cover is a banner, not a splash screen.
+const HERO_H = 148;
+const HERO_MIN = 84;
+// Fallback only — live highlighting measures the sticky cluster's bottom edge.
+const ANCHOR = 120;
+
+// `cats` are the Explore category ids this kitchen belongs to. The last two
+// entries used to exist only as byline strings inside CRAVINGS — promoting them
+// here keeps the Burgers and Shawarma categories pointing at real restaurants
+// instead of a second copy of the same names. Home still lists the first four.
+// `min` is the minimum order in shekels and `hours`/`open` drive the trading
+// status pill in the restaurant header. `open: false` is informational only —
+// a closed kitchen still accepts a basket in the prototype so the cart and
+// checkout flows stay walkable.
+const RESTS = [
+  { id: 'abu', name: 'Abu Kamel Grill', cuisine: 'Lebanese · Grills', rating: 4.8, reviews: '(1.2k)', time: '25–35 min', fee: 0, min: 40, hours: '11:00 – 23:30', open: true, cats: ['grills', 'shawarma', 'chicken', 'arabic'] },
+  { id: 'hum', name: 'Hummus Al-Balad', cuisine: 'Levantine · Breakfast', rating: 4.9, reviews: '(860)', time: '20–30 min', fee: 0, min: 35, hours: '07:00 – 16:00', open: false, cats: ['hummus', 'breakfast', 'healthy', 'arabic'] },
+  { id: 'kun', name: 'Kunafa House', cuisine: 'Desserts · Sweets', rating: 4.6, reviews: '(2.4k)', time: '15–25 min', fee: 9, min: 25, hours: '10:00 – 00:30', open: true, cats: ['desserts', 'coffee'] },
+  { id: 'saj', name: 'Saj & Co', cuisine: 'Bakery · Manakish', rating: 4.7, reviews: '(540)', time: '20–30 min', fee: 5, min: 30, hours: '06:30 – 20:00', open: true, cats: ['manakish', 'bakery', 'breakfast', 'coffee', 'arabic'] },
+  { id: 'shw', name: 'Shawarma Express', cuisine: 'Shawarma · Fast food', rating: 4.3, reviews: '(410)', time: '15–20 min', fee: 5, min: 30, hours: '11:00 – 02:00', open: true, cats: ['shawarma', 'chicken', 'arabic'] },
+  { id: 'bur', name: 'Karmel Burger', cuisine: 'Burgers · American', rating: 4.5, reviews: '(980)', time: '30–40 min', fee: 9, min: 45, hours: '12:00 – 23:00', open: true, cats: ['burgers', 'chicken'] },
+];
+
+// Explore grid. Every tile resolves to at least one RESTS entry, so no category
+// is a dead end. `tint`/`ink` reuse the CRAVINGS palette and the accent ramps;
+// `icon` is a single stroked path so the tile markup stays one <path>.
+const CATEGORIES = [
+  { id: 'grills', label: 'Grills', tint: '#efd8cb', ink: 'var(--color-accent-700)', icon: 'M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z' },
+  { id: 'shawarma', label: 'Shawarma', tint: '#e8dccb', ink: 'var(--color-neutral-800)', icon: 'M12 2.2v19.6M7.8 6h8.4l-1.1 4.6H8.9L7.8 6ZM9.1 11.4h5.8l-1 4.4h-3.8l-1-4.4Z' },
+  { id: 'burgers', label: 'Burgers', tint: 'var(--color-accent-200)', ink: 'var(--color-accent-700)', icon: 'M3.4 11.2Q12 3.4 20.6 11.2M3 14h18M3.6 16.8Q12 21.6 20.4 16.8' },
+  { id: 'chicken', label: 'Chicken', tint: '#f4e2c6', ink: 'var(--color-accent-700)', icon: 'M4 20 20 4M6.9 15a2.1 2.1 0 1 0 4.2 0 2.1 2.1 0 1 0-4.2 0M10.9 11a2.1 2.1 0 1 0 4.2 0 2.1 2.1 0 1 0-4.2 0M14.9 7a2.1 2.1 0 1 0 4.2 0 2.1 2.1 0 1 0-4.2 0' },
+  { id: 'manakish', label: 'Manakish', tint: '#e4e8d6', ink: 'var(--color-accent-2-800)', icon: 'M3.8 12a8.2 8.2 0 1 0 16.4 0 8.2 8.2 0 1 0-16.4 0M9.4 9.4h.01M14.2 8.8h.01M11.6 13.4h.01M8.6 14.8h.01M15 13.6h.01' },
+  { id: 'bakery', label: 'Bakery', tint: '#eee5d0', ink: 'var(--color-neutral-800)', icon: 'M3.8 11.4Q12 4 20.2 11.4L20.2 15.4a3 3 0 0 1-3 3H6.8a3 3 0 0 1-3-3ZM8.6 11.8 7.6 18.2M12.6 11.8 11.6 18.2M16.6 11.8 15.6 18.2' },
+  { id: 'breakfast', label: 'Breakfast', tint: 'var(--color-accent-2-200)', ink: 'var(--color-accent-2-800)', icon: 'M12.6 4.4c3.4-.6 6.4 1.8 6.4 4.9 0 1.6-.8 2.7-.6 4.1.3 2.1-1 4.2-3.2 5-2.6.9-5.6.1-7.4-1.6-1.9-1.8-2.6-4.8-1.6-7.3 1-2.5 3.5-4.5 6.4-5.1ZM9.4 13.2a2.6 2.6 0 1 0 5.2 0 2.6 2.6 0 1 0-5.2 0' },
+  { id: 'hummus', label: 'Hummus', tint: '#eee5d0', ink: 'var(--color-neutral-800)', icon: 'M3.4 12.6h17.2a8.6 8.6 0 0 1-17.2 0ZM9.4 9.2c0-1.1.9-1.6.9-2.7M12.4 9.2c0-1.4 1-2 1-3.4M15.4 9.2c0-1.1.9-1.6.9-2.7' },
+  { id: 'healthy', label: 'Healthy', tint: '#e4e8d6', ink: 'var(--color-accent-2-800)', icon: 'M11 20.4A7 7 0 0 1 9.8 6.5C15.4 5.4 17 4.9 19 2.4c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10ZM2.4 21.4c0-3 1.9-5.4 3-7a12.9 12.9 0 0 1 3-8' },
+  { id: 'desserts', label: 'Desserts', tint: '#f4e2c6', ink: 'var(--color-accent-700)', icon: 'M7.6 10.4h8.8L12 20.4 7.6 10.4ZM8 10.4Q12 3.4 16 10.4' },
+  { id: 'coffee', label: 'Coffee', tint: '#e8dccb', ink: 'var(--color-neutral-800)', icon: 'M4.4 8.6h11.2v5.6a5.6 5.6 0 0 1-11.2 0V8.6ZM15.6 9.8h1.8a2.6 2.6 0 0 1 0 5.2h-1.8M3.4 20.6h13.2' },
+  { id: 'arabic', label: 'Arabic', tint: 'var(--color-accent-200)', ink: 'var(--color-accent-700)', icon: 'M4.4 20.6v-9a7.6 7.6 0 0 1 15.2 0v9M3 20.6h18M12 11.6v9' },
+];
+
+// One menu per kitchen, keyed by the RESTS id. Item ids are prefixed with that
+// key so they stay unique across the whole catalogue — `quickAdd`, the cart and
+// the shared-element flight all address items by bare id. `Popular` reuses the
+// same ids as the section the dish really lives in, so a quick-add stepper on a
+// Popular card and on the Grills card stay in sync, which is what you want.
+// `out: true` marks a dish the kitchen has run out of.
+const MENUS = {
+  abu: [
+    { cat: 'Popular', items: [
+      { id: 'abu-mix', name: 'Mixed grill platter', desc: 'Lamb, chicken and kebab over saffron rice with grilled tomato.', price: 72, best: true },
+      { id: 'abu-taouk', name: 'Shish taouk', desc: 'Marinated chicken skewers, garlic sauce, warm pita.', price: 58, best: true },
+      { id: 'abu-wrap', name: 'Shawarma wrap', desc: 'Slow-roasted chicken, pickles, tahini, saj bread.', price: 32, best: true },
+      { id: 'abu-hummus', name: 'Hummus with pine nuts', desc: 'Whipped chickpeas, olive oil, warm bread.', price: 18, best: true },
+    ] },
+    { cat: 'Grills', items: [
+      { id: 'abu-kebab', name: 'Lamb kebab plate', desc: 'Two skewers, bulgur, charred pepper.', price: 68 },
+      { id: 'abu-kofta', name: 'Kofta kebab', desc: 'Minced lamb and parsley grilled over coals.', price: 62 },
+      { id: 'abu-chops', name: 'Lamb chops', desc: 'Four chops, sumac onion, grilled tomato.', price: 96 },
+      { id: 'abu-shish', name: 'Beef shish kebab', desc: 'Cubed sirloin, onion and green pepper.', price: 74 },
+      { id: 'abu-wings', name: 'Grilled chicken wings', desc: 'Eight wings, garlic and lemon.', price: 44 },
+      { id: 'abu-half', name: 'Half grilled chicken', desc: 'Spiced and flattened, served with toum.', price: 56 },
+      { id: 'abu-quail', name: 'Grilled quail', desc: 'Two birds, pomegranate glaze.', price: 78, out: true },
+      { id: 'abu-liver', name: 'Lamb liver skewers', desc: 'Quick-grilled, lemon and chilli.', price: 52 },
+    ] },
+    { cat: 'Shawarma', items: [
+      { id: 'abu-shwc', name: 'Chicken shawarma plate', desc: 'Off the spit with rice, pickles and tahini.', price: 54 },
+      { id: 'abu-shwm', name: 'Lamb shawarma plate', desc: 'Fatty and crisp at the edges, sumac onion.', price: 64 },
+      { id: 'abu-shwl', name: 'Shawarma laffa', desc: 'Large wrap, hummus, fries inside.', price: 42 },
+      { id: 'abu-shwb', name: 'Shawarma bowl', desc: 'No bread — rice, salad, extra tahini.', price: 46 },
+      { id: 'abu-shwf', name: 'Shawarma family tray', desc: 'Feeds three to four, bread on the side.', price: 148, was: 168 },
+    ] },
+    { cat: 'Sandwiches', items: [
+      { id: 'abu-falafel', name: 'Falafel sandwich', desc: 'Fried to order, salad and tahini in pita.', price: 22 },
+      { id: 'abu-taoukw', name: 'Taouk sandwich', desc: 'Chicken, garlic toum, pickled cucumber.', price: 28 },
+      { id: 'abu-kebabw', name: 'Kebab sandwich', desc: 'One skewer, tomato, parsley, saj bread.', price: 34 },
+      { id: 'abu-sujuk', name: 'Sujuk sandwich', desc: 'Spiced sausage, tomato, hot pepper paste.', price: 30 },
+      { id: 'abu-batata', name: 'Batata harra sandwich', desc: 'Chilli potato, coriander, garlic.', price: 20 },
+    ] },
+    { cat: 'Mezze', items: [
+      { id: 'abu-msabbaha', name: 'Msabbaha', desc: 'Warm whole chickpeas, cumin, olive oil.', price: 24 },
+      { id: 'abu-mutabal', name: 'Mutabal', desc: 'Smoked aubergine, tahini, pomegranate.', price: 22 },
+      { id: 'abu-labneh', name: 'Labneh with zaatar', desc: 'Strained yoghurt, olive oil, wild thyme.', price: 20 },
+      { id: 'abu-warak', name: 'Warak enab', desc: 'Six vine leaves rolled with rice and lemon.', price: 26 },
+      { id: 'abu-kibbeh', name: 'Kibbeh (4 pieces)', desc: 'Bulgur shells filled with spiced lamb.', price: 32 },
+      { id: 'abu-rakakat', name: 'Cheese rakakat', desc: 'Six crisp rolls, akkawi cheese.', price: 28 },
+      { id: 'abu-foul', name: 'Foul moudammas', desc: 'Slow-cooked fava beans, lemon, cumin.', price: 20, out: true },
+    ] },
+    { cat: 'Salads', items: [
+      { id: 'abu-tabbouleh', name: 'Tabbouleh', desc: 'Parsley, bulgur, tomato, plenty of lemon.', price: 24 },
+      { id: 'abu-fattoush', name: 'Fattoush', desc: 'Sumac dressing, fried bread, radish.', price: 26 },
+      { id: 'abu-rocket', name: 'Rocket and halloumi', desc: 'Grilled halloumi, walnut, honey.', price: 34 },
+      { id: 'abu-arab', name: 'Arabic salad', desc: 'Fine-chopped cucumber and tomato.', price: 18 },
+    ] },
+    { cat: 'Sides', items: [
+      { id: 'abu-fries', name: 'Sumac fries', desc: 'Hand-cut, sumac salt, garlic aioli.', price: 14 },
+      { id: 'abu-rice', name: 'Saffron rice', desc: 'With toasted vermicelli and almond.', price: 12 },
+      { id: 'abu-bread', name: 'Saj bread basket', desc: 'Four rounds, baked to order.', price: 8 },
+      { id: 'abu-pickles', name: 'House pickles', desc: 'Turnip, cucumber, chilli.', price: 10 },
+      { id: 'abu-toum', name: 'Extra toum', desc: 'Garlic sauce, the serious kind.', price: 6 },
+    ] },
+    { cat: 'Drinks', items: [
+      { id: 'abu-lemon', name: 'Lemon and mint', desc: 'Blended fresh, lightly sweet.', price: 16 },
+      { id: 'abu-ayran', name: 'Ayran', desc: 'Salted yoghurt drink, served very cold.', price: 12 },
+      { id: 'abu-tamar', name: 'Tamarind juice', desc: 'House-brewed, not too sweet.', price: 14 },
+      { id: 'abu-cola', name: 'Cola', desc: '330 ml can.', price: 9 },
+      { id: 'abu-water', name: 'Still water', desc: '500 ml bottle.', price: 6 },
+    ] },
+    { cat: 'Sweets', items: [
+      { id: 'abu-kunafa', name: 'Kunafa naameh', desc: 'Cheese kunafa in fine semolina with rose syrup.', price: 38, was: 45 },
+      { id: 'abu-bakl', name: 'Baklava box', desc: 'Six pieces, pistachio and walnut.', price: 26 },
+      { id: 'abu-rice-pud', name: 'Rice pudding', desc: 'Orange blossom, crushed pistachio.', price: 18 },
+      { id: 'abu-halawet', name: 'Halawet el jibn', desc: 'Sweet cheese rolls, ashta, syrup.', price: 32 },
+    ] },
+  ],
+  hum: [
+    { cat: 'Popular', items: [
+      { id: 'hum-msabbaha', name: 'Msabbaha', desc: 'Warm chickpeas, tahini, cumin, olive oil.', price: 28, best: true },
+      { id: 'hum-full', name: 'Hummus full', desc: 'Hummus topped with warm fava beans.', price: 30, best: true },
+      { id: 'hum-shakshuka', name: 'Shakshuka', desc: 'Two eggs in spiced tomato, bread to mop.', price: 38, best: true },
+    ] },
+    { cat: 'Hummus bowls', items: [
+      { id: 'hum-plain', name: 'Hummus plain', desc: 'Whipped smooth, generous olive oil.', price: 24 },
+      { id: 'hum-pine', name: 'Hummus with pine nuts', desc: 'Toasted in butter, poured over.', price: 32 },
+      { id: 'hum-meat', name: 'Hummus with lamb', desc: 'Minced lamb, almond, parsley.', price: 44 },
+      { id: 'hum-mushroom', name: 'Hummus with mushroom', desc: 'Garlic mushrooms, olive oil.', price: 34 },
+      { id: 'hum-beetroot', name: 'Beetroot hummus', desc: 'Earthy and bright pink, walnut on top.', price: 30 },
+    ] },
+    { cat: 'Breakfast', items: [
+      { id: 'hum-mezze', name: 'Breakfast mezze for two', desc: 'Nine small plates, bread, tea.', price: 96, best: true },
+      { id: 'hum-labneh', name: 'Labneh plate', desc: 'Strained yoghurt, zaatar, cucumber.', price: 26 },
+      { id: 'hum-zaatar', name: 'Zaatar and olive oil', desc: 'Wild thyme, oil, warm bread.', price: 18 },
+      { id: 'hum-jibneh', name: 'White cheese plate', desc: 'Nabulsi and akkawi, mint, tomato.', price: 30 },
+      { id: 'hum-manakish', name: 'Zaatar manakish', desc: 'Baked to order on the saj.', price: 16 },
+    ] },
+    { cat: 'Eggs', items: [
+      { id: 'hum-fried', name: 'Fried eggs with sujuk', desc: 'Two eggs, spiced sausage, bread.', price: 34 },
+      { id: 'hum-omelette', name: 'Herb omelette', desc: 'Parsley, mint, spring onion.', price: 30 },
+      { id: 'hum-boiled', name: 'Soft boiled eggs', desc: 'Two eggs, dukkah, olive oil.', price: 22 },
+    ] },
+    { cat: 'Salads', items: [
+      { id: 'hum-arab', name: 'Arabic salad', desc: 'Fine-chopped, lemon and oil only.', price: 20 },
+      { id: 'hum-fattoush', name: 'Fattoush', desc: 'Sumac, fried bread, purslane.', price: 26 },
+      { id: 'hum-tabbouleh', name: 'Tabbouleh', desc: 'Mostly parsley, as it should be.', price: 24 },
+    ] },
+    { cat: 'Sides', items: [
+      { id: 'hum-falafel', name: 'Falafel (6 pieces)', desc: 'Fried to order, tahini on the side.', price: 20 },
+      { id: 'hum-batata', name: 'Batata harra', desc: 'Chilli potato, coriander, garlic.', price: 22 },
+      { id: 'hum-pickles', name: 'Pickles and olives', desc: 'House-cured, small plate.', price: 12 },
+      { id: 'hum-bread', name: 'Taboon bread', desc: 'Two rounds from the oven.', price: 8 },
+    ] },
+    { cat: 'Drinks', items: [
+      { id: 'hum-tea', name: 'Mint tea', desc: 'Pot for one, fresh mint.', price: 12 },
+      { id: 'hum-coffee', name: 'Arabic coffee', desc: 'Cardamom, served in a finjan.', price: 14 },
+      { id: 'hum-orange', name: 'Fresh orange juice', desc: 'Squeezed when you order.', price: 18 },
+      { id: 'hum-ayran', name: 'Ayran', desc: 'Salted yoghurt drink.', price: 12 },
+    ] },
+  ],
+  kun: [
+    { cat: 'Popular', items: [
+      { id: 'kun-nabulsi', name: 'Kunafa Nabulsi', desc: 'Shredded pastry, akkawi cheese, hot syrup.', price: 42, best: true },
+      { id: 'kun-kunafa', name: 'Kunafa naameh', desc: 'Fine semolina crust, cheese pull, rose syrup.', price: 38, best: true },
+      { id: 'kun-bakl', name: 'Baklava box', desc: 'Twelve pieces, pistachio and walnut.', price: 48, best: true },
+    ] },
+    { cat: 'Kunafa', items: [
+      { id: 'kun-khishneh', name: 'Kunafa khishneh', desc: 'Coarse crust, extra crunch.', price: 40 },
+      { id: 'kun-choco', name: 'Chocolate kunafa', desc: 'Cheese base, dark chocolate, hazelnut.', price: 46 },
+      { id: 'kun-mafroukeh', name: 'Mafroukeh', desc: 'Semolina, ashta cream, pistachio.', price: 44 },
+      { id: 'kun-tray', name: 'Kunafa tray (1 kg)', desc: 'Whole tray, syrup poured at the shop.', price: 160, was: 180 },
+      { id: 'kun-mini', name: 'Mini kunafa (6)', desc: 'Single-bite portions, good for sharing.', price: 36 },
+    ] },
+    { cat: 'Baklava', items: [
+      { id: 'kun-pist', name: 'Pistachio baklava', desc: 'Sold by weight, 250 g box.', price: 52 },
+      { id: 'kun-walnut', name: 'Walnut baklava', desc: 'Darker syrup, less sweet.', price: 44 },
+      { id: 'kun-birdnest', name: "Bird's nest", desc: 'Coiled pastry, whole pistachio centre.', price: 46 },
+      { id: 'kun-borma', name: 'Borma', desc: 'Rolled, cut, packed with pistachio.', price: 54 },
+    ] },
+    { cat: 'Ashta and cream', items: [
+      { id: 'kun-halawet', name: 'Halawet el jibn', desc: 'Sweet cheese rolls, ashta, syrup.', price: 36 },
+      { id: 'kun-osmalieh', name: 'Osmalieh', desc: 'Crisp kunafa threads around ashta.', price: 40 },
+      { id: 'kun-layali', name: 'Layali Lubnan', desc: 'Semolina pudding, cream, banana.', price: 32 },
+      { id: 'kun-katayef', name: 'Katayef', desc: 'Folded pancakes, walnut, fried.', price: 34, out: true },
+    ] },
+    { cat: 'Ice cream', items: [
+      { id: 'kun-booza', name: 'Booza arabiyeh', desc: 'Stretchy mastic ice cream, pistachio.', price: 28 },
+      { id: 'kun-scoop', name: 'Two scoops', desc: 'Pick from six flavours.', price: 22 },
+      { id: 'kun-sundae', name: 'Kunafa sundae', desc: 'Warm kunafa under cold booza.', price: 38 },
+    ] },
+    { cat: 'Coffee', items: [
+      { id: 'kun-arabic', name: 'Arabic coffee', desc: 'Cardamom-heavy, small cup.', price: 12 },
+      { id: 'kun-turkish', name: 'Turkish coffee', desc: 'Medium sweet unless you say otherwise.', price: 14 },
+      { id: 'kun-tea', name: 'Mint tea', desc: 'Pot for one.', price: 12 },
+    ] },
+  ],
+  saj: [
+    { cat: 'Popular', items: [
+      { id: 'saj-zaatar', name: 'Zaatar manakish', desc: 'Wild thyme and olive oil on hot saj.', price: 16, best: true },
+      { id: 'saj-cheese', name: 'Cheese manakish', desc: 'Akkawi, stretchy and salty.', price: 22, best: true },
+      { id: 'saj-lahm', name: 'Lahm bi ajin', desc: 'Minced lamb, pine nut, pomegranate.', price: 28, best: true },
+    ] },
+    { cat: 'Manakish', items: [
+      { id: 'saj-half', name: 'Half and half', desc: 'Zaatar one side, cheese the other.', price: 24 },
+      { id: 'saj-sujuk', name: 'Sujuk manakish', desc: 'Spiced sausage and cheese.', price: 28 },
+      { id: 'saj-labneh', name: 'Labneh manakish', desc: 'Strained yoghurt, cucumber, mint.', price: 22 },
+      { id: 'saj-spinach', name: 'Spinach fatayer', desc: 'Three triangles, lemon and onion.', price: 20 },
+      { id: 'saj-kishk', name: 'Kishk manakish', desc: 'Fermented yoghurt and bulgur.', price: 24, out: true },
+    ] },
+    { cat: 'Saj wraps', items: [
+      { id: 'saj-halloumi', name: 'Halloumi saj wrap', desc: 'Grilled halloumi, tomato, mint.', price: 32 },
+      { id: 'saj-taouk', name: 'Taouk saj wrap', desc: 'Chicken, toum, pickles.', price: 34 },
+      { id: 'saj-falafel', name: 'Falafel saj wrap', desc: 'Falafel, salad, tahini.', price: 26 },
+      { id: 'saj-veg', name: 'Roasted vegetable wrap', desc: 'Aubergine, pepper, labneh.', price: 28 },
+    ] },
+    { cat: 'Pastries', items: [
+      { id: 'saj-sfiha', name: 'Sfiha (4 pieces)', desc: 'Open lamb pies from Baalbek.', price: 30 },
+      { id: 'saj-cheese-roll', name: 'Cheese rolls (6)', desc: 'Crisp and hot from the fryer.', price: 26 },
+      { id: 'saj-kaak', name: 'Kaak with sesame', desc: 'Ring bread, good with cheese.', price: 12 },
+      { id: 'saj-croissant', name: 'Zaatar croissant', desc: 'Butter dough, thyme swirl.', price: 14 },
+    ] },
+    { cat: 'Breakfast', items: [
+      { id: 'saj-tray', name: 'Saj breakfast tray', desc: 'Two manakish, labneh, olives, tea.', price: 52 },
+      { id: 'saj-eggs', name: 'Eggs on saj', desc: 'Two eggs baked onto the bread.', price: 26 },
+      { id: 'saj-olives', name: 'Olives and cheese plate', desc: 'Nabulsi, green olives, tomato.', price: 24 },
+    ] },
+    { cat: 'Drinks', items: [
+      { id: 'saj-tea', name: 'Black tea', desc: 'Glass, sugar on the side.', price: 8 },
+      { id: 'saj-coffee', name: 'Arabic coffee', desc: 'Cardamom, small cup.', price: 12 },
+      { id: 'saj-lemon', name: 'Lemon and mint', desc: 'Blended fresh.', price: 16 },
+      { id: 'saj-water', name: 'Still water', desc: '500 ml bottle.', price: 6 },
+    ] },
+  ],
+  shw: [
+    { cat: 'Popular', items: [
+      { id: 'shw-wrap', name: 'Chicken shawarma wrap', desc: 'Straight off the spit, pickles and tahini.', price: 32, best: true },
+      { id: 'shw-laffa', name: 'Shawarma laffa', desc: 'Large wrap with hummus and fries inside.', price: 42, best: true },
+      { id: 'shw-plate', name: 'Shawarma plate', desc: 'Rice, salad, two sauces.', price: 52, best: true },
+    ] },
+    { cat: 'Shawarma', items: [
+      { id: 'shw-lamb', name: 'Lamb shawarma wrap', desc: 'Crisp edges, sumac onion.', price: 38 },
+      { id: 'shw-mixed', name: 'Mixed shawarma wrap', desc: 'Chicken and lamb together.', price: 40 },
+      { id: 'shw-bowl', name: 'Shawarma bowl', desc: 'No bread, extra salad.', price: 44 },
+      { id: 'shw-family', name: 'Family shawarma tray', desc: 'Feeds four, bread on the side.', price: 138, was: 156 },
+    ] },
+    { cat: 'Plates', items: [
+      { id: 'shw-taouk', name: 'Taouk plate', desc: 'Chicken skewers, rice, toum.', price: 54 },
+      { id: 'shw-kebab', name: 'Kebab plate', desc: 'Two skewers, bulgur, salad.', price: 58 },
+      { id: 'shw-falafel', name: 'Falafel plate', desc: 'Eight pieces, hummus, salad.', price: 38 },
+    ] },
+    { cat: 'Sides', items: [
+      { id: 'shw-fries', name: 'Fries', desc: 'Salted, ketchup on request.', price: 14 },
+      { id: 'shw-loaded', name: 'Loaded fries', desc: 'Shawarma, tahini, pickles on top.', price: 28 },
+      { id: 'shw-hummus', name: 'Hummus', desc: 'Small bowl, warm bread.', price: 18 },
+      { id: 'shw-salad', name: 'Arabic salad', desc: 'Fine-chopped, lemon dressing.', price: 16 },
+      { id: 'shw-pickles', name: 'Pickles', desc: 'Turnip and cucumber.', price: 8 },
+    ] },
+    { cat: 'Drinks', items: [
+      { id: 'shw-cola', name: 'Cola', desc: '330 ml can.', price: 9 },
+      { id: 'shw-ayran', name: 'Ayran', desc: 'Salted yoghurt drink.', price: 12 },
+      { id: 'shw-lemon', name: 'Lemonade', desc: 'Fresh, with mint.', price: 14 },
+      { id: 'shw-water', name: 'Still water', desc: '500 ml bottle.', price: 6 },
+    ] },
+  ],
+  bur: [
+    { cat: 'Popular', items: [
+      { id: 'bur-karmel', name: 'Karmel double', desc: 'Two patties, cheddar, house pickles, secret sauce.', price: 62, best: true },
+      { id: 'bur-classic', name: 'Classic cheeseburger', desc: '180 g patty, cheddar, onion, tomato.', price: 48, best: true },
+      { id: 'bur-crispy', name: 'Crispy chicken burger', desc: 'Buttermilk chicken, slaw, chipotle mayo.', price: 52, best: true },
+    ] },
+    { cat: 'Burgers', items: [
+      { id: 'bur-smash', name: 'Smash burger', desc: 'Thin and crisp, American cheese.', price: 44 },
+      { id: 'bur-mushroom', name: 'Mushroom swiss', desc: 'Garlic mushrooms, swiss, thyme.', price: 56 },
+      { id: 'bur-bbq', name: 'BBQ bacon burger', desc: 'Beef bacon, onion ring, bbq sauce.', price: 58 },
+      { id: 'bur-blue', name: 'Blue cheese burger', desc: 'Blue cheese, caramelised onion.', price: 58, out: true },
+      { id: 'bur-veg', name: 'Halloumi burger', desc: 'Grilled halloumi, aubergine, zaatar mayo.', price: 46 },
+      { id: 'bur-lamb', name: 'Lamb kofta burger', desc: 'Spiced lamb patty, tahini, sumac onion.', price: 54 },
+    ] },
+    { cat: 'Chicken', items: [
+      { id: 'bur-tenders', name: 'Chicken tenders (5)', desc: 'Buttermilk crust, two dips.', price: 42 },
+      { id: 'bur-wings', name: 'Buffalo wings (8)', desc: 'Hot sauce, blue cheese dip.', price: 44 },
+      { id: 'bur-grilled', name: 'Grilled chicken burger', desc: 'Marinated breast, lettuce, garlic mayo.', price: 48 },
+    ] },
+    { cat: 'Sides', items: [
+      { id: 'bur-fries', name: 'Fries', desc: 'Skin-on, sea salt.', price: 16 },
+      { id: 'bur-sweet', name: 'Sweet potato fries', desc: 'Paprika salt, aioli.', price: 22 },
+      { id: 'bur-rings', name: 'Onion rings (6)', desc: 'Beer batter, thick cut.', price: 20 },
+      { id: 'bur-slaw', name: 'House slaw', desc: 'Cabbage, apple, light dressing.', price: 14 },
+      { id: 'bur-salad', name: 'Green salad', desc: 'Leaves, cucumber, lemon dressing.', price: 18 },
+    ] },
+    { cat: 'Shakes', items: [
+      { id: 'bur-vanilla', name: 'Vanilla shake', desc: 'Thick, real ice cream.', price: 24 },
+      { id: 'bur-choco', name: 'Chocolate shake', desc: 'Dark chocolate, sea salt.', price: 26 },
+      { id: 'bur-halva', name: 'Halva shake', desc: 'Tahini and halva, very rich.', price: 28 },
+    ] },
+    { cat: 'Drinks', items: [
+      { id: 'bur-cola', name: 'Cola', desc: '330 ml can.', price: 9 },
+      { id: 'bur-lemon', name: 'Lemonade', desc: 'Fresh, with mint.', price: 14 },
+      { id: 'bur-beer', name: 'Craft lager', desc: 'Local, 330 ml. ID on delivery.', price: 26 },
+      { id: 'bur-water', name: 'Still water', desc: '500 ml bottle.', price: 6 },
+    ] },
+  ],
+};
+
+// Every kitchen has a menu, so this never falls through to a stand-in.
+const menuFor = id => MENUS[id] || MENUS[RESTS[0].id];
+const allMenuItems = () => {
+  const out = [];
+  Object.keys(MENUS).forEach(rid => MENUS[rid].forEach(sec => sec.items.forEach(i => {
+    // `Popular` repeats ids from the real section, so keep the first hit only.
+    if (!out.some(x => x.id === i.id)) out.push({ ...i, cat: sec.cat, rest: rid });
+  })));
+  return out;
+};
+
+const CRAVINGS = [
+  { id: 'kunafa', label: 'Kunafa', bg: '#f4e2c6', fg: '#3d2a12', sub: 'rgba(61,42,18,.6)', head: 'Kunafa, still warm', dishes: [
+    { name: 'Kunafa Nabulsi', byline: 'Kunafa House · 15–25 min · ★ 4.6', price: '₪42', hot: true },
+    { name: 'Kunafa naameh', byline: 'Abu Kamel Grill · 25–35 min · ★ 4.8', price: '₪38' },
+  ] },
+  { id: 'shawarma', label: 'Shawarma', bg: '#e8dccb', fg: '#2b2418', sub: 'rgba(43,36,24,.6)', head: 'Off the spit right now', dishes: [
+    { name: 'Chicken shawarma wrap', byline: 'Abu Kamel Grill · 25–35 min · ★ 4.8', price: '₪32', hot: true },
+    { name: 'Shawarma plate', byline: 'Shawarma Express · 15–20 min · ★ 4.3', price: '₪49' },
+  ] },
+  { id: 'burger', label: 'Burger', bg: '#efd8cb', fg: '#3a2118', sub: 'rgba(58,33,24,.6)', head: 'Smashed and stacked', dishes: [
+    { name: 'Karmel smash burger', byline: 'Karmel Burger · 30–40 min · ★ 4.5', price: '₪54' },
+    { name: 'Double cheese', byline: 'Karmel Burger · 30–40 min · ★ 4.5', price: '₪62' },
+  ] },
+  { id: 'saj', label: 'Manakish', bg: '#e4e8d6', fg: 'var(--color-accent-2-900)', sub: 'rgba(39,46,27,.6)', head: 'Straight off the saj', dishes: [
+    { name: 'Zaatar manakish', byline: 'Saj & Co · 20–30 min · ★ 4.7', price: '₪16', hot: true },
+    { name: 'Cheese and zaatar', byline: 'Saj & Co · 20–30 min · ★ 4.7', price: '₪22' },
+  ] },
+  { id: 'hummus', label: 'Hummus', bg: '#eee5d0', fg: 'var(--color-neutral-900)', sub: 'rgba(46,43,37,.6)', head: 'Breakfast all day', dishes: [
+    { name: 'Hummus msabbaha', byline: 'Hummus Al-Balad · 20–30 min · ★ 4.9', price: '₪28' },
+    { name: 'Hummus with lamb', byline: 'Hummus Al-Balad · 20–30 min · ★ 4.9', price: '₪44' },
+  ] },
+];
+
+const STORIES = [
+  // `item` now points at a dish that actually exists in that kitchen's menu —
+  // Saj and Al-Balad both used to open Abu Kamel's hummus.
+  { id: 'st-abu', name: 'Abu Kamel', ph: 'grill', live: true, when: '12 min ago', caption: 'Fresh shawarma coming off the grill — the 4pm batch is the good one.', cta: 'View shawarma wrap', price: '₪32', item: 'abu-wrap' },
+  { id: 'st-kun', name: 'Kunafa House', ph: 'kunafa', live: false, when: '40 min ago', caption: 'Tonight we are pouring extra syrup. Say less.', cta: 'View kunafa naameh', price: '₪38', item: 'kun-kunafa' },
+  { id: 'st-saj', name: 'Saj & Co', ph: 'saj', live: true, when: '1 h ago', caption: 'Dough went on at six. Zaatar is next.', cta: 'View zaatar manakish', price: '₪16', item: 'saj-zaatar' },
+  { id: 'st-hum', name: 'Al-Balad', ph: 'hummus', live: false, when: '2 h ago', caption: 'The chickpeas have been soaking since last night.', cta: 'View hummus msabbaha', price: '₪28', item: 'hum-msabbaha' },
+];
+
+// Prototype-only Reels feed. Isolated from STORIES and from any production
+// API — there is no Reel model/table yet. `item` is optional and is the
+// future "attached dish" association; it is not a currently-supported backend
+// field. Shape is what a later GET /reels payload can drop in.
+const REELS = [
+  {
+    id: 'reel-abu-spit',
+    restaurant: { id: 'abu', name: 'Abu Kamel Grill', logo: 'AK' },
+    media: { type: 'video', src: null, thumbnail: null, ph: 'video 9:16', placeholder: 'repeating-linear-gradient(135deg,#efd8cb 0 8px,var(--placeholder-b) 8px 16px)' },
+    title: 'Off the spit, still steaming',
+    item: { id: 'abu-wrap', name: 'Shawarma wrap', image: null, price: 32 },
+  },
+  {
+    id: 'reel-kun-syrup',
+    restaurant: { id: 'kun', name: 'Kunafa House', logo: 'KH' },
+    media: { type: 'video', src: null, thumbnail: null, ph: 'video 9:16', placeholder: 'repeating-linear-gradient(145deg,#f4e2c6 0 8px,#ead3b0 8px 16px)' },
+    title: 'Syrup hitting the naameh',
+    item: { id: 'kun-kunafa', name: 'Kunafa naameh', image: null, price: 38 },
+  },
+  {
+    id: 'reel-saj-dough',
+    restaurant: { id: 'saj', name: 'Saj & Co', logo: 'S&' },
+    media: { type: 'video', src: null, thumbnail: null, ph: 'video 9:16', placeholder: 'repeating-linear-gradient(125deg,#eee5d0 0 8px,#e0d4bc 8px 16px)' },
+    title: 'Dough on the saj at six',
+    item: { id: 'saj-zaatar', name: 'Zaatar manakish', image: null, price: 16 },
+  },
+  {
+    id: 'reel-hum-chickpeas',
+    restaurant: { id: 'hum', name: 'Hummus Al-Balad', logo: 'HB' },
+    media: { type: 'video', src: null, thumbnail: null, ph: 'video 9:16', placeholder: 'repeating-linear-gradient(140deg,var(--placeholder-a) 0 8px,var(--placeholder-b) 8px 16px)' },
+    title: 'Chickpeas from last night',
+    item: { id: 'hum-msabbaha', name: 'Msabbaha', image: null, price: 28 },
+  },
+  {
+    id: 'reel-shw-late',
+    restaurant: { id: 'shw', name: 'Shawarma Express', logo: 'SE' },
+    media: { type: 'video', src: null, thumbnail: null, ph: 'video 9:16', placeholder: 'repeating-linear-gradient(130deg,#e8dccb 0 8px,#d9cbb6 8px 16px)' },
+    title: 'Late plate, extra tahini',
+    item: { id: 'shw-plate', name: 'Shawarma plate', image: null, price: 52 },
+  },
+  {
+    id: 'reel-bur-smash',
+    restaurant: { id: 'bur', name: 'Karmel Burger', logo: 'KB' },
+    media: { type: 'video', src: null, thumbnail: null, ph: 'video 9:16', placeholder: 'repeating-linear-gradient(148deg,#efd8cb 0 8px,#e8cfc0 8px 16px)' },
+    title: 'Smash coming off the iron',
+    item: null,
+  },
+];
+
+const GROUPS = [
+  { key: 'size', title: 'Choose a size', kind: 'one', opts: [{ id: 'reg', name: 'Regular', d: 0 }, { id: 'lg', name: 'Large', d: 12 }] },
+  { key: 'bread', title: 'Bread', kind: 'one', opts: [{ id: 'pita', name: 'Warm pita', d: 0 }, { id: 'saj', name: 'Saj wrap', d: 3 }, { id: 'none', name: 'No bread', d: 0 }] },
+  { key: 'extras', title: 'Add extras', kind: 'many', max: 2, opts: [{ id: 'garlic', name: 'Extra garlic sauce', d: 4 }, { id: 'pickles', name: 'House pickles', d: 3 }, { id: 'sfries', name: 'Side of sumac fries', d: 9 }, { id: 'meat', name: 'Extra meat', d: 14 }] },
+];
+
+const STEPS = ['Order received', 'Restaurant confirmed', 'Preparing your food', 'Ready for pickup', 'On the way', 'Delivered'];
+const STEP_SUB = [
+  'Kaman has your order and is telling the kitchen.',
+  'Abu Kamel Grill accepted and started the clock.',
+  'The grill is on. This usually takes 12 minutes.',
+  'Packed and waiting for a courier.',
+  'Sami is two stops away from you.',
+  'Enjoy. Rate your order when you have a minute.',
+];
+
+const PAYS = [
+  { id: 'cash', tag: '₪', label: 'Cash on delivery', sub: 'Pay the courier when it arrives' },
+  { id: 'visa', tag: 'VISA', label: 'Visa ·· 4417', sub: 'Expires 06/28' },
+  { id: 'apple', tag: 'Pay', label: 'Apple Pay', sub: 'Confirm with Face ID' },
+];
+
+const STATE_CARDS = [
+  { glyph: '◎', title: 'No restaurants nearby', body: 'Kaman looked 6 km out and found nothing open. We will hold your address and tell you when a kitchen turns its lights on.', cta: 'Notify me', alt: 'Change address', bg: 'var(--surface-elevated)', iconBg: 'var(--color-neutral-200)', iconFg: 'var(--color-neutral-700)', motion: 'radar sweep once on entry, then still · no loop' },
+  { glyph: '⌀', title: 'Restaurant closed', body: 'Abu Kamel opens at 11:00. You can build the order now and we will send it the minute they open.', cta: 'Schedule for 11:00', alt: 'Browse open places', bg: 'var(--color-neutral-200)', iconBg: 'var(--surface-elevated)', iconFg: 'var(--color-neutral-700)', motion: 'menu dims to 55% over 200ms; CTA swaps with a cross-fade' },
+  { glyph: '×', title: 'Mixed grill just sold out', body: 'The kitchen marked it unavailable while you were deciding. The rest of your cart is untouched.', cta: 'See two close matches', bg: 'var(--danger-bg)', iconBg: 'var(--surface-elevated)', iconFg: 'var(--danger)', motion: 'row collapses its height over 240ms, replacement rows slide up' },
+  { glyph: '↺', title: 'No orders yet', body: 'When you order, this becomes your reorder shelf — one tap puts the same basket back together.', cta: 'Find something to eat', bg: 'var(--surface-elevated)', iconBg: 'var(--color-accent-200)', iconFg: 'var(--color-accent-700)', motion: 'empty shelf illustration parallaxes 8px with scroll' },
+  { glyph: '⚡', title: 'No connection', body: 'Showing the restaurants you saw last. Your cart is saved on this phone and will sync when you are back.', cta: 'Retry', bg: 'var(--surface)', iconBg: 'var(--surface-hover)', iconFg: 'var(--color-accent-400)', motion: 'amber dot pulses 1.2s; content desaturates 20%' },
+  { glyph: '!', title: 'Payment failed', body: 'Your bank declined the Visa ·· 4417. Nothing was charged and the order is still here — switch to cash and it goes straight through.', cta: 'Pay cash on delivery', alt: 'Try another card', bg: 'var(--danger-bg)', iconBg: 'var(--surface-elevated)', iconFg: 'var(--danger)', motion: 'CTA shakes 6px once (160ms) · heavy haptic · never a loop' },
+];
+
+const MOTION_TIERS = [
+  { name: 'Micro', ms: '120–200ms', use: 'Presses, chips, checkboxes, counters, badge reactions. Scale to 0.94–0.98, never translate.', flutter: 'AnimatedScale / AnimatedContainer' },
+  { name: 'Standard', ms: '220–350ms', use: 'Sheets, selection changes, list inserts and removals, skeleton cross-fades, sticky header collapse.', flutter: 'AnimatedSize, SliverAppBar, AnimatedSwitcher' },
+  { name: 'Expressive', ms: '380–600ms', use: 'Restaurant entry, item hero, story open and close, add-to-cart flight, order handover.', flutter: 'Hero + PageRouteBuilder, AnimationController' },
+];
+
+const MOTION_RULES = [
+  { title: 'One curve', body: 'cubic-bezier(.2,.8,.2,1) for everything that enters or grows; the mirror of it for anything leaving. Linear only for opacity.' },
+  { title: 'Shared elements carry identity', body: 'Whenever a tap opens something, the thing you tapped becomes the thing you land on: dish photo to hero, story thumbnail to full bleed. The flight owns the transition; the new screen only fades its text in behind it.' },
+  { title: 'Scale, do not bounce', body: 'No overshoot above 1.12 and never on anything holding text. Food should look handled, not springy.' },
+  { title: 'Motion follows state', body: 'If nothing changed, nothing moves. No idle loops except two: live story rings and the steam on an in-progress order.' },
+  { title: 'Reduce-motion is a real path', body: 'With the OS flag on, every flight becomes a 120ms cross-fade and the collapse headers snap. Layouts are identical, so nothing else changes.' },
+];
+
+const SIGNATURES = [
+  { num: '01', name: 'Craving explorer', what: 'The Home discovery block is driven by a single horizontal row of cravings. Moving across Kunafa, Shawarma, Burger, Manakish and Hummus re-tints the whole block and restages the dishes beneath it with a 40ms stagger — the atmosphere follows the food, not the brand.', why: 'People open a delivery app wanting a dish, not a venue. This turns a search query into a swipe, and every position lands on real orderable food instead of a category page.', where: 'Home, and the same row is the header of Explore so the mental model is continuous.', backend: 'Needs dish-level tagging (craving → dish ids), per-dish photography, and a freshness/recency signal for the "just off the grill" marker.', status: 'Requires backend support — no code source is connected, so I could not confirm which of these fields already exist.' },
+  { num: '02', name: 'Add-to-cart flight', what: 'Tapping the CTA sends a small round crop of the dish photo along an arc to the cart bar, which rises, pops its badge and rolls its total to the new value. The item sheet dismisses behind the flight, so you land back in the menu already scrolled where you were. Whole thing is about 520ms.', why: 'It proves the tap landed without a modal or a spinner, keeps the menu position, and makes the hundredth order still feel physical. It also answers "what is in my bag" without a trip to the cart.', where: 'Item details, quick-add on menu rows, story-to-item, and reorder.', backend: 'None beyond current cart endpoints. Purely client-side.', status: 'Already supported — client-side only.' },
+  { num: '03', name: 'Order handover', what: 'Placing the order lifts the summary card out of the checkout, shrinks it, and lands it in the restaurant queue at the top of tracking, where a slow steam plume starts. The timeline builds downward from it. The card literally leaves your hands and arrives in the kitchen.', why: 'It replaces the dead "✓ Order placed" beat with the one thing customers actually want to know: someone else has it now. It sets the tracking screen up spatially, so the timeline reads as a continuation rather than a new page.', where: 'Checkout to tracking, and the reduced version on the Orders active card.', backend: 'Needs restaurant-accepted and preparing timestamps to drive real progress instead of a fake timer.', status: 'Requires backend support — confirm your order status webhook exposes per-stage timestamps.' },
+];
+
+const HAPTICS = [
+  { when: 'Item added to cart (flight lands)', kind: 'light impact' },
+  { when: 'Required option group completed', kind: 'selection click' },
+  { when: 'Extras maximum reached', kind: 'soft warning' },
+  { when: 'Order placed, handover starts', kind: 'medium impact' },
+  { when: 'Payment declined', kind: 'heavy impact' },
+  { when: 'Story group changes (not slide to slide)', kind: 'selection click' },
+];
+
+const NOTES = {
+  home: [
+    { l: '150px', t: '96px', tag: 'Scroll', body: 'The compact header sticks and fades its cream backdrop in; the Search pill stays pinned to the bottom.' },
+    { l: '20px', t: '218px', tag: 'Idle loop', body: 'Live rings rotate 8s linear. Tap expands the thumbnail to full bleed, 420ms.' },
+    { l: '120px', t: '470px', tag: 'Craving', body: 'Chip tap re-tints the block (420ms) and restages dishes with a 40ms stagger.' },
+  ],
+  restaurant: [
+    { l: '110px', t: '150px', tag: 'Collapse', body: 'Cover stays a short banner. Once identity scrolls away, a compact bar (back, name, search, cart) sits on the sticky rail.' },
+    { l: '30px', t: '330px', tag: 'Auto rail', body: 'Active chip follows the scrolled section; tapping a chip smooth-scrolls to it and keeps the chip in view.' },
+    { l: '120px', t: '620px', tag: 'Quick add', body: '+ morphs into a stepper for 3s, then settles back. Photo tap opens the item sheet.' },
+  ],
+  tracking: [
+    { l: '80px', t: '240px', tag: 'Handover', body: 'Order card arrives from checkout, settles, then the steam loop starts.' },
+    { l: '40px', t: '470px', tag: 'State change', body: 'Each stage fills its bar and dot over 300ms. Only the current dot pulses.' },
+  ],
+};
+
+class Component extends DCLogic {
+  state = {
+    screen: 'home', stack: [], rest: 'abu',
+    craving: 'shawarma', cravingSeq: 0,
+    scrollY: 0, itemScrollY: 0, activeCat: MENUS.abu[0].cat,
+    // Measured width of the scrolling pane — drives the menu grid column count.
+    frameW: 390,
+    // Restaurant-scoped menu search, separate from the Explore query.
+    menuSearch: false, menuQ: '',
+    story: null, storyIdx: 0, storyPaused: false,
+    // Phase 2 fullscreen viewer. Kept null in Phase 1 so Home chrome stays put.
+    reel: null,
+    item: null, sel: { size: 'reg', bread: 'pita' }, extras: [], qty: 1, qtySeq: 0, priceSeq: 0,
+    cart: [], displayTotal: 0, cartSeq: 0, quickAdd: {},
+    query: '', cat: CATEGORIES[0].id, payId: 'cash', step: 1, handover: false,
+    ghost: null, fly: null, toast: null,
+    theme: kmResolvedTheme(),
+  };
+
+  scrollRef = React.createRef();
+  itemScrollRef = React.createRef();
+  menuSearchRef = React.createRef();
+  stickyRef = React.createRef();
+  secRefs = {};
+  // Category chips, so the active one can be kept inside the rail's viewport.
+  chipRefs = {};
+  railRef = React.createRef();
+
+  componentDidMount() {
+    this.secRefs = this.secRefs || {};
+    kmApplyTheme(this.state.theme, false);
+    try {
+      this._themeMq = matchMedia('(prefers-color-scheme: dark)');
+      this._onThemeMq = () => {
+        if (kmStoredTheme()) return;
+        const next = kmSystemTheme();
+        kmApplyTheme(next, false);
+        if (next !== this.state.theme) this.setState({ theme: next });
+      };
+      if (this._themeMq.addEventListener) this._themeMq.addEventListener('change', this._onThemeMq);
+      else if (this._themeMq.addListener) this._themeMq.addListener(this._onThemeMq);
+    } catch (e) {}
+    // Measure the pane rather than the window: the prototype renders inside a
+    // phone frame, and on desktop the same pane is what actually widens.
+    const el = this.scrollRef.current;
+    if (el && typeof ResizeObserver !== 'undefined') {
+      this.ro = new ResizeObserver(es => {
+        const w = Math.round(es[0].contentRect.width);
+        if (w && w !== this.state.frameW) this.setState({ frameW: w });
+      });
+      this.ro.observe(el);
+    }
+  }
+
+  componentWillUnmount() {
+    ['t1', 't2', 't3', 't4', 't5'].forEach(k => clearTimeout(this[k]));
+    clearInterval(this.iv); clearInterval(this.tw);
+    clearTimeout(this.ta); clearTimeout(this.tr);
+    if (this.ro) this.ro.disconnect();
+    try {
+      if (this._themeMq && this._onThemeMq) {
+        if (this._themeMq.removeEventListener) this._themeMq.removeEventListener('change', this._onThemeMq);
+        else if (this._themeMq.removeListener) this._themeMq.removeListener(this._onThemeMq);
+      }
+    } catch (e) {}
+  }
+
+  componentDidUpdate() {
+    const s = this.state;
+    if (this._lastScreen !== s.screen) {
+      this._lastScreen = s.screen;
+      if (this.scrollRef.current) {
+        this.scrollRef.current.scrollTop = 0;
+        if (s.scrollY !== 0) this.setState({ scrollY: 0 });
+        if (s.screen === 'restaurant') { clearTimeout(this.ta); this.ta = setTimeout(this.syncActive, 60); }
+      }
+    }
+    if (!this._lastMenuSearch && s.menuSearch && this.menuSearchRef.current) {
+      try { this.menuSearchRef.current.focus(); } catch (e) {}
+    }
+    this._lastMenuSearch = !!s.menuSearch;
+    const target = this.total();
+    if (this._target !== target) { this._target = target; this.tween(this.state.displayTotal, target); }
+  }
+
+  tween = (from, to) => {
+    clearInterval(this.tw);
+    const t0 = Date.now(), dur = 300;
+    this.tw = setInterval(() => {
+      const p = Math.min(1, (Date.now() - t0) / dur);
+      const e = 1 - Math.pow(1 - p, 3);
+      this.setState({ displayTotal: from + (to - from) * e });
+      if (p >= 1) clearInterval(this.tw);
+    }, 16);
+  };
+
+  flash = msg => { clearTimeout(this.t1); this.setState({ toast: msg }); this.t1 = setTimeout(() => this.setState({ toast: null }), 2400); };
+
+  setTheme = mode => {
+    kmApplyTheme(mode, true);
+    if (mode !== this.state.theme) this.setState({ theme: mode });
+  };
+  setLightTheme = () => this.setTheme('light');
+  setDarkTheme = () => this.setTheme('dark');
+
+  go = (screen, patch) => this.setState(Object.assign({ screen, stack: [...this.state.stack, this.state.screen] }, patch || {}));
+  back = () => { const s = [...this.state.stack]; const prev = s.pop() || 'home'; this.setState({ screen: prev, stack: s }); };
+  // Root-level jump: clears the back stack. Used by the tracking close button
+  // and the prototype's screen-jump toolbar now that there is no tab bar.
+  root = screen => this.setState({ screen, stack: [] });
+
+  phoneRect = () => {
+    const el = this.scrollRef.current;
+    if (!el) return null;
+    const host = el.parentElement;
+    return host ? host.getBoundingClientRect() : null;
+  };
+
+  // shared-element flight: from a tapped [data-shared] node to a known target box
+  flight = (ev, to, radius) => {
+    const host = this.phoneRect();
+    const src = ev && ev.currentTarget ? (ev.currentTarget.matches('[data-shared]') ? ev.currentTarget : ev.currentTarget.querySelector('[data-shared]')) : null;
+    if (!host || !src) return;
+    const r = src.getBoundingClientRect();
+    const from = { l: r.left - host.left, t: r.top - host.top, w: r.width, h: r.height, radius: getComputedStyle(src).borderRadius };
+    this.setState({ ghost: { ...from, op: 1 } });
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      this.setState({ ghost: { l: to.l, t: to.t, w: to.w, h: to.h, radius: radius || '0px', op: 1 } });
+      clearTimeout(this.t2);
+      this.t2 = setTimeout(() => this.setState(s => ({ ghost: s.ghost ? { ...s.ghost, op: 0 } : null })), 300);
+      clearTimeout(this.t3);
+      this.t3 = setTimeout(() => this.setState({ ghost: null }), 520);
+    }));
+  };
+
+  openRestaurant = (id, ev) => {
+    this.flight(ev, { l: 0, t: 0, w: 390, h: HERO_H }, '0px');
+    // Each kitchen names its own first section, so seed the rail from the menu
+    // rather than assuming every restaurant has a "Popular".
+    this.go('restaurant', { activeCat: menuFor(id)[0].cat, rest: id, menuSearch: false, menuQ: '' });
+  };
+
+  openCategory = id => this.go('category', { cat: id });
+
+  openItem = (id, ev) => {
+    if (ev) this.flight(ev, { l: 0, t: 22, w: 390, h: 250 }, '30px 30px 0 0');
+    this.setState({ item: id, sel: { size: 'reg', bread: 'pita' }, extras: [], qty: 1, itemScrollY: 0 });
+  };
+  closeItem = () => this.setState({ item: null });
+
+  // Look in the open restaurant first, then fall back to the whole catalogue so
+  // a dish opened straight from Explore search still resolves.
+  findItem = id => {
+    let f = null;
+    menuFor(this.state.rest).forEach(c => c.items.forEach(i => { if (i.id === id) f = i; }));
+    if (!f) f = allMenuItems().find(i => i.id === id) || null;
+    return f || menuFor(this.state.rest)[0].items[0];
+  };
+
+  unit = () => {
+    const it = this.findItem(this.state.item);
+    let p = it.price;
+    GROUPS.forEach(g => {
+      if (g.kind === 'one') { const o = g.opts.find(o => o.id === this.state.sel[g.key]); if (o) p += o.d; }
+      else g.opts.forEach(o => { if (this.state.extras.includes(o.id)) p += o.d; });
+    });
+    return p;
+  };
+
+  subtotal = () => this.state.cart.reduce((s, c) => s + c.unit * c.qty, 0);
+  fee = () => (this.subtotal() >= 60 || this.subtotal() === 0 ? 0 : 9);
+  total = () => this.subtotal() + this.fee();
+
+  addToCart = ev => {
+    const it = this.findItem(this.state.item);
+    const labels = [];
+    GROUPS.forEach(g => {
+      if (g.kind === 'one') { const o = g.opts.find(o => o.id === this.state.sel[g.key]); if (o) labels.push(o.name); }
+      else g.opts.forEach(o => { if (this.state.extras.includes(o.id)) labels.push('+ ' + o.name); });
+    });
+    const host = this.phoneRect();
+    if (host && ev && ev.currentTarget) {
+      const r = ev.currentTarget.getBoundingClientRect();
+      this.setState({ fly: { l: r.left - host.left + r.width / 2 - 17, t: r.top - host.top, scale: 1 } });
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        this.setState({ fly: { l: 34, t: 844 - 152, scale: 0.45 } });
+        clearTimeout(this.t4);
+        this.t4 = setTimeout(() => this.setState(s => ({ fly: null, cartSeq: s.cartSeq + 1 })), 470);
+      }));
+    }
+    this.setState(s => ({
+      cart: [...s.cart, { key: Date.now(), name: it.name, unit: this.unit(), qty: s.qty, opts: labels.join(' · ') || 'No changes', seq: 0 }],
+      item: null,
+    }));
+    this.flash(it.name + ' added · light haptic');
+  };
+
+  quickAdd = (id, name, price) => {
+    this.setState(s => {
+      const q = { ...s.quickAdd };
+      q[id] = (q[id] || 0) + 1;
+      const cart = [...s.cart];
+      const at = cart.findIndex(c => c.qid === id);
+      if (at >= 0) cart[at] = { ...cart[at], qty: cart[at].qty + 1 };
+      else cart.push({ key: Date.now(), qid: id, name, unit: price, qty: 1, opts: 'Quick add · no changes' });
+      return { quickAdd: q, cart, cartSeq: s.cartSeq + 1 };
+    });
+    clearTimeout(this['qa' + id]);
+    this['qa' + id] = setTimeout(() => this.setState(s => { const q = { ...s.quickAdd }; delete q[id]; return { quickAdd: q }; }), 3000);
+  };
+
+  stepQuick = (id, dir) => this.setState(s => {
+    const cart = [...s.cart];
+    const at = cart.findIndex(c => c.qid === id);
+    const q = { ...s.quickAdd };
+    if (at < 0) return {};
+    const next = cart[at].qty + dir;
+    if (next <= 0) { cart.splice(at, 1); delete q[id]; } else { cart[at] = { ...cart[at], qty: next }; q[id] = next; }
+    return { cart, quickAdd: q, cartSeq: s.cartSeq + 1 };
+  });
+
+  // Active category = the last section whose top has crossed the anchor line,
+  // which sits just under the sticky rail. At the very bottom the final section
+  // wins outright, because a short last section can never reach the anchor.
+  railBottom = sc => {
+    const bar = this.stickyRef.current;
+    if (bar && bar.isConnected) return bar.getBoundingClientRect().bottom + 10;
+    return (sc ? sc.getBoundingClientRect().top : 0) + ANCHOR;
+  };
+
+  computeActive = sc => {
+    const menu = menuFor(this.state.rest);
+    if (!sc) return menu[0].cat;
+    if (sc.scrollHeight - sc.clientHeight - sc.scrollTop <= 4) return menu[menu.length - 1].cat;
+    const anchor = this.railBottom(sc);
+    let active = menu[0].cat;
+    menu.forEach(sec => {
+      const el = this.secRefs[sec.cat] || (sc && sc.querySelector('[data-km-cat="' + String(sec.cat).replace(/"/g, '') + '"]'));
+      if (el && el.isConnected && el.getBoundingClientRect().top <= anchor) active = sec.cat;
+    });
+    return active;
+  };
+
+  syncActive = () => {
+    const sc = this.scrollRef.current;
+    if (!sc) return;
+    const active = this.computeActive(sc);
+    if (active !== this.state.activeCat) this.setState({ activeCat: active });
+    else this.revealChip(active);
+  };
+
+  // Keep the highlighted chip inside the rail's visible strip. `nearest` means a
+  // chip already on screen is left alone, so the rail does not twitch on every
+  // scroll frame.
+  revealChip = cat => {
+    const rail = this.railRef.current;
+    const chip = (rail && rail.querySelector('[data-km-chip="' + String(cat).replace(/"/g, '') + '"]')) || this.chipRefs[cat];
+    if (!chip || !chip.isConnected || !rail) return;
+    const cr = chip.getBoundingClientRect();
+    const rr = rail.getBoundingClientRect();
+    if (cr.left < rr.left + 10) rail.scrollLeft += cr.left - rr.left - 18;
+    else if (cr.right > rr.right - 10) rail.scrollLeft += cr.right - rr.right + 18;
+  };
+
+  onScroll = e => {
+    const y = e.target.scrollTop;
+    if (this.state.screen !== 'restaurant' || this.state.menuSearch) {
+      // Home sticky has two bands (header ~40px, search ~48px). Fast scrolls
+      // can skip the first, so both thresholds must be able to trigger a render.
+      const band = n => (n > 48 ? 2 : n > 40 ? 1 : 0);
+      const was = band(this.state.scrollY), now = band(y);
+      if (was !== now || (this.state.screen === 'restaurant' && Math.abs(y - this.state.scrollY) > 24)) {
+        this.setState({ scrollY: y });
+      }
+      return;
+    }
+    const collapsedNow = y > 72, collapsedWas = this.state.scrollY > 72;
+    const patch = {};
+    if (collapsedNow !== collapsedWas) patch.scrollY = y;
+    if (!this._jumping) {
+      const active = this.computeActive(e.target);
+      if (active !== this.state.activeCat) patch.activeCat = active;
+    }
+    if (Object.keys(patch).length) {
+      this.setState(patch);
+      if (patch.activeCat) this.revealChip(patch.activeCat);
+    }
+  };
+  onItemScroll = e => this.setState({ itemScrollY: e.target.scrollTop });
+
+  jumpCat = cat => {
+    const sc = this.scrollRef.current;
+    const el = (sc && sc.querySelector('[data-km-cat="' + String(cat).replace(/"/g, '') + '"]')) || this.secRefs[cat];
+    this._jumping = cat;
+    let y = this.state.scrollY;
+    if (el && el.isConnected && sc) {
+      const top = el.getBoundingClientRect().top - sc.getBoundingClientRect().top + sc.scrollTop;
+      const bar = this.stickyRef.current;
+      const offset = (bar && bar.isConnected ? Math.max(bar.getBoundingClientRect().height, 96) : ANCHOR) + 10;
+      y = Math.max(0, top - offset);
+      sc.scrollTop = y;
+      sc.dispatchEvent(new Event('scroll'));
+    }
+    this.setState({ activeCat: cat, scrollY: y });
+    this.revealChip(cat);
+    clearTimeout(this.tr);
+    this.tr = setTimeout(() => {
+      this._jumping = null;
+      this.setState({ activeCat: cat });
+      this.revealChip(cat);
+    }, 400);
+  };
+
+  // Compact name/price rows: one column on phones, two from tablet width, more on desktop.
+  menuCols = () => {
+    const w = this.state.frameW;
+    return w < 560 ? 1 : w < 900 ? 2 : w < 1200 ? 3 : 4;
+  };
+
+  openMenuSearch = () => {
+    this.setState({ menuSearch: true, menuQ: '' });
+    const sc = this.scrollRef.current;
+    if (sc) sc.scrollTo({ top: 0 });
+  };
+  closeMenuSearch = () => {
+    this.setState(s => ({ menuSearch: false, menuQ: '', activeCat: menuFor(s.rest)[0].cat }));
+    const sc = this.scrollRef.current;
+    if (sc) sc.scrollTo({ top: 0 });
+    clearTimeout(this.ta);
+    this.ta = setTimeout(this.syncActive, 80);
+  };
+  clearMenuQ = () => this.setState({ menuQ: '' });
+
+  openStory = (i, ev) => {
+    this.flight(ev, { l: 0, t: 0, w: 390, h: 844 }, '0px');
+    this.setState({ story: i, storyIdx: 0, storyPaused: false });
+  };
+  closeStory = () => this.setState({ story: null });
+  storyNext = () => this.setState(s => (s.story === null ? {} : s.story >= STORIES.length - 1 && s.storyIdx >= 2 ? { story: null } : s.storyIdx >= 2 ? { story: s.story + 1, storyIdx: 0 } : { storyIdx: s.storyIdx + 1 }));
+  storyPrev = () => this.setState(s => (s.storyIdx > 0 ? { storyIdx: s.storyIdx - 1 } : s.story > 0 ? { story: s.story - 1, storyIdx: 0 } : {}));
+  holdStart = () => this.setState({ storyPaused: true });
+  holdEnd = () => this.setState({ storyPaused: false });
+  // STORIES ids are 'st-<restaurant id>', so the story lands on its own place.
+  storyToItem = () => { const st = STORIES[this.state.story]; this.setState({ story: null, screen: 'restaurant', stack: ['home'], rest: st.id.replace('st-', '') }); this.openItem(st.item, null); };
+
+  // Fullscreen Reels target. Phase 2: flight(ev, this.reelTarget(), '0px') then set reel.
+  reelTarget = () => {
+    const host = this.phoneRect();
+    if (!host) return { l: 0, t: 0, w: 390, h: 844 };
+    return { l: 0, t: 0, w: host.width, h: host.height };
+  };
+  openReel = (i, ev) => { this._pendingReel = i; };
+  openReelsAll = () => { this._pendingReel = 0; };
+
+  placeOrder = () => {
+    this.setState({ screen: 'tracking', stack: [], step: 0, handover: true });
+    clearTimeout(this.t5);
+    this.t5 = setTimeout(() => this.setState({ handover: false }), 60);
+    clearInterval(this.iv);
+    this.iv = setInterval(() => this.setState(s => (s.step >= 4 ? (clearInterval(this.iv), { step: s.step }) : { step: s.step + 1 })), 3400);
+  };
+
+  reorder = () => {
+    this.setState(s => ({
+      cart: [
+        { key: 1, name: 'Shawarma wrap', unit: 35, qty: 2, opts: 'Regular · Saj wrap · + House pickles' },
+        { key: 2, name: 'Fresh mint lemonade', unit: 12, qty: 1, opts: 'No changes' },
+      ],
+      screen: 'cart', stack: ['home'], cartSeq: s.cartSeq + 1,
+    }));
+    this.flash('Thursday order rebuilt · 3 items');
+  };
+
+  renderVals() {
+    const s = this.state, p = this.props;
+    const isRTL = (p.direction || 'LTR') === 'RTL';
+    const ios = (p.platform || 'iPhone') === 'iPhone';
+    const annotate = !!p.annotations;
+    const scr = s.screen;
+    // The restaurant screen shows whichever card was tapped, and each kitchen
+    // now carries its own menu, so search rows credit the real owner.
+    const r = RESTS.find(x => x.id === s.rest) || RESTS[0];
+    const menu = menuFor(r.id);
+    const y = s.scrollY;
+    const cravIdx = CRAVINGS.findIndex(c => c.id === s.craving);
+    const crav = CRAVINGS[cravIdx] || CRAVINGS[0];
+    const dark = s.theme === 'dark';
+    const mixTint = hex => dark ? 'color-mix(in srgb, ' + hex + ' 28%, var(--surface))' : hex;
+
+    const heroH = HERO_H;
+    const restCollapsed = !s.menuSearch && y > 72;
+    const iy = s.itemScrollY;
+    const itemHeroH = Math.max(88, 250 - iy);
+
+    const cartCount = s.cart.reduce((a, c) => a + c.qty, 0);
+    const showCartBar = cartCount > 0 && ['home', 'restaurant', 'explore', 'category', 'cart'].includes(scr) && !s.item && s.story === null && s.reel === null;
+    const showSearchPill = scr === 'home' && !s.item && s.story === null && s.reel === null;
+
+    const toCard = i => {
+      const qa = s.quickAdd[i.id];
+      const out = !!i.out;
+      return {
+        sid: 'menu-' + i.id, name: i.name, desc: i.desc, price: NIS(i.price), best: !!i.best,
+        was: i.was ? NIS(i.was) : '', wasShown: !!i.was,
+        out, cardOp: out ? '0.55' : '1',
+        open: ev => out ? this.flash(i.name + ' is unavailable') : this.openItem(i.id, ev),
+        quick: () => out ? this.flash(i.name + ' is unavailable') : this.quickAdd(i.id, i.name, i.price),
+        quickOn: !out && !!qa, quickOff: !out && !qa, qty: qa || 1,
+        inc: () => this.stepQuick(i.id, 1), dec: () => this.stepQuick(i.id, -1),
+      };
+    };
+    const mq = s.menuQ.trim().toLowerCase();
+    const menuHits = [];
+    if (s.menuSearch) {
+      const seen = {};
+      menu.forEach(sec => {
+        if (sec.cat === 'Popular') return;
+        sec.items.forEach(i => {
+          if (seen[i.id]) return;
+          if (!mq || (i.name + ' ' + (i.desc || '') + ' ' + sec.cat).toLowerCase().includes(mq)) {
+            seen[i.id] = true;
+            menuHits.push(toCard(i));
+          }
+        });
+      });
+    }
+
+    const cat = CATEGORIES.find(c => c.id === s.cat) || CATEGORIES[0];
+    const catRests = RESTS.filter(x => x.cats.includes(cat.id));
+
+    const q = s.query.trim().toLowerCase();
+    const hit = (...parts) => parts.join(' ').toLowerCase().includes(q);
+    const matchCats = q ? CATEGORIES.filter(c => hit(c.label, c.id)) : [];
+    const matchRests = q ? RESTS.filter(x => hit(x.name, x.cuisine, x.cats.join(' '))) : [];
+    const matchDishes = q ? allMenuItems().filter(i => hit(i.name, i.desc, i.cat)) : [];
+
+    const stagger = i => 'kmStagger 300ms ' + EASE + ' both ' + (i * 40) + 'ms';
+    const catRow = (c, i) => ({
+      ph: 'category', title: c.label, anim: stagger(i), tail: 'Browse',
+      sub: 'Category · ' + RESTS.filter(x => x.cats.includes(c.id)).length + ' places',
+      go: () => this.openCategory(c.id),
+    });
+    const restRow = (x, i) => ({
+      ph: 'photo', title: x.name, sub: x.cuisine + ' · ' + x.time, tail: '★ ' + x.rating.toFixed(1),
+      anim: stagger(i), go: ev => this.openRestaurant(x.id, ev),
+    });
+    // A dish row now knows which kitchen it came from, so the subtitle is true
+    // and tapping it opens that restaurant rather than always the first one.
+    const dishRow = (d, i) => {
+      const owner = RESTS.find(x => x.id === d.rest) || RESTS[0];
+      return {
+        ph: 'dish', title: d.name, sub: owner.name + ' · ' + d.cat, tail: NIS(d.price), anim: stagger(i),
+        go: () => {
+          this.setState({ screen: 'restaurant', stack: ['explore'], rest: owner.id, activeCat: menuFor(owner.id)[0].cat });
+          this.openItem(d.id, null);
+        },
+      };
+    };
+    const suggestions = q
+      ? matchCats.map(catRow)
+          .concat(matchRests.map((x, i) => restRow(x, matchCats.length + i)))
+          .concat(matchDishes.map((d, i) => dishRow(d, matchCats.length + matchRests.length + i)))
+          .slice(0, 10)
+      : crav.dishes.map((d, i) => ({
+          ph: 'dish', title: d.name, sub: d.byline, tail: d.price, anim: stagger(i),
+          go: () => { this.setState({ screen: 'restaurant', stack: ['explore'], rest: RESTS[0].id, activeCat: menuFor(RESTS[0].id)[0].cat }); this.openItem('abu-wrap', null); },
+        })).concat(RESTS.slice(0, 3).map((x, i) => restRow(x, i + 2)));
+
+    const priceRows = [
+      { label: 'Subtotal', value: NIS(this.subtotal()), color: 'var(--color-text)' },
+      { label: 'Delivery fee', value: this.fee() === 0 ? 'Free over ₪60' : NIS(this.fee()), color: this.fee() === 0 ? 'var(--color-accent-2-700)' : 'var(--color-text)' },
+    ];
+
+    const reqDone = GROUPS.filter(g => g.kind === 'one').every(g => !!s.sel[g.key]);
+    const groups = GROUPS.map(g => {
+      const many = g.kind === 'many';
+      const full = many && s.extras.length >= g.max;
+      const done = !many && !!s.sel[g.key];
+      return {
+        title: g.title,
+        badge: many ? (full ? 'Maximum reached' : 'Optional · up to ' + g.max) : done ? '✓ Selected' : 'Required · pick 1',
+        badgeBg: many ? (full ? 'var(--color-neutral-200)' : 'var(--color-neutral-200)') : done ? 'var(--color-accent-2-200)' : 'var(--color-accent-200)',
+        badgeFg: many ? 'var(--color-neutral-700)' : done ? 'var(--color-accent-2-800)' : 'var(--color-accent-700)',
+        badgeAnim: done ? 'kmPop 260ms ' + EASE : 'none',
+        opts: g.opts.map(o => {
+          const on = many ? s.extras.includes(o.id) : s.sel[g.key] === o.id;
+          const blocked = many && full && !on;
+          return {
+            name: o.name,
+            delta: many ? '+' + NIS(o.d) : o.d === 0 ? 'Included' : '+' + NIS(o.d),
+            on, opacity: blocked ? 0.42 : 1,
+            border: on ? 'var(--brand)' : 'var(--color-neutral-300)',
+            bg: on ? 'var(--brand-soft)' : 'var(--surface-elevated)',
+            markRadius: many ? '7px' : '999px',
+            markBg: on ? 'var(--color-accent)' : 'transparent',
+            markBorder: on ? 'var(--color-accent)' : 'var(--color-neutral-400)',
+            font: on ? "700 14.5px/1.2 var(--font-body)" : "600 14.5px/1.2 var(--font-body)",
+            deltaColor: on ? 'var(--color-accent-700)' : 'var(--color-neutral-700)',
+            pick: () => {
+              if (blocked) { this.flash('Up to ' + g.max + ' extras · soft haptic'); return; }
+              this.setState(st => {
+                if (!many) return { sel: { ...st.sel, [g.key]: o.id }, priceSeq: st.priceSeq + 1 };
+                const next = st.extras.includes(o.id) ? st.extras.filter(x => x !== o.id) : [...st.extras, o.id];
+                return { extras: next, priceSeq: st.priceSeq + 1 };
+              });
+            },
+          };
+        }),
+      };
+    });
+
+    const jumps = [
+      { key: 'home', label: 'Home' }, { key: 'explore', label: 'Explore' }, { key: 'restaurant', label: 'Restaurant' },
+      { key: 'cart', label: 'Cart' }, { key: 'checkout', label: 'Checkout' }, { key: 'tracking', label: 'Tracking' },
+      { key: 'states', label: 'States' }, { key: 'notes', label: 'Motion notes' },
+    ].map(j => ({
+      label: j.label, bg: scr === j.key ? 'var(--surface-strong)' : 'var(--surface-elevated)', fg: scr === j.key ? 'var(--text-on-media)' : 'var(--text-primary)',
+      go: () => this.setState({ screen: j.key, stack: [], item: null, story: null, reel: null, menuSearch: false, menuQ: '' }),
+    }));
+
+    const reelW = Math.max(136, Math.min(160, Math.round((s.frameW - 36 - 10 - 42) / 2)));
+
+    return {
+      dirVal: isRTL ? 'rtl' : 'ltr', isLTR: !isRTL, isRTL, annotate,
+      theme: s.theme,
+      statusH: 'env(safe-area-inset-top, 0px)',
+      statusFg: s.story !== null ? 'var(--text-on-media)' : 'var(--color-text)',
+      // No tab bar any more, so the only bottom furniture is the Search pill,
+      // the cart bar and the toast — pad for whichever is on screen.
+      bottomPad: 'calc(' + (showSearchPill ? (showCartBar ? '152px' : '86px') : showCartBar ? '96px' : scr === 'cart' || scr === 'checkout' ? '110px' : '40px') + ' + env(safe-area-inset-bottom, 0px))',
+      jumps,
+      scrollRef: this.scrollRef, onScroll: this.onScroll,
+      itemScrollRef: this.itemScrollRef, onItemScroll: this.onItemScroll,
+      back: this.back,
+
+      isHome: scr === 'home', isExplore: scr === 'explore', isCategory: scr === 'category', isRestaurant: scr === 'restaurant',
+      isCart: scr === 'cart', isCheckout: scr === 'checkout', isTracking: scr === 'tracking',
+      isStates: scr === 'states', isNotes: scr === 'notes',
+
+      // The header is a single compact sticky row now — no display title to
+      // collapse, so Account, Address, Orders and Notifications stay reachable
+      // at a fixed height while scrolling.
+      homeHeadClass: y > 40 ? 'km-head km-glass km-glass-stuck km-bar' : 'km-head',
+      searchStuckCls: y > 48 ? 'km-search-stuck km-glass-stuck' : '',
+      setLightTheme: this.setLightTheme, setDarkTheme: this.setDarkTheme,
+      themeLightBg: s.theme === 'light' ? 'var(--surface)' : 'transparent',
+      themeDarkBg: s.theme === 'dark' ? 'var(--surface-strong)' : 'transparent',
+      themeLightOp: s.theme === 'light' ? '1' : '.55',
+      themeDarkOp: s.theme === 'dark' ? '1' : '.55',
+      themeLightDot: s.theme === 'light' ? 'var(--brand)' : 'transparent',
+      themeDarkDot: s.theme === 'dark' ? 'var(--brand)' : 'transparent',
+      themeSwitchBottom: 'calc(' + ((s.item || s.story !== null) ? '90px' : showSearchPill ? (showCartBar ? '158px' : '92px') : showCartBar ? '96px' : '16px') + ' + env(safe-area-inset-bottom, 0px))',
+      openAddress: () => this.flash('Address picker · out of scope this pass'),
+      // Every destination the removed tab bar used to own now has its own
+      // control: Search is the floating pill, Orders is the bag in the header,
+      // account sits beside it, and Home is reached by Back/Close everywhere.
+      openProfile: () => this.flash('Account · out of scope this pass'),
+      openNotifications: () => this.flash('Notifications · out of scope this pass'),
+      openOrders: () => this.go('tracking'),
+
+      showSearchPill, searchPillBottom: showCartBar ? 'calc(90px + env(safe-area-inset-bottom, 0px))' : 'calc(24px + env(safe-area-inset-bottom, 0px))',
+      openSearch: () => this.go('explore', { query: '' }),
+      openAiChat: () => this.flash('Kaman AI · order together by chat · needs a screen'),
+      openReelsAll: this.openReelsAll,
+      reelW: reelW + 'px',
+      reelH: Math.round(reelW * 16 / 9) + 'px',
+      reels: REELS.map((rl, i) => ({
+        sid: rl.id,
+        logo: rl.restaurant.logo,
+        restName: rl.restaurant.name,
+        ph: rl.media.ph,
+        stripe: 'repeating-linear-gradient(' + (125 + i * 8) + 'deg,var(--placeholder-a) 0 8px,var(--placeholder-b) 8px 16px)',
+        title: rl.title,
+        hasItem: !!rl.item,
+        itemLabel: rl.item ? rl.item.name + ' · ' + NIS(rl.item.price) : '',
+        anim: 'kmStagger 320ms ' + EASE + ' both ' + (i * 40) + 'ms',
+        open: ev => this.openReel(i, ev),
+      })),
+
+      stories: STORIES.map((st, i) => ({
+        id: st.id, name: st.name, ph: st.ph, live: st.live,
+        ring: st.live ? 'conic-gradient(from 0deg,var(--color-accent),var(--color-accent-400),var(--color-accent-2),var(--color-accent))' : 'conic-gradient(from 0deg,var(--color-neutral-300),var(--color-neutral-400),var(--color-neutral-300))',
+        ringAnim: st.live ? 'kmRingSpin 8s linear infinite' : 'none',
+        open: ev => this.openStory(i, ev),
+      })),
+
+      atmosBg: mixTint(crav.bg), atmosFg: dark ? 'var(--text-primary)' : crav.fg, atmosSub: dark ? 'var(--text-muted)' : crav.sub,
+      cravingHead: crav.head, cravingCount: crav.dishes.length + ' places open',
+      cravings: CRAVINGS.map(c => {
+        const on = c.id === s.craving;
+        return {
+          label: c.label,
+          font: on ? "800 13.5px/1 var(--font-body)" : "600 13.5px/1 var(--font-body)",
+          bg: on ? 'var(--brand)' : 'var(--surface-hover)', fg: on ? 'var(--text-on-brand)' : 'var(--text-primary)',
+          bg2: on ? 'var(--brand)' : 'var(--surface-elevated)', fg2: on ? 'var(--text-on-brand)' : 'var(--text-primary)',
+          pick: () => this.setState(st => ({ craving: c.id, cravingSeq: st.cravingSeq + 1 })),
+        };
+      }),
+      cravingDishes: crav.dishes.map((d, i) => ({
+        sid: crav.id + '-' + i, name: d.name, byline: d.byline, price: d.price, hot: !!d.hot,
+        anim: 'kmStagger 340ms ' + EASE + ' both ' + (i * 60) + 'ms',
+        open: ev => this.openRestaurant('abu', ev),
+      })),
+
+      again: [
+        { sid: 'again-1', name: 'Shawarma wrap ×2 + lemonade', sub: 'Abu Kamel Grill · last Thursday', cta: '₪82', lift: 'none', reorder: this.reorder },
+      ],
+      // One restaurant-card list, shared by Home ("Places near you") and the
+      // category results screen, so both stay on the same component.
+      showRestList: scr === 'home' || scr === 'category',
+      // On the category screen the big screen title already labels the list.
+      showRestListHead: scr !== 'category', restListHead: 'Places near you',
+      restList: (scr === 'category' ? catRests : RESTS.slice(0, 4)).map((x, i) => ({
+        sid: 'near-' + x.id, name: x.name, cuisine: x.cuisine, rating: x.rating.toFixed(1),
+        meta: x.time + ' · ' + (x.fee === 0 ? 'Free delivery' : NIS(x.fee) + ' delivery'),
+        anim: scr === 'category' ? stagger(i) : 'none',
+        open: ev => this.openRestaurant(x.id, ev),
+      })),
+
+      catTitle: cat.label, catTint: mixTint(cat.tint), catInk: dark ? 'var(--text-primary)' : cat.ink, catIcon: cat.icon,
+      catCount: catRests.length + (catRests.length === 1 ? ' place nearby' : ' places nearby'),
+
+      query: s.query, onQuery: e => this.setState({ query: e.target.value }),
+      browseMode: !q,
+      categories: CATEGORIES.map((c, i) => ({
+        label: c.label, tint: mixTint(c.tint), ink: dark ? 'var(--text-primary)' : c.ink, icon: c.icon,
+        anim: 'kmStagger 320ms ' + EASE + ' both ' + (i * 26) + 'ms',
+        open: () => this.openCategory(c.id),
+      })),
+      suggestHead: q ? 'Results for "' + s.query + '"' : 'Because you keep ordering ' + crav.label.toLowerCase(),
+      suggestions, noResults: !!q && suggestions.length === 0,
+
+      rName: r.name, rCuisine: r.cuisine, rRating: r.rating.toFixed(1), rReviews: r.reviews, rTime: r.time,
+      rFee: r.fee === 0 ? 'Free delivery' : NIS(r.fee) + ' delivery',
+      rMin: 'Min ' + NIS(r.min),
+      rHours: r.open ? 'Open · ' + r.hours : 'Closed · ' + r.hours,
+      rOpenBg: r.open ? 'var(--color-accent-2-200)' : 'var(--color-neutral-200)',
+      rOpenFg: r.open ? 'var(--color-accent-2-800)' : 'var(--color-neutral-700)',
+      rLogo: r.name.split(' ').filter(Boolean).slice(0, 2).map(w => w[0]).join(''),
+      curFav: true, curNotFav: false, favCurrent: () => this.flash('Saved to favorites'),
+      heroH: heroH + 'px',
+      restCollapsed,
+      showHeadCart: restCollapsed && cartCount > 0,
+      browseMenu: !s.menuSearch, menuSearch: s.menuSearch,
+      menuQ: s.menuQ, menuQOn: !!s.menuQ,
+      onMenuQ: e => this.setState({ menuQ: e.target.value }),
+      openMenuSearch: this.openMenuSearch, closeMenuSearch: this.closeMenuSearch, clearMenuQ: this.clearMenuQ,
+      menuSearchRef: this.menuSearchRef, stickyRef: this.stickyRef, railRef: this.railRef,
+      menuColCount: String(this.menuCols()),
+      menuHits, menuHitsOn: s.menuSearch && menuHits.length > 0, menuHitsOff: s.menuSearch && menuHits.length === 0,
+      menuHitsLabel: mq ? menuHits.length + (menuHits.length === 1 ? ' match' : ' matches') : 'All dishes',
+      progressText: this.subtotal() >= 60 ? 'Free delivery unlocked' : 'You are ' + NIS(60 - Math.max(0, this.subtotal())) + ' from free delivery',
+      progressPct: Math.min(100, (this.subtotal() / 60) * 100) + '%',
+      menuCats: menu.map(c => {
+        const on = c.cat === s.activeCat;
+        return {
+          name: c.cat, on,
+          font: on ? "700 13px/1 var(--font-body)" : "600 13px/1 var(--font-body)",
+          bg: on ? 'var(--brand)' : 'var(--surface-elevated)', fg: on ? 'var(--text-on-brand)' : 'var(--text-primary)',
+          shadow: on ? '0 4px 14px var(--brand-glow)' : 'var(--shadow-sm)',
+          pick: () => this.jumpCat(c.cat),
+          chipRef: el => { if (el) this.chipRefs[c.cat] = el; else delete this.chipRefs[c.cat]; },
+        };
+      }),
+      menuSections: menu.map(sec => ({
+        cat: sec.cat, count: String(sec.items.length),
+        ref: el => { if (el) this.secRefs[sec.cat] = el; else delete this.secRefs[sec.cat]; },
+        items: sec.items.map(toCard),
+      })),
+
+      itemOpen: !!s.item, closeItem: this.closeItem,
+      itemName: this.findItem(s.item).name, itemDesc: this.findItem(s.item).desc, itemBase: NIS(this.findItem(s.item).price),
+      itemHeroH: itemHeroH + 'px', itemHeroLabelOp: iy > 120 ? 0 : 1,
+      itemBarBg: iy > 120 ? 'var(--bg-sticky)' : 'transparent',
+      itemBarOp: iy > 120 ? 1 : 0,
+      groups, qty: s.qty, qtyAnim: 'kmPop 220ms ' + EASE + ' ' + s.qtySeq,
+      incQty: () => this.setState(st => ({ qty: Math.min(20, st.qty + 1), qtySeq: st.qtySeq + 1 })),
+      decQty: () => this.setState(st => ({ qty: Math.max(1, st.qty - 1), qtySeq: st.qtySeq + 1 })),
+      addBg: reqDone ? 'var(--color-accent)' : 'var(--color-neutral-400)',
+      addLabel: reqDone ? 'Add to cart' : 'Choose a size and bread',
+      addHasPrice: reqDone, addPrice: NIS(this.unit() * s.qty),
+      addPriceAnim: 'kmPop 240ms ' + EASE + ' ' + s.priceSeq,
+      addToCart: ev => { if (!reqDone) { this.flash('Two required choices left'); return; } this.addToCart(ev); },
+
+      storyOpen: s.story !== null,
+      storyName: s.story !== null ? STORIES[s.story].name : '',
+      storyWhen: s.story !== null ? STORIES[s.story].when : '',
+      storyCaption: s.story !== null ? STORIES[s.story].caption : '',
+      storyCta: s.story !== null ? STORIES[s.story].cta : '',
+      storyCtaPrice: s.story !== null ? STORIES[s.story].price : '',
+      storyBars: [0, 1, 2].map(i => ({
+        w: i < s.storyIdx ? '100%' : i > s.storyIdx ? '0%' : undefined,
+        anim: i === s.storyIdx ? 'kmBar 5s linear forwards' : 'none',
+        play: s.storyPaused ? 'paused' : 'running',
+      })),
+      storyNext: this.storyNext, storyPrev: this.storyPrev, closeStory: this.closeStory,
+      holdStart: this.holdStart, holdEnd: this.holdEnd, storyToItem: this.storyToItem,
+
+      cart: s.cart.map((c, i) => ({
+        name: c.name, opts: c.opts, qty: c.qty, total: NIS(c.unit * c.qty),
+        qtyAnim: 'kmPop 200ms ' + EASE,
+        inc: () => this.setState(st => { const n = [...st.cart]; n[i] = { ...n[i], qty: n[i].qty + 1 }; return { cart: n }; }),
+        dec: () => this.setState(st => { const n = [...st.cart]; if (n[i].qty <= 1) n.splice(i, 1); else n[i] = { ...n[i], qty: n[i].qty - 1 }; return { cart: n }; }),
+        remove: () => { this.setState(st => ({ cart: st.cart.filter((_, j) => j !== i) })); this.flash(c.name + ' removed'); },
+      })),
+      cartEmpty: s.cart.length === 0, cartFull: s.cart.length > 0, reorderLast: this.reorder,
+      priceRows, totalText: NIS(this.total()),
+      goHome: () => this.root('home'),
+      placeOrder: this.placeOrder,
+      placeLabel: 'Place order · ' + (s.payId === 'cash' ? 'pay cash' : s.payId === 'visa' ? 'Visa ·· 4417' : 'Apple Pay'),
+      payments: PAYS.map(x => {
+        const on = x.id === s.payId;
+        return {
+          tag: x.tag, label: x.label, sub: x.sub, on,
+          border: on ? 'var(--color-accent)' : 'var(--color-neutral-300)', bg: on ? 'var(--color-accent-100)' : 'var(--surface-elevated)',
+          tagBg: on ? 'var(--color-accent)' : 'var(--color-neutral-200)', tagFg: on ? 'var(--text-on-brand)' : 'var(--color-neutral-700)',
+          dotBg: on ? 'var(--color-accent)' : 'transparent', dotBorder: on ? 'var(--color-accent)' : 'var(--color-neutral-400)',
+          pick: () => this.setState({ payId: x.id }),
+        };
+      }),
+
+      showCartBar, cartCount: String(cartCount),
+      cartBarLabel: scr === 'cart' ? 'Go to checkout' : 'View order · ' + cartCount + (cartCount === 1 ? ' item' : ' items'),
+      cartBarBottom: 'calc(24px + env(safe-area-inset-bottom, 0px))',
+      cartBarT: 'none',
+      cartBarAnim: 'kmPop 320ms ' + EASE + ' ' + s.cartSeq,
+      cartBadgeAnim: 'kmPop 280ms ' + EASE + ' ' + s.cartSeq,
+      cartTotalAnim: 'kmPop 240ms ' + EASE + ' ' + s.cartSeq,
+      cartBarAction: () => this.go(scr === 'cart' ? 'checkout' : 'cart'),
+
+      hasGhost: !!s.ghost,
+      ghostL: s.ghost ? s.ghost.l + 'px' : '0px', ghostT: s.ghost ? s.ghost.t + 'px' : '0px',
+      ghostW: s.ghost ? s.ghost.w + 'px' : '0px', ghostH: s.ghost ? s.ghost.h + 'px' : '0px',
+      ghostR: s.ghost ? s.ghost.radius : '0px', ghostOp: s.ghost ? s.ghost.op : 0,
+      hasFly: !!s.fly,
+      flyL: s.fly ? s.fly.l + 'px' : '0px', flyT: s.fly ? s.fly.t + 'px' : '0px', flyScale: s.fly ? s.fly.scale : 1,
+
+      hasToast: !!s.toast, toast: s.toast || '',
+      toastBottom: 'calc(' + (showSearchPill ? (showCartBar ? '152px' : '86px') : showCartBar ? '90px' : '24px') + ' + env(safe-area-inset-bottom, 0px))',
+
+      eta: ['19:40', '19:40', '19:45', '19:45', '19:52', 'Delivered'][s.step],
+      etaNote: s.step >= 5 ? '' : 'estimated arrival',
+      trackTitle: STEPS[s.step], trackSub: STEP_SUB[s.step],
+      handoverT: s.handover ? 'translateY(-220px) scale(.86)' : 'none',
+      nextStep: () => this.setState(st => ({ step: Math.min(5, st.step + 1) })),
+      trackBars: STEPS.map((_, i) => ({ color: i <= s.step ? (i === s.step ? 'var(--color-accent)' : 'var(--color-accent-2)') : 'var(--color-neutral-300)' })),
+      trackSteps: STEPS.map((name, i) => ({
+        name, time: i < s.step ? '19:' + (28 + i * 3) : i === s.step ? 'now' : '',
+        done: i < s.step, now: i === s.step,
+        dotBg: i < s.step ? 'var(--color-accent-2)' : i === s.step ? 'var(--color-accent)' : 'transparent',
+        dotBorder: i <= s.step ? 'transparent' : 'var(--color-neutral-300)',
+        dotAnim: i === s.step ? 'kmPulse 1.6s infinite' : 'none',
+        tail: i < STEPS.length - 1, tailColor: i < s.step ? 'var(--color-accent-2)' : 'var(--color-neutral-300)',
+        color: i > s.step ? 'var(--color-neutral-500)' : 'var(--color-text)',
+      })),
+
+      stateCards: STATE_CARDS.map(x => ({ ...x, hasAlt: !!x.alt, alt: x.alt || '' })),
+      motionTiers: MOTION_TIERS, motionRules: MOTION_RULES, haptics: HAPTICS,
+      signatures: SIGNATURES.map(x => ({
+        ...x,
+        statusBg: x.status.startsWith('Already') ? 'rgba(122,138,94,.28)' : 'rgba(198,113,57,.26)',
+        statusFg: x.status.startsWith('Already') ? 'var(--color-accent-2-300)' : 'var(--color-accent-300)',
+      })),
+      notes: (NOTES[scr] || []).map(n => ({ tag: n.tag, body: n.body, l: n.l, t: n.t })),
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#f5ead8"/><text x="50" y="66" font-family="Georgia,serif" font-size="42" fill="#201e1d" text-anchor="middle">K</text><rect x="62" y="24" width="9" height="9" fill="#c67139" transform="rotate(45 66.5 28.5)"/></svg></template>
+
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Figtree:wght@400;500;600;700;800&family=Heebo:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0;background:#e6dac4;font-family:"Figtree","Heebo",system-ui,sans-serif;-webkit-font-smoothing:antialiased;color:#201e1d}
+*{box-sizing:border-box}
+a{color:#8c491a;text-decoration:none}
+a:hover{color:#b2622d}
+button{font-family:inherit}
+input,textarea{font-family:inherit}
+::-webkit-scrollbar{width:0;height:0}
+@keyframes kmShimmer{0%{background-position:-180% 0}100%{background-position:180% 0}}
+@keyframes kmPulse{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes kmRise{from{transform:translateY(14px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes kmSheet{from{transform:translateY(40px)}to{transform:translateY(0)}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:36px 20px">
+<div dir="{{ dirVal }}" style="animation:kmRise .3s ease">
+<x-import component-from-global-scope="{{ frameName }}" from="./ios-frame.jsx ./android-frame.jsx" width="{{ fw }}" height="{{ fh }}" hint-size="402px,874px">
+
+<div style="min-height:100%;display:flex;flex-direction:column;background:#f5ead8;padding-top:{{ topPad }}">
+
+<sc-if value="{{ showHeader }}" hint-placeholder-val="{{ false }}">
+<div style="position:sticky;top:0;z-index:55;background:#f5ead8;display:flex;align-items:center;gap:10px;padding:10px 12px 12px;border-bottom:1px solid rgba(32,30,29,.08)">
+  <button onClick="{{ back }}" style="width:44px;height:44px;flex:none;border:0;border-radius:999px;background:#fff;box-shadow:0 1px 2px rgba(46,43,37,.14);display:grid;place-items:center;cursor:pointer" style-hover="background:#eee7db">
+    <sc-if value="{{ isLTR }}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#201e1d" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></sc-if>
+    <sc-if value="{{ isRTL }}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#201e1d" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></sc-if>
+  </button>
+  <div style="font:800 19px/1.2 'Figtree','Heebo';flex:1;min-width:0">{{ title }}</div>
+</div>
+</sc-if>
+
+<div style="flex:1">
+
+<sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}">
+<div style="padding:16px;display:flex;flex-direction:column;gap:14px">
+  <div style="height:46px;border-radius:999px;background:linear-gradient(90deg,#eee7db 25%,#f9f4ed 42%,#eee7db 60%);background-size:280% 100%;animation:kmShimmer 1.4s linear infinite"></div>
+  <div style="display:flex;gap:12px"><div style="width:68px;height:68px;border-radius:999px;background:#eee7db"></div><div style="width:68px;height:68px;border-radius:999px;background:#eee7db"></div><div style="width:68px;height:68px;border-radius:999px;background:#eee7db"></div><div style="width:68px;height:68px;border-radius:999px;background:#eee7db"></div></div>
+  <div style="height:120px;border-radius:24px;background:linear-gradient(90deg,#eee7db 25%,#f9f4ed 42%,#eee7db 60%);background-size:280% 100%;animation:kmShimmer 1.4s linear infinite"></div>
+  <div style="background:#fff;border-radius:28px;overflow:hidden">
+    <div style="height:150px;background:linear-gradient(90deg,#eee7db 25%,#f9f4ed 42%,#eee7db 60%);background-size:280% 100%;animation:kmShimmer 1.4s linear infinite"></div>
+    <div style="padding:16px;display:flex;flex-direction:column;gap:9px"><div style="height:15px;width:60%;border-radius:999px;background:#eee7db"></div><div style="height:11px;width:38%;border-radius:999px;background:#eee7db"></div><div style="height:11px;width:50%;border-radius:999px;background:#eee7db"></div></div>
+  </div>
+  <div style="background:#fff;border-radius:28px;overflow:hidden">
+    <div style="height:150px;background:#eee7db"></div>
+    <div style="padding:16px;display:flex;flex-direction:column;gap:9px"><div style="height:15px;width:52%;border-radius:999px;background:#eee7db"></div><div style="height:11px;width:44%;border-radius:999px;background:#eee7db"></div></div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isError }}" hint-placeholder-val="{{ false }}">
+<div style="padding:72px 28px;text-align:center">
+  <div style="width:80px;height:80px;margin:0 auto;border-radius:999px;background:#fbe6e3;display:grid;place-items:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#a8332a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5m0 3.5h.01"/><circle cx="12" cy="12" r="9"/></svg></div>
+  <div style="font:800 20px/1.3 'Figtree','Heebo';margin-top:20px">We couldn't reach Kaman</div>
+  <div style="font:400 14.5px/1.55 'Figtree','Heebo';color:#645c50;margin-top:10px;text-wrap:pretty">Check your connection and try again. Nothing in your cart was lost.</div>
+  <button onClick="{{ retry }}" style="height:50px;padding:0 28px;margin-top:22px;border:0;border-radius:999px;background:#201e1d;color:#f9f4ed;font:700 15px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:#474238">Try again</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div>
+  <div style="padding:12px 16px 4px;display:flex;align-items:center;gap:12px">
+    <button onClick="{{ openLocation }}" style="flex:1;min-width:0;border:0;background:transparent;padding:0;text-align:start;cursor:pointer;display:flex;align-items:center;gap:9px">
+      <div style="width:38px;height:38px;flex:none;border-radius:999px;background:#201e1d;display:grid;place-items:center;position:relative">
+        <span style="font-family:'Caprasimo','Heebo',serif;font-size:19px;color:#f9f4ed;line-height:1">K</span>
+        <span style="position:absolute;top:6px;right:6px;width:6px;height:6px;background:#c67139;transform:rotate(45deg)"></span>
+      </div>
+      <div style="min-width:0">
+        <div style="font:600 11px/1 'Figtree','Heebo';color:#82796a;letter-spacing:.06em;text-transform:uppercase">Deliver to</div>
+        <div style="display:flex;align-items:center;gap:5px;margin-top:4px">
+          <div style="font:800 14.5px/1.1 'Figtree','Heebo';white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ addressLabel }}</div>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#82796a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+      </div>
+    </button>
+    <button onClick="{{ openNotifications }}" style="width:44px;height:44px;flex:none;border:0;border-radius:999px;background:#fff;box-shadow:0 1px 2px rgba(46,43,37,.14);display:grid;place-items:center;cursor:pointer;position:relative" style-hover="background:#eee7db">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#201e1d" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 9a6 6 0 1 0-12 0c0 5-2 6-2 6h16s-2-1-2-6M10.5 20a2 2 0 0 0 3 0"/></svg>
+      <span style="position:absolute;top:8px;inset-inline-end:9px;width:9px;height:9px;border-radius:999px;background:#c67139;box-shadow:0 0 0 2px #fff"></span>
+    </button>
+  </div>
+
+  <div style="padding:14px 16px 0">
+    <button onClick="{{ goExplore }}" style="width:100%;height:54px;border:0;border-radius:999px;background:#fff;box-shadow:0 1px 2px rgba(46,43,37,.14);display:flex;align-items:center;gap:12px;padding:0 18px;cursor:pointer;text-align:start" style-hover="background:#f9f4ed">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#82796a" stroke-width="2.75" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <span style="font:500 15px/1 'Figtree','Heebo';color:#a19786">Search restaurants or dishes</span>
+    </button>
+  </div>
+
+  <div style="padding:18px 0 0;overflow-x:auto">
+    <div style="display:flex;gap:14px;padding:0 16px">
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+        <button onClick="{{ c.go }}" style="border:0;background:transparent;padding:0;cursor:pointer;flex:none;width:72px;text-align:center">
+          <div style="width:72px;height:72px;border-radius:999px;background:repeating-linear-gradient(135deg,#e8dcc6 0 7px,#dfd0b4 7px 14px);display:grid;place-items:center;font:500 8px/1.3 'JetBrains Mono',monospace;color:#82796a;box-shadow:0 1px 2px rgba(46,43,37,.12)">{{ c.ph }}</div>
+          <div style="font:600 12px/1.2 'Figtree','Heebo';margin-top:8px">{{ c.name }}</div>
+        </button>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="padding:22px 16px 0">
+    <div style="border-radius:28px;background:#201e1d;padding:24px 22px;position:relative;overflow:hidden">
+      <div style="position:absolute;inset-inline-end:-30px;top:-30px;width:150px;height:150px;border-radius:999px;background:#c67139;opacity:.9"></div>
+      <div style="position:absolute;inset-inline-end:34px;bottom:-46px;width:96px;height:96px;border-radius:999px;background:#7a8a5e;opacity:.55"></div>
+      <div style="position:relative;max-width:62%">
+        <div style="font:700 11px/1 'Figtree','Heebo';letter-spacing:.14em;text-transform:uppercase;color:#f6a06b">This week</div>
+        <div style="font-family:'Caprasimo','Heebo',serif;font-size:27px;line-height:1.1;color:#f9f4ed;margin-top:10px">Free delivery over ₪60</div>
+        <div style="font:500 13px/1.45 'Figtree','Heebo';color:#c0b6a5;margin-top:9px">At 40+ restaurants near you.</div>
+        <button onClick="{{ goExplore }}" style="height:42px;padding:0 20px;margin-top:16px;border:0;border-radius:999px;background:#f9f4ed;color:#201e1d;font:700 13.5px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:#fff">See them</button>
+      </div>
+      <div style="display:flex;gap:6px;margin-top:20px;position:relative">
+        <div style="width:22px;height:5px;border-radius:999px;background:#f9f4ed"></div>
+        <div style="width:5px;height:5px;border-radius:999px;background:rgba(249,244,237,.4)"></div>
+        <div style="width:5px;height:5px;border-radius:999px;background:rgba(249,244,237,.4)"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:30px 0 0">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;padding:0 16px 14px;gap:10px">
+      <div style="font:800 19px/1.2 'Figtree','Heebo'">Order again</div>
+      <button onClick="{{ goOrders }}" style="border:0;background:transparent;padding:0;font:700 13px/1 'Figtree','Heebo';color:#8c491a;cursor:pointer">All orders</button>
+    </div>
+    <div style="overflow-x:auto"><div style="display:flex;gap:12px;padding:0 16px">
+      <sc-for list="{{ again }}" as="a" hint-placeholder-count="2">
+        <div style="width:172px;flex:none;background:#fff;border-radius:24px;padding:12px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+          <div style="height:96px;border-radius:16px;background:repeating-linear-gradient(135deg,#e8dcc6 0 7px,#dfd0b4 7px 14px);display:grid;place-items:center;font:500 9px/1 'JetBrains Mono',monospace;color:#82796a">dish photo</div>
+          <div style="font:700 14px/1.3 'Figtree','Heebo';margin-top:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ a.name }}</div>
+          <div style="font:600 11.5px/1 'Figtree','Heebo';color:#82796a;margin-top:5px">{{ a.sub }}</div>
+          <button onClick="{{ a.reorder }}" style="width:100%;height:40px;margin-top:11px;border:0;border-radius:999px;background:#201e1d;color:#f9f4ed;font:700 13px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:#474238">{{ a.cta }}</button>
+        </div>
+      </sc-for>
+    </div></div>
+  </div>
+
+  <div style="padding:30px 0 0">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;padding:0 16px 14px;gap:10px">
+      <div style="font:800 19px/1.2 'Figtree','Heebo'">Popular near you</div>
+      <button onClick="{{ goExplore }}" style="border:0;background:transparent;padding:0;font:700 13px/1 'Figtree','Heebo';color:#8c491a;cursor:pointer">See all</button>
+    </div>
+    <div style="overflow-x:auto"><div style="display:flex;gap:12px;padding:0 16px">
+      <sc-for list="{{ popular }}" as="r" hint-placeholder-count="2">
+        <div style="width:250px;flex:none;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+          <button onClick="{{ r.open }}" style="display:block;width:100%;border:0;padding:0;background:transparent;cursor:pointer;text-align:start">
+            <div style="position:relative;height:138px;background:repeating-linear-gradient(135deg,#e8dcc6 0 9px,#dfd0b4 9px 18px);display:grid;place-items:center">
+              <span style="font:500 10px/1 'JetBrains Mono',monospace;color:#82796a">restaurant photo</span>
+              <sc-if value="{{ r.hasPromo }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;top:11px;inset-inline-start:11px;font:700 11px/1 'Figtree','Heebo';padding:7px 10px;border-radius:8px;background:#e1eecc;color:#3d472b">{{ r.promo }}</div></sc-if>
+            </div>
+            <div style="padding:14px 16px 16px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+                <div style="font:700 16px/1.25 'Figtree','Heebo';min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.name }}</div>
+                <div style="display:flex;align-items:center;gap:3px;flex:none"><svg width="13" height="13" viewBox="0 0 24 24" fill="#c67139"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9Z"/></svg><span style="font:800 13px/1 'Figtree','Heebo'">{{ r.rating }}</span></div>
+              </div>
+              <div style="font:600 12px/1 'Figtree','Heebo';color:#82796a;margin-top:7px">{{ r.cuisine }}</div>
+              <div style="font:600 12px/1 'Figtree','Heebo';color:#474238;margin-top:9px">{{ r.meta }}</div>
+            </div>
+          </button>
+        </div>
+      </sc-for>
+    </div></div>
+  </div>
+
+  <div style="padding:30px 16px 24px">
+    <div style="font:800 19px/1.2 'Figtree','Heebo';margin-bottom:14px">Recommended for you</div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ recommended }}" as="r" hint-placeholder-count="3">
+        <div style="background:#fff;border-radius:24px;padding:12px;display:flex;gap:14px;align-items:center;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+          <button onClick="{{ r.open }}" style="flex:1;min-width:0;display:flex;gap:14px;align-items:center;border:0;background:transparent;padding:0;cursor:pointer;text-align:start">
+            <div style="width:82px;height:82px;flex:none;border-radius:18px;background:repeating-linear-gradient(135deg,#e8dcc6 0 7px,#dfd0b4 7px 14px);display:grid;place-items:center;font:500 9px/1 'JetBrains Mono',monospace;color:#82796a">photo</div>
+            <div style="min-width:0;flex:1">
+              <div style="display:flex;align-items:center;gap:7px">
+                <div style="font:700 15.5px/1.25 'Figtree','Heebo';min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.name }}</div>
+                <div style="display:flex;align-items:center;gap:3px;flex:none"><svg width="12" height="12" viewBox="0 0 24 24" fill="#c67139"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9Z"/></svg><span style="font:800 12.5px/1 'Figtree','Heebo'">{{ r.rating }}</span></div>
+              </div>
+              <div style="font:600 11.5px/1 'Figtree','Heebo';color:#82796a;margin-top:6px">{{ r.cuisine }}</div>
+              <div style="font:600 12px/1 'Figtree','Heebo';color:#474238;margin-top:7px">{{ r.meta }}</div>
+              <sc-if value="{{ r.hasPromo }}" hint-placeholder-val="{{ false }}"><div style="display:inline-block;font:700 10.5px/1 'Figtree','Heebo';padding:6px 9px;border-radius:7px;background:#ffe1d0;color:#8c491a;margin-top:8px">{{ r.promo }}</div></sc-if>
+            </div>
+          </button>
+          <button onClick="{{ r.fav }}" style="width:40px;height:40px;flex:none;border:0;border-radius:999px;background:#f5ead8;display:grid;place-items:center;cursor:pointer" style-hover="background:#eee7db">
+            <sc-if value="{{ r.isFav }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="#c67139" stroke="#c67139" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></sc-if>
+            <sc-if value="{{ r.notFav }}" hint-placeholder-val="{{ true }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#474238" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></sc-if>
+          </button>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isExplore }}" hint-placeholder-val="{{ false }}">
+<div>
+  <div style="position:sticky;top:0;z-index:50;background:#f5ead8;padding:12px 16px 12px">
+    <div style="display:flex;gap:10px;align-items:center">
+      <div style="flex:1;min-width:0;height:54px;border-radius:999px;background:#fff;box-shadow:0 1px 2px rgba(46,43,37,.14);display:flex;align-items:center;gap:11px;padding:0 18px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#82796a" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input value="{{ query }}" onChange="{{ onQuery }}" placeholder="Search restaurants or dishes" style="flex:1;min-width:0;border:0;outline:none;background:transparent;font:500 15px/1 'Figtree','Heebo';color:#201e1d" />
+        <sc-if value="{{ hasQuery }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ clearQuery }}" style="width:26px;height:26px;flex:none;border:0;border-radius:999px;background:#eee7db;display:grid;place-items:center;cursor:pointer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#645c50" stroke-width="3.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        </sc-if>
+      </div>
+      <button onClick="{{ openFilters }}" style="width:54px;height:54px;flex:none;border:0;border-radius:999px;background:#201e1d;display:grid;place-items:center;cursor:pointer;position:relative" style-hover="background:#474238">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#f9f4ed" stroke-width="2.75" stroke-linecap="round"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+        <sc-if value="{{ hasFilters }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:6px;inset-inline-end:7px;min-width:17px;height:17px;border-radius:999px;background:#c67139;color:#fff;font:800 10px/17px 'Figtree','Heebo';text-align:center;padding:0 3px">{{ filterCount }}</span></sc-if>
+      </button>
+    </div>
+  </div>
+
+  <sc-if value="{{ exploreIdle }}" hint-placeholder-val="{{ true }}">
+  <div style="padding:6px 0 24px">
+    <div style="padding:0 16px 12px;font:800 17px/1.2 'Figtree','Heebo'">Browse by cuisine</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px">
+      <sc-for list="{{ cuisineTiles }}" as="c" hint-placeholder-count="6">
+        <button onClick="{{ c.go }}" style="border:0;padding:0;cursor:pointer;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(46,43,37,.14);text-align:start">
+          <div style="height:80px;background:repeating-linear-gradient(135deg,#e8dcc6 0 7px,#dfd0b4 7px 14px);display:grid;place-items:center;font:500 9px/1 'JetBrains Mono',monospace;color:#82796a">{{ c.ph }}</div>
+          <div style="padding:11px 14px;font:700 14px/1.2 'Figtree','Heebo'">{{ c.name }}</div>
+        </button>
+      </sc-for>
+    </div>
+    <div style="padding:26px 16px 0;font:800 17px/1.2 'Figtree','Heebo'">Recent searches</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;padding:14px 16px 0">
+      <sc-for list="{{ recents }}" as="s" hint-placeholder-count="4">
+        <button onClick="{{ s.go }}" style="border:0;cursor:pointer;font:600 13.5px/1 'Figtree','Heebo';padding:11px 16px;border-radius:999px;background:#fff;color:#474238;box-shadow:0 1px 2px rgba(46,43,37,.14)" style-hover="background:#f9f4ed">{{ s.q }}</button>
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ exploreResults }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:2px 0 24px">
+    <sc-if value="{{ hasFilters }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;gap:8px;overflow-x:auto;padding:0 16px 14px">
+      <sc-for list="{{ activeFilters }}" as="f" hint-placeholder-count="2">
+        <div style="flex:none;display:flex;align-items:center;gap:7px;font:700 12.5px/1 'Figtree','Heebo';padding:10px 12px;border-radius:999px;background:#201e1d;color:#f9f4ed">
+          <span>{{ f.label }}</span>
+          <button onClick="{{ f.clear }}" style="border:0;background:transparent;padding:0;cursor:pointer;display:grid;place-items:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#c0b6a5" stroke-width="3.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        </div>
+      </sc-for>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:60px 28px;text-align:center">
+      <div style="width:84px;height:84px;margin:0 auto;border-radius:999px;background:#eee7db;display:grid;place-items:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c0b6a5" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+      <div style="font:800 18px/1.3 'Figtree','Heebo';margin-top:20px">Nothing matched "{{ query }}"</div>
+      <div style="font:400 14px/1.55 'Figtree','Heebo';color:#645c50;margin-top:9px;text-wrap:pretty">Try a shorter word, or clear your filters to widen the search.</div>
+      <button onClick="{{ clearAll }}" style="height:46px;padding:0 24px;margin-top:20px;border:0;border-radius:999px;background:#201e1d;color:#f9f4ed;font:700 14.5px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:#474238">Clear search and filters</button>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ hasDishHits }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:0 16px 8px;display:flex;align-items:baseline;gap:9px">
+      <div style="font:800 17px/1.2 'Figtree','Heebo'">Dishes</div>
+      <div style="font:600 12.5px/1 'Figtree','Heebo';color:#82796a">{{ dishCount }}</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;padding:6px 16px 26px">
+      <sc-for list="{{ dishHits }}" as="d" hint-placeholder-count="2">
+        <div style="background:#fff;border-radius:24px;padding:12px;display:flex;gap:14px;align-items:center;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+          <div style="width:78px;height:78px;flex:none;border-radius:18px;background:repeating-linear-gradient(135deg,#e8dcc6 0 7px,#dfd0b4 7px 14px);display:grid;place-items:center;font:500 9px/1 'JetBrains Mono',monospace;color:#82796a">dish</div>
+          <div style="min-width:0;flex:1">
+            <div style="font:700 15px/1.25 'Figtree','Heebo'">{{ d.name }}</div>
+            <div style="font:600 11.5px/1 'Figtree','Heebo';color:#82796a;margin-top:6px">{{ d.rest }}</div>
+            <div style="font:800 14.5px/1 'Figtree','Heebo';margin-top:9px">{{ d.price }}</div>
+          </div>
+          <button onClick="{{ d.open }}" style="width:40px;height:40px;flex:none;border:0;border-radius:999px;background:#c67139;color:#fff;font:700 21px/1 'Figtree','Heebo';cursor:pointer;display:grid;place-items:center" style-hover="background:#b2622d">+</button>
+        </div>
+      </sc-for>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ hasRestHits }}" hint-placeholder-val="{{ false }}">
+    <div style="padding:0 16px 8px;display:flex;align-items:baseline;gap:9px">
+      <div style="font:800 17px/1.2 'Figtree','Heebo'">Restaurants</div>
+      <div style="font:600 12.5px/1 'Figtree','Heebo';color:#82796a">{{ restCount }}</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;padding:6px 16px 24px">
+      <sc-for list="{{ restHits }}" as="r" hint-placeholder-count="3">
+        <button onClick="{{ r.open }}" style="background:#fff;border:0;border-radius:24px;padding:12px;display:flex;gap:14px;align-items:center;box-shadow:0 1px 2px rgba(46,43,37,.14);cursor:pointer;text-align:start" style-hover="background:#f9f4ed">
+          <div style="width:82px;height:82px;flex:none;border-radius:18px;background:repeating-linear-gradient(135deg,#e8dcc6 0 7px,#dfd0b4 7px 14px);display:grid;place-items:center;font:500 9px/1 'JetBrains Mono',monospace;color:#82796a">photo</div>
+          <div style="min-width:0;flex:1">
+            <div style="display:flex;align-items:center;gap:7px">
+              <div style="font:700 15.5px/1.25 'Figtree','Heebo';min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.name }}</div>
+              <div style="display:flex;align-items:center;gap:3px;flex:none"><svg width="12" height="12" viewBox="0 0 24 24" fill="#c67139"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9Z"/></svg><span style="font:800 12.5px/1 'Figtree','Heebo'">{{ r.rating }}</span></div>
+            </div>
+            <div style="font:600 11.5px/1 'Figtree','Heebo';color:#82796a;margin-top:6px">{{ r.cuisine }}</div>
+            <div style="font:600 12px/1 'Figtree','Heebo';color:#474238;margin-top:7px">{{ r.meta }}</div>
+          </div>
+        </button>
+      </sc-for>
+    </div>
+    </sc-if>
+  </div>
+  </sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ isFilters }}" hint-placeholder-val="{{ false }}">
+<div style="min-height:100%;display:flex;flex-direction:column">
+  <button onClick="{{ back }}" style="height:44px;border:0;background:rgba(32,30,29,.35);cursor:pointer;flex:none"></button>
+  <div style="flex:1;background:#f9f4ed;border-radius:32px 32px 0 0;animation:kmSheet .28s ease;display:flex;flex-direction:column">
+    <div style="display:grid;place-items:center;padding:12px 0 2px"><div style="width:44px;height:5px;border-radius:999px;background:#dcd3c4"></div></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px 4px;gap:10px">
+      <div style="font:800 21px/1.2 'Figtree','Heebo'">Filters</div>
+      <button onClick="{{ clearFilters }}" style="border:0;background:transparent;padding:0;font:700 13.5px/1 'Figtree','Heebo';color:#8c491a;cursor:pointer">Reset</button>
+    </div>
+    <div style="padding:18px 20px 24px;display:flex;flex-direction:column;gap:26px">
+      <sc-for list="{{ filterGroups }}" as="g" hint-placeholder-count="4">
+        <div>
+          <div style="font:700 13px/1 'Figtree','Heebo';letter-spacing:.06em;text-transform:uppercase;color:#82796a;margin-bottom:12px">{{ g.title }}</div>
+          <div style="display:flex;flex-wrap:wrap;gap:9px">
+            <sc-for list="{{ g.opts }}" as="o" hint-placeholder-count="4">
+              <div>
+                <sc-if value="{{ o.on }}" hint-placeholder-val="{{ false }}"><button onClick="{{ o.pick }}" style="border:0;cursor:pointer;font:700 13.5px/1 'Figtree','Heebo';padding:12px 17px;border-radius:999px;background:#201e1d;color:#f9f4ed">{{ o.label }}</button></sc-if>
+                <sc-if value="{{ o.off }}" hint-placeholder-val="{{ true }}"><button onClick="{{ o.pick }}" style="border:1.5px solid #dcd3c4;cursor:pointer;font:600 13.5px/1 'Figtree','Heebo';padding:11px 16px;border-radius:999px;background:#fff;color:#474238" style-hover="background:#f5ead8">{{ o.label }}</button></sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isLocation }}" hint-placeholder-val="{{ false }}">
+<div style="min-height:100%;display:flex;flex-direction:column">
+  <button onClick="{{ back }}" style="height:120px;border:0;background:rgba(32,30,29,.35);cursor:pointer;flex:none"></button>
+  <div style="flex:1;background:#f9f4ed;border-radius:32px 32px 0 0;animation:kmSheet .28s ease">
+    <div style="display:grid;place-items:center;padding:12px 0 2px"><div style="width:44px;height:5px;border-radius:999px;background:#dcd3c4"></div></div>
+    <div style="padding:12px 20px 4px;font:800 21px/1.2 'Figtree','Heebo'">Deliver to</div>
+    <div style="padding:16px 20px 20px;display:flex;flex-direction:column;gap:10px">
+      <sc-for list="{{ addresses }}" as="a" hint-placeholder-count="3">
+        <div>
+          <sc-if value="{{ a.on }}" hint-placeholder-val="{{ true }}">
+          <button onClick="{{ a.pick }}" style="width:100%;border:1.5px solid #c67139;background:#fff2eb;border-radius:18px;padding:15px 16px;display:flex;align-items:center;gap:13px;cursor:pointer;text-align:start">
+            <div style="width:22px;height:22px;flex:none;border-radius:999px;background:#c67139;display:grid;place-items:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <div style="min-width:0;flex:1"><div style="font:700 15px/1.2 'Figtree','Heebo'">{{ a.label }}</div><div style="font:500 12.5px/1.35 'Figtree','Heebo';color:#645c50;margin-top:4px">{{ a.line }}</div></div>
+          </button>
+          </sc-if>
+          <sc-if value="{{ a.off }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ a.pick }}" style="width:100%;border:1.5px solid #dcd3c4;background:#fff;border-radius:18px;padding:15px 16px;display:flex;align-items:center;gap:13px;cursor:pointer;text-align:start" style-hover="background:#f5ead8">
+            <div style="width:22px;height:22px;flex:none;border-radius:999px;border:2px solid #c0b6a5"></div>
+            <div style="min-width:0;flex:1"><div style="font:600 15px/1.2 'Figtree','Heebo'">{{ a.label }}</div><div style="font:500 12.5px/1.35 'Figtree','Heebo';color:#645c50;margin-top:4px">{{ a.line }}</div></div>
+          </button>
+          </sc-if>
+        </div>
+      </sc-for>
+      <button onClick="{{ goAddresses }}" style="height:50px;border:1.5px dashed #c0b6a5;border-radius:18px;background:transparent;font:700 14.5px/1 'Figtree','Heebo';color:#474238;cursor:pointer;margin-top:4px" style-hover="background:#f5ead8">Manage addresses</button>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isRestaurant }}" hint-placeholder-val="{{ false }}">
+<div>
+  <div style="position:relative;height:216px;background:repeating-linear-gradient(135deg,#e8dcc6 0 11px,#dfd0b4 11px 22px);display:grid;place-items:center">
+    <span style="font:500 11px/1 'JetBrains Mono',monospace;color:#82796a">restaurant hero photo</span>
+    <div style="position:absolute;top:12px;inset-inline-start:12px;display:flex;gap:9px">
+      <button onClick="{{ back }}" style="width:44px;height:44px;border:0;border-radius:999px;background:rgba(255,255,255,.94);display:grid;place-items:center;cursor:pointer;box-shadow:0 1px 2px rgba(46,43,37,.2)" style-hover="background:#fff">
+        <sc-if value="{{ isLTR }}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#201e1d" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></sc-if>
+        <sc-if value="{{ isRTL }}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#201e1d" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></sc-if>
+      </button>
+    </div>
+    <div style="position:absolute;top:12px;inset-inline-end:12px">
+      <button onClick="{{ favCurrent }}" style="width:44px;height:44px;border:0;border-radius:999px;background:rgba(255,255,255,.94);display:grid;place-items:center;cursor:pointer;box-shadow:0 1px 2px rgba(46,43,37,.2)" style-hover="background:#fff">
+        <sc-if value="{{ curFav }}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="#c67139" stroke="#c67139" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></sc-if>
+        <sc-if value="{{ curNotFav }}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#201e1d" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></sc-if>
+      </button>
+    </div>
+  </div>
+
+  <div style="background:#f5ead8;border-radius:28px 28px 0 0;margin-top:-26px;position:relative;padding:22px 16px 0">
+    <div style="font-family:'Caprasimo','Heebo',serif;font-size:27px;line-height:1.12">{{ rName }}</div>
+    <div style="font:600 13px/1 'Figtree','Heebo';color:#82796a;margin-top:9px">{{ rCuisine }}</div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:14px">
+      <div style="display:flex;align-items:center;gap:5px;background:#fff;border-radius:999px;padding:8px 13px;box-shadow:0 1px 2px rgba(46,43,37,.12)"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c67139"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3l-5-4.9 7-.9Z"/></svg><span style="font:800 13px/1 'Figtree','Heebo'">{{ rRating }}</span><span style="font:600 12px/1 'Figtree','Heebo';color:#82796a">{{ rReviews }}</span></div>
+      <div style="display:flex;align-items:center;gap:6px;background:#fff;border-radius:999px;padding:8px 13px;box-shadow:0 1px 2px rgba(46,43,37,.12)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#474238" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span style="font:700 12.5px/1 'Figtree','Heebo'">{{ rTime }}</span></div>
+      <div style="display:flex;align-items:center;gap:6px;background:#fff;border-radius:999px;padding:8px 13px;box-shadow:0 1px 2px rgba(46,43,37,.12)"><span style="font:700 12.5px/1 'Figtree','Heebo';color:#56633f">{{ rFee }}</span></div>
+      <div style="display:flex;align-items:center;gap:6px;background:#fff;border-radius:999px;padding:8px 13px;box-shadow:0 1px 2px rgba(46,43,37,.12)"><span style="font:700 12.5px/1 'Figtree','Heebo';color:#645c50">{{ rMin }}</span></div>
+    </div>
+    <sc-if value="{{ rHasPromo }}" hint-placeholder-val="{{ false }}">
+    <div style="margin-top:14px;display:flex;align-items:center;gap:11px;background:#e1eecc;border-radius:16px;padding:14px 16px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3d472b" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M3 10V7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3a2 2 0 0 0 0 4v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-3a2 2 0 0 0 0-4Z"/></svg>
+      <div style="font:700 13.5px/1.35 'Figtree','Heebo';color:#3d472b">{{ rPromo }}</div>
+    </div>
+    </sc-if>
+  </div>
+
+  <div style="position:sticky;top:0;z-index:45;background:#f5ead8;padding:18px 0 12px;box-shadow:0 8px 12px -10px rgba(46,43,37,.25)">
+    <div style="overflow-x:auto"><div style="display:flex;gap:8px;padding:0 16px">
+      <sc-for list="{{ menuCats }}" as="c" hint-placeholder-count="5">
+        <div style="flex:none">
+          <sc-if value="{{ c.on }}" hint-placeholder-val="{{ false }}"><button onClick="{{ c.pick }}" style="border:0;cursor:pointer;font:700 13.5px/1 'Figtree','Heebo';padding:12px 18px;border-radius:999px;background:#201e1d;color:#f9f4ed;white-space:nowrap">{{ c.name }}</button></sc-if>
+          <sc-if value="{{ c.off }}" hint-placeholder-val="{{ true }}"><button onClick="{{ c.pick }}" style="border:0;cursor:pointer;font:600 13.5px/1 'Figtree','Heebo';padding:12px 18px;border-radius:999px;background:#fff;color:#474238;white-space:nowrap;box-shadow:0 1px 2px rgba(46,43,37,.12)" style-hover="background:#eee7db">{{ c.name }}</button></sc-if>
+        </div>
+      </sc-for>
+    </div></div>
+  </div>
+
+  <div style="padding:8px 16px 28px;display:flex;flex-direction:column;gap:12px">
+    <sc-for list="{{ menuItems }}" as="m" hint-placeholder-count="5">
+      <button onClick="{{ m.open }}" style="background:#fff;border:0;border-radius:24px;padding:14px;display:flex;gap:14px;box-shadow:0 1px 2px rgba(46,43,37,.14);cursor:pointer;text-align:start" style-hover="background:#f9f4ed">
+        <div style="min-width:0;flex:1">
+          <sc-if value="{{ m.best }}" hint-placeholder-val="{{ false }}"><div style="display:inline-block;font:700 10.5px/1 'Figtree','Heebo';padding:6px 9px;border-radius:7px;background:#201e1d;color:#f9f4ed;margin-bottom:9px">Bestseller</div></sc-if>
+          <div style="font:700 16px/1.25 'Figtree','Heebo'">{{ m.name }}</div>
+          <div style="font:400 13px/1.45 'Figtree','Heebo';color:#645c50;margin-top:6px">{{ m.desc }}</div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:11px">
+            <span style="font:800 15.5px/1 'Figtree','Heebo'">{{ m.price }}</span>
+            <sc-if value="{{ m.wasShown }}" hint-placeholder-val="{{ false }}"><span style="font:600 13px/1 'Figtree','Heebo';color:#a19786;text-decoration:line-through">{{ m.was }}</span></sc-if>
+          </div>
+        </div>
+        <div style="width:92px;height:92px;flex:none;border-radius:18px;background:repeating-linear-gradient(135deg,#e8dcc6 0 7px,#dfd0b4 7px 14px);display:grid;place-items:center;font:500 9px/1 'JetBrains Mono',monospace;color:#82796a;position:relative">dish
+          <div style="position:absolute;bottom:-6px;inset-inline-end:-6px;width:34px;height:34px;border-radius:999px;background:#c67139;color:#fff;display:grid;place-items:center;font:700 19px/1 'Figtree','Heebo';box-shadow:0 3px 10px rgba(46,43,37,.2)">+</div>
+        </div>
+      </button>
+    </sc-for>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isItem }}" hint-placeholder-val="{{ false }}">
+<div style="min-height:100%;display:flex;flex-direction:column">
+  <button onClick="{{ back }}" style="height:26px;border:0;background:rgba(32,30,29,.4);cursor:pointer;flex:none"></button>
+  <div style="flex:1;background:#f9f4ed;border-radius:32px 32px 0 0;overflow:hidden;animation:kmSheet .28s ease">
+    <div style="position:relative;height:196px;background:repeating-linear-gradient(135deg,#e8dcc6 0 11px,#dfd0b4 11px 22px);display:grid;place-items:center">
+      <span style="font:500 11px/1 'JetBrains Mono',monospace;color:#82796a">dish photo 4:3</span>
+      <button onClick="{{ back }}" style="position:absolute;top:12px;inset-inline-end:12px;width:40px;height:40px;border:0;border-radius:999px;background:rgba(255,255,255,.94);display:grid;place-items:center;cursor:pointer" style-hover="background:#fff"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#201e1d" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+
+    <div style="padding:20px 20px 0">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+        <div style="font:800 22px/1.2 'Figtree','Heebo';min-width:0">{{ itemName }}</div>
+        <div style="font:800 19px/1 'Figtree','Heebo';flex:none">{{ itemBase }}</div>
+      </div>
+      <div style="font:400 14px/1.55 'Figtree','Heebo';color:#645c50;margin-top:10px;text-wrap:pretty">{{ itemDesc }}</div>
+    </div>
+
+    <div style="padding:22px 20px 0;display:flex;flex-direction:column;gap:22px">
+      <sc-for list="{{ reqGroups }}" as="g" hint-placeholder-count="2">
+        <div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px">
+            <div style="font:800 16px/1.2 'Figtree','Heebo'">{{ g.title }}</div>
+            <div style="font:700 11px/1 'Figtree','Heebo';padding:6px 10px;border-radius:7px;background:#ffe1d0;color:#8c491a;flex:none">{{ g.badge }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <sc-for list="{{ g.opts }}" as="o" hint-placeholder-count="2">
+              <div>
+                <sc-if value="{{ o.on }}" hint-placeholder-val="{{ false }}">
+                <button onClick="{{ o.pick }}" style="width:100%;border:1.5px solid #c67139;background:#fff2eb;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:13px;cursor:pointer;text-align:start">
+                  <div style="width:22px;height:22px;flex:none;border-radius:999px;background:#c67139;display:grid;place-items:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+                  <span style="font:700 15px/1.2 'Figtree','Heebo';flex:1;min-width:0">{{ o.name }}</span>
+                  <span style="font:700 13.5px/1 'Figtree','Heebo';color:#8c491a;flex:none">{{ o.delta }}</span>
+                </button>
+                </sc-if>
+                <sc-if value="{{ o.off }}" hint-placeholder-val="{{ true }}">
+                <button onClick="{{ o.pick }}" style="width:100%;border:1.5px solid #dcd3c4;background:#fff;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:13px;cursor:pointer;text-align:start" style-hover="background:#f5ead8">
+                  <div style="width:22px;height:22px;flex:none;border-radius:999px;border:2px solid #c0b6a5"></div>
+                  <span style="font:600 15px/1.2 'Figtree','Heebo';flex:1;min-width:0">{{ o.name }}</span>
+                  <span style="font:600 13.5px/1 'Figtree','Heebo';color:#645c50;flex:none">{{ o.delta }}</span>
+                </button>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+
+      <sc-for list="{{ optGroups }}" as="g" hint-placeholder-count="2">
+        <div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px">
+            <div style="font:800 16px/1.2 'Figtree','Heebo'">{{ g.title }}</div>
+            <div style="font:600 11.5px/1 'Figtree','Heebo';color:#82796a;flex:none">{{ g.badge }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <sc-for list="{{ g.opts }}" as="o" hint-placeholder-count="3">
+              <div>
+                <sc-if value="{{ o.on }}" hint-placeholder-val="{{ false }}">
+                <button onClick="{{ o.pick }}" style="width:100%;border:1.5px solid #c67139;background:#fff2eb;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:13px;cursor:pointer;text-align:start">
+                  <div style="width:22px;height:22px;flex:none;border-radius:7px;background:#c67139;display:grid;place-items:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+                  <span style="font:700 15px/1.2 'Figtree','Heebo';flex:1;min-width:0">{{ o.name }}</span>
+                  <span style="font:700 13.5px/1 'Figtree','Heebo';color:#8c491a;flex:none">{{ o.delta }}</span>
+                </button>
+                </sc-if>
+                <sc-if value="{{ o.off }}" hint-placeholder-val="{{ true }}">
+                <button onClick="{{ o.pick }}" style="width:100%;border:1.5px solid #dcd3c4;background:#fff;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:13px;cursor:pointer;text-align:start" style-hover="background:#f5ead8">
+                  <div style="width:22px;height:22px;flex:none;border-radius:7px;border:2px solid #c0b6a5"></div>
+                  <span style="font:600 15px/1.2 'Figtree','Heebo';flex:1;min-width:0">{{ o.name }}</span>
+                  <span style="font:600 13.5px/1 'Figtree','Heebo';color:#645c50;flex:none">{{ o.delta }}</span>
+                </button>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+
+      <div>
+        <div style="font:800 16px/1.2 'Figtree','Heebo';margin-bottom:12px">Special instructions</div>
+        <textarea value="{{ note }}" onChange="{{ onNote }}" placeholder="No pickles, extra napkins…" style="width:100%;height:84px;resize:none;border:1.5px solid #dcd3c4;border-radius:16px;background:#fff;padding:14px 16px;font:500 14.5px/1.45 'Figtree','Heebo';color:#201e1d;outline:none"></textarea>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;padding-bottom:8px">
+        <div style="font:800 16px/1.2 'Figtree','Heebo'">Quantity</div>
+        <div style="display:flex;align-items:center;gap:4px;background:#fff;border-radius:999px;padding:5px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+          <button onClick="{{ decQty }}" style="width:40px;height:40px;border:0;border-radius:999px;background:#f5ead8;font:700 20px/1 'Figtree','Heebo';color:#474238;cursor:pointer" style-hover="background:#eee7db">−</button>
+          <div style="min-width:34px;text-align:center;font:800 16px/1 'Figtree','Heebo'">{{ qty }}</div>
+          <button onClick="{{ incQty }}" style="width:40px;height:40px;border:0;border-radius:999px;background:#c67139;font:700 20px/1 'Figtree','Heebo';color:#fff;cursor:pointer" style-hover="background:#b2622d">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isCart }}" hint-placeholder-val="{{ false }}">
+<div style="padding:16px 16px 24px">
+  <sc-if value="{{ cartEmpty }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:52px 20px;text-align:center">
+    <div style="width:80px;height:80px;margin:0 auto;border-radius:999px;background:#ffe1d0;display:grid;place-items:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c67139" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l2 6H4Zm-1 6h14v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1Z"/></svg></div>
+    <div style="font:800 19px/1.3 'Figtree','Heebo';margin-top:20px">Your cart is empty</div>
+    <div style="font:400 14px/1.55 'Figtree','Heebo';color:#645c50;margin-top:9px">Last time you had a shawarma wrap from Abu Kamel Grill.</div>
+    <button onClick="{{ reorderLast }}" style="height:50px;padding:0 26px;margin-top:20px;border:0;border-radius:999px;background:#c67139;color:#fff;font:700 15px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:#b2622d">Order that again</button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ cartFull }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <div style="display:flex;align-items:center;gap:13px;background:#fff;border-radius:20px;padding:13px 16px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+      <div style="width:44px;height:44px;flex:none;border-radius:14px;background:repeating-linear-gradient(135deg,#e8dcc6 0 6px,#dfd0b4 6px 12px)"></div>
+      <div style="min-width:0;flex:1"><div style="font:700 15px/1.2 'Figtree','Heebo'">{{ cartRestName }}</div><div style="font:600 12px/1 'Figtree','Heebo';color:#82796a;margin-top:5px">{{ cartRestMeta }}</div></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:14px">
+      <sc-for list="{{ cart }}" as="c" hint-placeholder-count="2">
+        <div style="background:#fff;border-radius:24px;padding:14px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+          <div style="display:flex;gap:13px">
+            <div style="width:66px;height:66px;flex:none;border-radius:16px;background:repeating-linear-gradient(135deg,#e8dcc6 0 6px,#dfd0b4 6px 12px)"></div>
+            <div style="min-width:0;flex:1">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px">
+                <div style="font:700 15.5px/1.25 'Figtree','Heebo';min-width:0">{{ c.name }}</div>
+                <div style="font:800 15px/1 'Figtree','Heebo';flex:none">{{ c.total }}</div>
+              </div>
+              <div style="font:500 12.5px/1.45 'Figtree','Heebo';color:#645c50;margin-top:6px">{{ c.opts }}</div>
+              <sc-if value="{{ c.hasNote }}" hint-placeholder-val="{{ false }}"><div style="font:600 12px/1.4 'Figtree','Heebo';color:#8c491a;margin-top:5px">Note: {{ c.note }}</div></sc-if>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:13px">
+            <div style="display:flex;align-items:center;gap:4px;background:#f5ead8;border-radius:999px;padding:4px">
+              <button onClick="{{ c.dec }}" style="width:36px;height:36px;border:0;border-radius:999px;background:#fff;font:700 18px/1 'Figtree','Heebo';color:#474238;cursor:pointer;box-shadow:0 1px 2px rgba(46,43,37,.1)" style-hover="background:#eee7db">−</button>
+              <div style="min-width:30px;text-align:center;font:800 15px/1 'Figtree','Heebo'">{{ c.qty }}</div>
+              <button onClick="{{ c.inc }}" style="width:36px;height:36px;border:0;border-radius:999px;background:#c67139;font:700 18px/1 'Figtree','Heebo';color:#fff;cursor:pointer" style-hover="background:#b2622d">+</button>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button onClick="{{ c.edit }}" style="height:36px;padding:0 15px;border:1.5px solid #dcd3c4;border-radius:999px;background:transparent;font:700 12.5px/1 'Figtree','Heebo';color:#474238;cursor:pointer" style-hover="background:#f5ead8">Edit</button>
+              <button onClick="{{ c.remove }}" style="height:36px;padding:0 15px;border:0;border-radius:999px;background:#fbe6e3;font:700 12.5px/1 'Figtree','Heebo';color:#a8332a;cursor:pointer" style-hover="background:#f6d5d1">Remove</button>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <button onClick="{{ addMore }}" style="width:100%;height:50px;margin-top:14px;border:1.5px solid #201e1d;border-radius:999px;background:transparent;font:700 15px/1 'Figtree','Heebo';color:#201e1d;cursor:pointer" style-hover="background:rgba(32,30,29,.06)">Add more items</button>
+
+    <div style="background:#fff;border-radius:24px;padding:16px;margin-top:14px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+      <div style="font:800 15px/1.2 'Figtree','Heebo';margin-bottom:12px">Promo code</div>
+      <div style="display:flex;gap:9px">
+        <input value="{{ promo }}" onChange="{{ onPromo }}" placeholder="KAMAN10" style="flex:1;min-width:0;height:48px;border:1.5px solid #dcd3c4;border-radius:14px;background:#f9f4ed;padding:0 15px;font:600 14.5px/1 'Figtree','Heebo';outline:none;color:#201e1d" />
+        <button onClick="{{ applyPromo }}" style="height:48px;padding:0 20px;border:0;border-radius:14px;background:#201e1d;color:#f9f4ed;font:700 14px/1 'Figtree','Heebo';cursor:pointer;flex:none" style-hover="background:#474238">Apply</button>
+      </div>
+      <sc-if value="{{ promoOk }}" hint-placeholder-val="{{ false }}"><div style="font:700 12.5px/1.4 'Figtree','Heebo';color:#56633f;margin-top:10px">KAMAN10 applied — 10% off your items.</div></sc-if>
+      <sc-if value="{{ promoBad }}" hint-placeholder-val="{{ false }}"><div style="font:700 12.5px/1.4 'Figtree','Heebo';color:#a8332a;margin-top:10px">That code isn't valid for this order.</div></sc-if>
+    </div>
+
+    <div style="background:#fff;border-radius:24px;padding:18px;margin-top:14px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+      <sc-for list="{{ priceRows }}" as="p" hint-placeholder-count="3">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:6px 0">
+          <span style="font:500 14px/1.3 'Figtree','Heebo';color:#645c50">{{ p.label }}</span>
+          <span style="font:700 14px/1 'Figtree','Heebo';color:{{ p.color }}">{{ p.value }}</span>
+        </div>
+      </sc-for>
+      <div style="height:1px;background:rgba(32,30,29,.1);margin:12px 0"></div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+        <span style="font:800 17px/1.2 'Figtree','Heebo'">Total</span>
+        <span style="font:800 20px/1 'Figtree','Heebo'">{{ grandTotal }}</span>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ isCheckout }}" hint-placeholder-val="{{ false }}">
+<div style="padding:16px 16px 24px;display:flex;flex-direction:column;gap:14px">
+  <div style="display:flex;gap:6px;background:#eee7db;border-radius:999px;padding:5px">
+    <sc-for list="{{ modes }}" as="m" hint-placeholder-count="2">
+      <div style="flex:1">
+        <sc-if value="{{ m.on }}" hint-placeholder-val="{{ true }}"><button onClick="{{ m.pick }}" style="width:100%;height:46px;border:0;border-radius:999px;background:#201e1d;color:#f9f4ed;font:800 14.5px/1 'Figtree','Heebo';cursor:pointer">{{ m.label }}</button></sc-if>
+        <sc-if value="{{ m.off }}" hint-placeholder-val="{{ false }}"><button onClick="{{ m.pick }}" style="width:100%;height:46px;border:0;border-radius:999px;background:transparent;color:#645c50;font:700 14.5px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:rgba(32,30,29,.06)">{{ m.label }}</button></sc-if>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="background:#fff;border-radius:24px;padding:18px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+      <div style="font:800 15px/1.2 'Figtree','Heebo'">{{ addrHeading }}</div>
+      <button onClick="{{ openLocation }}" style="border:0;background:transparent;padding:0;font:700 13px/1 'Figtree','Heebo';color:#8c491a;cursor:pointer">Change</button>
+    </div>
+    <div style="font:600 14.5px/1.35 'Figtree','Heebo';margin-top:11px">{{ addressLabel }}</div>
+    <div style="font:500 13px/1.4 'Figtree','Heebo';color:#645c50;margin-top:4px">{{ addressLine }}</div>
+    <input value="{{ dropNote }}" onChange="{{ onDropNote }}" placeholder="Delivery instructions — gate code, floor…" style="width:100%;height:48px;margin-top:13px;border:1.5px solid #dcd3c4;border-radius:14px;background:#f9f4ed;padding:0 15px;font:500 14px/1 'Figtree','Heebo';outline:none;color:#201e1d" />
+  </div>
+
+  <div style="background:#fff;border-radius:24px;padding:18px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+    <div style="font:800 15px/1.2 'Figtree','Heebo';margin-bottom:13px">Contact</div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <input value="{{ name }}" onChange="{{ onName }}" placeholder="Full name" style="width:100%;height:50px;border:1.5px solid #dcd3c4;border-radius:14px;background:#f9f4ed;padding:0 15px;font:600 14.5px/1 'Figtree','Heebo';outline:none;color:#201e1d" />
+      <input value="{{ phone }}" onChange="{{ onPhone }}" placeholder="Phone number" style="width:100%;height:50px;border:1.5px solid #dcd3c4;border-radius:14px;background:#f9f4ed;padding:0 15px;font:600 14.5px/1 'Figtree','Heebo';outline:none;color:#201e1d" />
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:24px;padding:18px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+    <div style="font:800 15px/1.2 'Figtree','Heebo';margin-bottom:13px">Payment</div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <sc-for list="{{ payments }}" as="p" hint-placeholder-count="3">
+        <div>
+          <sc-if value="{{ p.on }}" hint-placeholder-val="{{ true }}">
+          <button onClick="{{ p.pick }}" style="width:100%;border:1.5px solid #c67139;background:#fff2eb;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:13px;cursor:pointer;text-align:start">
+            <div style="width:40px;height:40px;flex:none;border-radius:12px;background:#c67139;display:grid;place-items:center;font:800 13px/1 'Figtree','Heebo';color:#fff">{{ p.tag }}</div>
+            <div style="min-width:0;flex:1"><div style="font:700 14.5px/1.2 'Figtree','Heebo'">{{ p.label }}</div><div style="font:500 12px/1.35 'Figtree','Heebo';color:#645c50;margin-top:4px">{{ p.sub }}</div></div>
+            <div style="width:22px;height:22px;flex:none;border-radius:999px;background:#c67139;display:grid;place-items:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          </button>
+          </sc-if>
+          <sc-if value="{{ p.off }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ p.pick }}" style="width:100%;border:1.5px solid #dcd3c4;background:#f9f4ed;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:13px;cursor:pointer;text-align:start" style-hover="background:#f5ead8">
+            <div style="width:40px;height:40px;flex:none;border-radius:12px;background:#eee7db;display:grid;place-items:center;font:800 13px/1 'Figtree','Heebo';color:#645c50">{{ p.tag }}</div>
+            <div style="min-width:0;flex:1"><div style="font:600 14.5px/1.2 'Figtree','Heebo'">{{ p.label }}</div><div style="font:500 12px/1.35 'Figtree','Heebo';color:#645c50;margin-top:4px">{{ p.sub }}</div></div>
+            <div style="width:22px;height:22px;flex:none;border-radius:999px;border:2px solid #c0b6a5"></div>
+          </button>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:24px;padding:18px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+    <div style="font:800 15px/1.2 'Figtree','Heebo';margin-bottom:13px">Order summary</div>
+    <sc-for list="{{ priceRows }}" as="p" hint-placeholder-count="3">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:6px 0">
+        <span style="font:500 14px/1.3 'Figtree','Heebo';color:#645c50">{{ p.label }}</span>
+        <span style="font:700 14px/1 'Figtree','Heebo';color:{{ p.color }}">{{ p.value }}</span>
+      </div>
+    </sc-for>
+    <div style="height:1px;background:rgba(32,30,29,.1);margin:12px 0"></div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+      <span style="font:800 17px/1.2 'Figtree','Heebo'">Total</span>
+      <span style="font:800 20px/1 'Figtree','Heebo'">{{ grandTotal }}</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:9px;margin-top:14px;background:#e1eecc;border-radius:14px;padding:12px 14px">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3d472b" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <div style="font:700 12.5px/1.35 'Figtree','Heebo';color:#3d472b">Arriving about {{ eta }}</div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isTracking }}" hint-placeholder-val="{{ false }}">
+<div>
+  <div style="position:relative;height:200px;background:repeating-linear-gradient(135deg,#dfe3d4 0 11px,#d6dbca 11px 22px);display:grid;place-items:center">
+    <span style="font:500 11px/1 'JetBrains Mono',monospace;color:#728157">live map</span>
+    <button onClick="{{ goOrders }}" style="position:absolute;top:12px;inset-inline-start:12px;width:44px;height:44px;border:0;border-radius:999px;background:rgba(255,255,255,.94);display:grid;place-items:center;cursor:pointer;box-shadow:0 1px 2px rgba(46,43,37,.2)" style-hover="background:#fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201e1d" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+
+  <div style="background:#f5ead8;border-radius:28px 28px 0 0;margin-top:-26px;position:relative;padding:24px 16px 28px">
+    <div style="font:700 11px/1 'Figtree','Heebo';letter-spacing:.14em;text-transform:uppercase;color:#82796a">Arriving</div>
+    <div style="display:flex;align-items:baseline;gap:10px;margin-top:10px">
+      <div style="font-family:'Caprasimo','Heebo',serif;font-size:42px;line-height:1">{{ eta }}</div>
+      <div style="font:600 14px/1 'Figtree','Heebo';color:#645c50">{{ etaNote }}</div>
+    </div>
+    <div style="font:700 17px/1.3 'Figtree','Heebo';margin-top:16px">{{ trackTitle }}</div>
+    <div style="font:400 14px/1.5 'Figtree','Heebo';color:#645c50;margin-top:7px;text-wrap:pretty">{{ trackSub }}</div>
+
+    <div style="display:flex;gap:6px;margin-top:20px">
+      <sc-for list="{{ trackBars }}" as="b" hint-placeholder-count="6">
+        <div style="flex:1;height:6px;border-radius:999px;background:{{ b.color }}"></div>
+      </sc-for>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:2px;margin-top:24px">
+      <sc-for list="{{ trackSteps }}" as="s" hint-placeholder-count="6">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <div style="width:26px;flex:none;display:flex;flex-direction:column;align-items:center">
+            <sc-if value="{{ s.done }}" hint-placeholder-val="{{ true }}"><div style="width:26px;height:26px;border-radius:999px;background:#7a8a5e;display:grid;place-items:center;flex:none"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div></sc-if>
+            <sc-if value="{{ s.now }}" hint-placeholder-val="{{ false }}"><div style="width:26px;height:26px;border-radius:999px;background:#c67139;display:grid;place-items:center;flex:none;animation:kmPulse 1.4s infinite"><div style="width:9px;height:9px;border-radius:999px;background:#fff"></div></div></sc-if>
+            <sc-if value="{{ s.todo }}" hint-placeholder-val="{{ false }}"><div style="width:26px;height:26px;border-radius:999px;border:2px solid #dcd3c4;flex:none"></div></sc-if>
+            <sc-if value="{{ s.tail }}" hint-placeholder-val="{{ true }}"><div style="width:2px;height:26px;background:{{ s.tailColor }}"></div></sc-if>
+          </div>
+          <div style="padding-bottom:12px;flex:1;min-width:0">
+            <div style="font:700 14.5px/1.25 'Figtree','Heebo';color:{{ s.color }}">{{ s.name }}</div>
+            <div style="font:600 12px/1.3 'Figtree','Heebo';color:#82796a;margin-top:4px">{{ s.time }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="background:#fff;border-radius:24px;padding:16px;display:flex;align-items:center;gap:13px;box-shadow:0 1px 2px rgba(46,43,37,.14);margin-top:8px">
+      <div style="width:48px;height:48px;flex:none;border-radius:999px;background:repeating-linear-gradient(135deg,#e8dcc6 0 6px,#dfd0b4 6px 12px)"></div>
+      <div style="min-width:0;flex:1"><div style="font:700 14.5px/1.2 'Figtree','Heebo'">{{ courierName }}</div><div style="font:600 12px/1 'Figtree','Heebo';color:#82796a;margin-top:5px">Your courier</div></div>
+      <button style="width:44px;height:44px;flex:none;border:0;border-radius:999px;background:#201e1d;display:grid;place-items:center;cursor:pointer" style-hover="background:#474238"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#f9f4ed" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg></button>
+    </div>
+
+    <button onClick="{{ nextStep }}" style="width:100%;height:46px;margin-top:14px;border:1.5px dashed #c0b6a5;border-radius:999px;background:transparent;font:600 13px/1 'Figtree','Heebo';color:#645c50;cursor:pointer" style-hover="background:#eee7db">Demo: advance status</button>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isOrders }}" hint-placeholder-val="{{ false }}">
+<div style="padding:14px 16px 24px">
+  <div style="font-family:'Caprasimo','Heebo',serif;font-size:27px;line-height:1.1;margin-bottom:18px">Orders</div>
+  <div style="font:700 11px/1 'Figtree','Heebo';letter-spacing:.14em;text-transform:uppercase;color:#82796a;margin-bottom:12px">Active</div>
+  <button onClick="{{ goTracking }}" style="width:100%;border:0;background:#201e1d;border-radius:28px;padding:20px;cursor:pointer;text-align:start;position:relative;overflow:hidden" style-hover="background:#2e2b25">
+    <div style="position:absolute;inset-inline-end:-24px;top:-24px;width:110px;height:110px;border-radius:999px;background:#c67139;opacity:.85"></div>
+    <div style="position:relative">
+      <div style="display:flex;align-items:center;gap:8px"><div style="width:8px;height:8px;border-radius:999px;background:#ccdbb2;animation:kmPulse 1.3s infinite"></div><span style="font:700 11.5px/1 'Figtree','Heebo';color:#ccdbb2;letter-spacing:.08em;text-transform:uppercase">{{ trackTitle }}</span></div>
+      <div style="font:800 19px/1.25 'Figtree','Heebo';color:#f9f4ed;margin-top:12px">Abu Kamel Grill</div>
+      <div style="font:600 13px/1 'Figtree','Heebo';color:#c0b6a5;margin-top:7px">2 items · ₪95.00</div>
+      <div style="font:800 15px/1 'Figtree','Heebo';color:#f6a06b;margin-top:14px">Arriving {{ eta }}</div>
+    </div>
+  </button>
+
+  <div style="font:700 11px/1 'Figtree','Heebo';letter-spacing:.14em;text-transform:uppercase;color:#82796a;margin:28px 0 12px">Previous</div>
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <sc-for list="{{ pastOrders }}" as="o" hint-placeholder-count="3">
+      <div style="background:#fff;border-radius:24px;padding:16px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+        <button onClick="{{ o.open }}" style="width:100%;border:0;background:transparent;padding:0;cursor:pointer;text-align:start;display:flex;gap:13px;align-items:center">
+          <div style="width:52px;height:52px;flex:none;border-radius:16px;background:repeating-linear-gradient(135deg,#e8dcc6 0 6px,#dfd0b4 6px 12px)"></div>
+          <div style="min-width:0;flex:1">
+            <div style="font:700 15.5px/1.2 'Figtree','Heebo'">{{ o.rest }}</div>
+            <div style="font:600 12px/1 'Figtree','Heebo';color:#82796a;margin-top:6px">{{ o.meta }}</div>
+            <div style="font:600 12px/1 'Figtree','Heebo';color:#56633f;margin-top:6px">{{ o.status }}</div>
+          </div>
+          <div style="font:800 15px/1 'Figtree','Heebo';flex:none">{{ o.total }}</div>
+        </button>
+        <div style="display:flex;gap:9px;margin-top:14px">
+          <button onClick="{{ o.reorder }}" style="flex:1;height:44px;border:0;border-radius:999px;background:#201e1d;color:#f9f4ed;font:700 13.5px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:#474238">Reorder</button>
+          <button onClick="{{ o.open }}" style="flex:1;height:44px;border:1.5px solid #dcd3c4;border-radius:999px;background:transparent;color:#474238;font:700 13.5px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:#f5ead8">Details</button>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isOrderDetail }}" hint-placeholder-val="{{ false }}">
+<div style="padding:16px 16px 24px;display:flex;flex-direction:column;gap:14px">
+  <div style="background:#fff;border-radius:24px;padding:18px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+    <div style="display:flex;align-items:center;gap:13px">
+      <div style="width:52px;height:52px;flex:none;border-radius:16px;background:repeating-linear-gradient(135deg,#e8dcc6 0 6px,#dfd0b4 6px 12px)"></div>
+      <div style="min-width:0;flex:1"><div style="font:700 16px/1.2 'Figtree','Heebo'">{{ odRest }}</div><div style="font:600 12px/1 'Figtree','Heebo';color:#82796a;margin-top:6px">{{ odMeta }}</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:9px;margin-top:16px;background:#e1eecc;border-radius:14px;padding:12px 14px">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3d472b" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"/></svg>
+      <div style="font:700 12.5px/1.35 'Figtree','Heebo';color:#3d472b">{{ odStatus }}</div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:24px;padding:18px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+    <div style="font:800 15px/1.2 'Figtree','Heebo';margin-bottom:14px">Items</div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <sc-for list="{{ odItems }}" as="i" hint-placeholder-count="2">
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="min-width:24px;font:800 14px/1.3 'Figtree','Heebo';color:#8c491a;flex:none">{{ i.qty }}</div>
+          <div style="min-width:0;flex:1"><div style="font:700 14.5px/1.25 'Figtree','Heebo'">{{ i.name }}</div><div style="font:500 12.5px/1.4 'Figtree','Heebo';color:#645c50;margin-top:4px">{{ i.opts }}</div></div>
+          <div style="font:700 14px/1.3 'Figtree','Heebo';flex:none">{{ i.price }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="height:1px;background:rgba(32,30,29,.1);margin:16px 0"></div>
+    <sc-for list="{{ odRows }}" as="p" hint-placeholder-count="3">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:5px 0">
+        <span style="font:500 14px/1.3 'Figtree','Heebo';color:#645c50">{{ p.label }}</span>
+        <span style="font:700 14px/1 'Figtree','Heebo';color:{{ p.color }}">{{ p.value }}</span>
+      </div>
+    </sc-for>
+    <div style="height:1px;background:rgba(32,30,29,.1);margin:12px 0"></div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+      <span style="font:800 16px/1.2 'Figtree','Heebo'">Paid</span><span style="font:800 19px/1 'Figtree','Heebo'">{{ odTotal }}</span>
+    </div>
+  </div>
+
+  <button onClick="{{ reorderDetail }}" style="width:100%;height:52px;border:0;border-radius:999px;background:#c67139;color:#fff;font:800 16px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:#b2622d">Reorder this</button>
+  <button style="width:100%;height:50px;border:1.5px solid #dcd3c4;border-radius:999px;background:transparent;color:#474238;font:700 15px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:#fff">Get help with this order</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ isFavorites }}" hint-placeholder-val="{{ false }}">
+<div style="padding:16px 16px 24px">
+  <sc-if value="{{ favEmpty }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:56px 22px;text-align:center">
+    <div style="width:80px;height:80px;margin:0 auto;border-radius:999px;background:#ffe1d0;display:grid;place-items:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c67139" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
+    <div style="font:800 19px/1.3 'Figtree','Heebo';margin-top:20px">No favorites yet</div>
+    <div style="font:400 14px/1.55 'Figtree','Heebo';color:#645c50;margin-top:9px;text-wrap:pretty">Tap the heart on any restaurant and it will wait for you here.</div>
+    <button onClick="{{ goHome }}" style="height:50px;padding:0 26px;margin-top:20px;border:0;border-radius:999px;background:#201e1d;color:#f9f4ed;font:700 15px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:#474238">Browse restaurants</button>
+  </div>
+  </sc-if>
+  <sc-if value="{{ favFull }}" hint-placeholder-val="{{ true }}">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <sc-for list="{{ favList }}" as="r" hint-placeholder-count="2">
+      <div style="background:#fff;border-radius:24px;padding:12px;display:flex;gap:14px;align-items:center;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+        <button onClick="{{ r.open }}" style="flex:1;min-width:0;display:flex;gap:14px;align-items:center;border:0;background:transparent;padding:0;cursor:pointer;text-align:start">
+          <div style="width:82px;height:82px;flex:none;border-radius:18px;background:repeating-linear-gradient(135deg,#e8dcc6 0 7px,#dfd0b4 7px 14px);display:grid;place-items:center;font:500 9px/1 'JetBrains Mono',monospace;color:#82796a">photo</div>
+          <div style="min-width:0;flex:1">
+            <div style="font:700 15.5px/1.25 'Figtree','Heebo'">{{ r.name }}</div>
+            <div style="font:600 11.5px/1 'Figtree','Heebo';color:#82796a;margin-top:6px">{{ r.cuisine }}</div>
+            <div style="font:600 12px/1 'Figtree','Heebo';color:#474238;margin-top:7px">{{ r.meta }}</div>
+          </div>
+        </button>
+        <button onClick="{{ r.fav }}" style="width:40px;height:40px;flex:none;border:0;border-radius:999px;background:#ffe1d0;display:grid;place-items:center;cursor:pointer" style-hover="background:#ffc6a5"><svg width="18" height="18" viewBox="0 0 24 24" fill="#c67139" stroke="#c67139" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+      </div>
+    </sc-for>
+  </div>
+  </sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ isProfile }}" hint-placeholder-val="{{ false }}">
+<div style="padding:14px 16px 24px">
+  <div style="display:flex;align-items:center;gap:15px;margin-bottom:22px">
+    <div style="width:64px;height:64px;flex:none;border-radius:999px;background:#201e1d;display:grid;place-items:center;font-family:'Caprasimo','Heebo',serif;font-size:24px;color:#f9f4ed">CN</div>
+    <div style="min-width:0">
+      <div style="font-family:'Caprasimo','Heebo',serif;font-size:23px;line-height:1.1">Celina Nassif</div>
+      <div style="font:600 13px/1 'Figtree','Heebo';color:#82796a;margin-top:7px">052 418 9034</div>
+    </div>
+  </div>
+  <div style="display:flex;gap:10px;margin-bottom:22px">
+    <button onClick="{{ goFavorites }}" style="flex:1;background:#fff;border:0;border-radius:20px;padding:16px 14px;cursor:pointer;text-align:start;box-shadow:0 1px 2px rgba(46,43,37,.14)" style-hover="background:#f9f4ed">
+      <div style="font:800 21px/1 'Figtree','Heebo'">{{ favCount }}</div><div style="font:600 12px/1 'Figtree','Heebo';color:#82796a;margin-top:6px">Favorites</div>
+    </button>
+    <button onClick="{{ goOrders }}" style="flex:1;background:#fff;border:0;border-radius:20px;padding:16px 14px;cursor:pointer;text-align:start;box-shadow:0 1px 2px rgba(46,43,37,.14)" style-hover="background:#f9f4ed">
+      <div style="font:800 21px/1 'Figtree','Heebo'">24</div><div style="font:600 12px/1 'Figtree','Heebo';color:#82796a;margin-top:6px">Orders</div>
+    </button>
+  </div>
+  <div style="background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+    <sc-for list="{{ profileRows }}" as="p" hint-placeholder-count="7">
+      <button onClick="{{ p.go }}" style="width:100%;border:0;background:transparent;padding:16px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;text-align:start;border-bottom:1px solid rgba(32,30,29,.07)" style-hover="background:#f9f4ed">
+        <div style="min-width:0;flex:1"><div style="font:700 14.5px/1.2 'Figtree','Heebo'">{{ p.label }}</div><div style="font:500 12px/1.3 'Figtree','Heebo';color:#82796a;margin-top:5px">{{ p.sub }}</div></div>
+        <sc-if value="{{ isLTR }}" hint-placeholder-val="{{ true }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a19786" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="m9 6 6 6-6 6"/></svg></sc-if>
+        <sc-if value="{{ isRTL }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a19786" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="m15 6-6 6 6 6"/></svg></sc-if>
+      </button>
+    </sc-for>
+  </div>
+  <button style="width:100%;height:50px;margin-top:18px;border:1.5px solid #dcd3c4;border-radius:999px;background:transparent;color:#a8332a;font:700 15px/1 'Figtree','Heebo';cursor:pointer" style-hover="background:#fbe6e3">Log out</button>
+  <div style="font:500 11.5px/1 'JetBrains Mono',monospace;color:#a19786;text-align:center;margin-top:18px">Kaman 3.0.0 · build 1</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAddresses }}" hint-placeholder-val="{{ false }}">
+<div style="padding:16px 16px 24px">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <sc-for list="{{ addresses }}" as="a" hint-placeholder-count="3">
+      <div style="background:#fff;border-radius:24px;padding:16px;display:flex;gap:13px;align-items:flex-start;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+        <div style="width:40px;height:40px;flex:none;border-radius:999px;background:#f5ead8;display:grid;place-items:center"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#474238" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.2-7-10.5A7 7 0 0 1 19 10.5C19 15.8 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.5"/></svg></div>
+        <div style="min-width:0;flex:1">
+          <div style="display:flex;align-items:center;gap:8px"><div style="font:700 15px/1.2 'Figtree','Heebo'">{{ a.label }}</div><sc-if value="{{ a.on }}" hint-placeholder-val="{{ true }}"><span style="font:700 10.5px/1 'Figtree','Heebo';padding:5px 8px;border-radius:7px;background:#ffe1d0;color:#8c491a">Default</span></sc-if></div>
+          <div style="font:500 13px/1.45 'Figtree','Heebo';color:#645c50;margin-top:6px">{{ a.line }}</div>
+          <div style="font:500 12.5px/1.4 'Figtree','Heebo';color:#82796a;margin-top:4px">{{ a.note }}</div>
+          <div style="display:flex;gap:9px;margin-top:13px">
+            <button style="height:38px;padding:0 15px;border:1.5px solid #dcd3c4;border-radius:999px;background:transparent;font:700 12.5px/1 'Figtree','Heebo';color:#474238;cursor:pointer" style-hover="background:#f5ead8">Edit</button>
+            <button style="height:38px;padding:0 15px;border:0;border-radius:999px;background:#fbe6e3;font:700 12.5px/1 'Figtree','Heebo';color:#a8332a;cursor:pointer" style-hover="background:#f6d5d1">Delete</button>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <button style="width:100%;height:52px;margin-top:16px;border:1.5px dashed #c0b6a5;border-radius:999px;background:transparent;font:700 15px/1 'Figtree','Heebo';color:#474238;cursor:pointer" style-hover="background:#fff">Add a new address</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ isPayments }}" hint-placeholder-val="{{ false }}">
+<div style="padding:16px 16px 24px">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <sc-for list="{{ payments }}" as="p" hint-placeholder-count="3">
+      <div style="background:#fff;border-radius:24px;padding:16px;display:flex;align-items:center;gap:13px;box-shadow:0 1px 2px rgba(46,43,37,.14)">
+        <div style="width:46px;height:46px;flex:none;border-radius:14px;background:#eee7db;display:grid;place-items:center;font:800 13px/1 'Figtree','Heebo';color:#645c50">{{ p.tag }}</div>
+        <div style="min-width:0;flex:1"><div style="font:700 14.5px/1.2 'Figtree','Heebo'">{{ p.label }}</div><div style="font:500 12.5px/1.35 'Figtree','Heebo';color:#645c50;margin-top:5px">{{ p.sub }}</div></div>
+        <sc-if value="{{ p.on }}" hint-placeholder-val="{{ true }}"><span style="font:700 10.5px/1 'Figtree','Heebo';padding:6px 9px;border-radius:7px;background:#ffe1d0;color:#8c491a;flex:none">Default</span></sc-if>
+      </div>
+    </sc-for>
+  </div>
+  <button style="width:100%;height:52px;margin-top:16px;border:1.5px dashed #c0b6a5;border-radius:999px;background:transparent;font:700 15px/1 'Figtree','Heebo';color:#474238;cursor:pointer" style-hover="background:#fff">Add a card</button>
+  <div style="font:400 12.5px/1.5 'Figtree','Heebo';color:#82796a;margin-top:16px;text-wrap:pretty">Cards are stored by our payment provider. Kaman never sees the full number.</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isNotifications }}" hint-placeholder-val="{{ false }}">
+<div style="padding:16px 16px 24px">
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <sc-for list="{{ notifications }}" as="n" hint-placeholder-count="4">
+      <div>
+        <sc-if value="{{ n.unread }}" hint-placeholder-val="{{ true }}">
+        <div style="background:#fff2eb;border:1.5px solid #ffc6a5;border-radius:22px;padding:16px;display:flex;gap:13px">
+          <div style="width:9px;height:9px;flex:none;border-radius:999px;background:#c67139;margin-top:5px"></div>
+          <div style="min-width:0;flex:1"><div style="font:700 14.5px/1.3 'Figtree','Heebo'">{{ n.title }}</div><div style="font:400 13px/1.45 'Figtree','Heebo';color:#645c50;margin-top:5px">{{ n.body }}</div><div style="font:600 11.5px/1 'Figtree','Heebo';color:#82796a;margin-top:9px">{{ n.when }}</div></div>
+        </div>
+        </sc-if>
+        <sc-if value="{{ n.read }}" hint-placeholder-val="{{ false }}">
+        <div style="background:#fff;border-radius:22px;padding:16px;display:flex;gap:13px;box-shadow:0 1px 2px rgba(46,43,37,.1)">
+          <div style="width:9px;height:9px;flex:none;border-radius:999px;background:#dcd3c4;margin-top:5px"></div>
+          <div style="min-width:0;flex:1"><div style="font:600 14.5px/1.3 'Figtree','Heebo'">{{ n.title }}</div><div style="font:400 13px/1.45 'Figtree','Heebo';color:#645c50;margin-top:5px">{{ n.body }}</div><div style="font:600 11.5px/1 'Figtree','Heebo';color:#82796a;margin-top:9px">{{ n.when }}</div></div>
+        </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+</div>
+</sc-if>
+
+</div>
+
+<div style="position:sticky;bottom:0;z-index:70">
+  <sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+  <div style="margin:0 12px 10px;background:#2e2b25;border-radius:18px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 12px 32px rgba(46,43,37,.28);animation:kmRise .22s ease">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#ccdbb2" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M20 6 9 17l-5-5"/></svg>
+    <span style="font:600 13.5px/1.3 'Figtree','Heebo';color:#f9f4ed;flex:1;min-width:0">{{ toast }}</span>
+    <button onClick="{{ goCart }}" style="border:0;background:transparent;padding:0;font:700 12.5px/1 'Figtree','Heebo';color:#f6a06b;cursor:pointer;flex:none">View cart</button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ hasCta }}" hint-placeholder-val="{{ false }}">
+  <div style="background:rgba(249,244,237,.96);backdrop-filter:blur(12px);border-top:1px solid rgba(32,30,29,.1);padding:14px 16px {{ ctaPadB }}">
+    <sc-if value="{{ hasCtaNote }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:11px">
+      <span style="font:600 12.5px/1 'Figtree','Heebo';color:#645c50">{{ ctaNote }}</span>
+      <span style="font:700 12.5px/1 'Figtree','Heebo';color:#56633f">{{ ctaNote2 }}</span>
+    </div>
+    </sc-if>
+    <button onClick="{{ ctaAction }}" style="width:100%;height:54px;border:0;border-radius:999px;background:#c67139;color:#fff;font:800 16.5px/1 'Figtree','Heebo';cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 3px 10px rgba(46,43,37,.18)" style-hover="background:#b2622d" style-active="background:#8c491a">
+      <span>{{ ctaLabel }}</span>
+      <sc-if value="{{ hasCtaPrice }}" hint-placeholder-val="{{ false }}"><span style="opacity:.55">•</span><span>{{ ctaPrice }}</span></sc-if>
+    </button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ showNav }}" hint-placeholder-val="{{ true }}">
+  <div style="background:rgba(249,244,237,.97);backdrop-filter:blur(12px);border-top:1px solid rgba(32,30,29,.1);display:flex;padding:9px 6px {{ navPadB }}">
+    <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+      <button onClick="{{ t.go }}" style="flex:1;border:0;background:transparent;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;min-height:56px;justify-content:center">
+        <div style="width:46px;height:30px;border-radius:999px;background:{{ t.pillBg }};display:grid;place-items:center;position:relative">
+          <sc-if value="{{ t.isHome }}" hint-placeholder-val="{{ false }}"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="{{ t.color }}" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1Z"/></svg></sc-if>
+          <sc-if value="{{ t.isExplore }}" hint-placeholder-val="{{ false }}"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="{{ t.color }}" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></sc-if>
+          <sc-if value="{{ t.isOrders }}" hint-placeholder-val="{{ false }}"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="{{ t.color }}" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l2 6H4Zm-1 6h14v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1Z"/></svg></sc-if>
+          <sc-if value="{{ t.isProfile }}" hint-placeholder-val="{{ false }}"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="{{ t.color }}" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></sc-if>
+          <sc-if value="{{ t.badge }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:-2px;inset-inline-end:2px;min-width:17px;height:17px;border-radius:999px;background:#c67139;color:#fff;font:800 10px/17px 'Figtree','Heebo';text-align:center;padding:0 3px">{{ t.badgeText }}</span></sc-if>
+        </div>
+        <span style="font:700 11px/1 'Figtree','Heebo';color:{{ t.color }}">{{ t.label }}</span>
+      </button>
+    </sc-for>
+  </div>
+  </sc-if>
+</div>
+
+</div>
+</x-import>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;platform&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;iPhone&quot;,&quot;Android&quot;],&quot;default&quot;:&quot;iPhone&quot;,&quot;tsType&quot;:&quot;'iPhone' | 'Android'&quot;},&quot;direction&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;LTR&quot;,&quot;RTL&quot;],&quot;default&quot;:&quot;LTR&quot;,&quot;tsType&quot;:&quot;'LTR' | 'RTL'&quot;,&quot;section&quot;:&quot;Localization&quot;},&quot;dataState&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ready&quot;,&quot;Loading&quot;,&quot;Error&quot;],&quot;default&quot;:&quot;Ready&quot;,&quot;tsType&quot;:&quot;'Ready' | 'Loading' | 'Error'&quot;,&quot;section&quot;:&quot;States&quot;}}">
+const NIS = n => '₪' + (Math.round(n * 100) / 100).toFixed(n % 1 === 0 ? 0 : 2);
+
+const RESTS = [
+  { id: 'abu', name: 'Abu Kamel Grill', cuisine: 'Lebanese · Grills', rating: 4.8, reviews: '(1.2k)', time: '25–35 min', fee: 0, min: 40, promo: 'Free delivery over ₪60', tags: ['grills', 'lebanese'] },
+  { id: 'hum', name: 'Hummus Al-Balad', cuisine: 'Levantine · Breakfast', rating: 4.9, reviews: '(860)', time: '20–30 min', fee: 0, min: 35, promo: 'Free delivery', tags: ['hummus', 'levantine'] },
+  { id: 'kun', name: 'Kunafa House', cuisine: 'Desserts · Sweets', rating: 4.6, reviews: '(2.4k)', time: '15–25 min', fee: 9, min: 25, promo: '20% off sweets', tags: ['sweets', 'kunafa', 'desserts'] },
+  { id: 'saj', name: 'Saj & Co', cuisine: 'Bakery · Manakish', rating: 4.7, reviews: '(540)', time: '20–30 min', fee: 5, min: 30, promo: null, tags: ['manakish', 'bakery'] },
+  { id: 'brg', name: 'Karmel Burger', cuisine: 'Burgers · American', rating: 4.5, reviews: '(3.1k)', time: '30–40 min', fee: 12, min: 45, promo: 'Buy 1 get 1', tags: ['burgers'] },
+  { id: 'shw', name: 'Shawarma Express', cuisine: 'Street food', rating: 4.3, reviews: '(1.9k)', time: '15–20 min', fee: 7, min: 20, promo: null, tags: ['shawarma', 'street'] },
+];
+
+const MENU = {
+  abu: [
+    { cat: 'Popular', items: [
+      { id: 'mix', name: 'Mixed grill platter', desc: 'Lamb, chicken and kebab over saffron rice with grilled tomato.', price: 72, best: true },
+      { id: 'taouk', name: 'Shish taouk', desc: 'Marinated chicken skewers, garlic sauce, warm pita.', price: 58, best: true },
+      { id: 'wrap', name: 'Shawarma wrap', desc: 'Slow-roasted chicken, pickles, tahini, saj bread.', price: 32 },
+    ] },
+    { cat: 'Meals', items: [
+      { id: 'kebab', name: 'Lamb kebab plate', desc: 'Two skewers, bulgur, charred pepper.', price: 68 },
+      { id: 'musakhan', name: 'Chicken musakhan', desc: 'Sumac chicken on taboon bread with onions and pine nuts.', price: 62 },
+    ] },
+    { cat: 'Burgers', items: [
+      { id: 'smash', name: 'Karmel smash burger', desc: 'Double patty, aged cheddar, house pickles.', price: 54, was: 64 },
+    ] },
+    { cat: 'Sides', items: [
+      { id: 'hummus', name: 'Hummus with pine nuts', desc: 'Whipped chickpeas, olive oil, warm bread.', price: 18, best: true },
+      { id: 'tabb', name: 'Tabbouleh', desc: 'Parsley, bulgur, tomato, lemon.', price: 20 },
+      { id: 'fries', name: 'Sumac fries', desc: 'Hand-cut, sumac salt, garlic aioli.', price: 14 },
+    ] },
+    { cat: 'Drinks', items: [
+      { id: 'lemon', name: 'Fresh mint lemonade', desc: 'Pressed to order.', price: 12 },
+      { id: 'ayran', name: 'Ayran', desc: 'Salted yoghurt drink.', price: 9 },
+    ] },
+    { cat: 'Desserts', items: [
+      { id: 'kunafa', name: 'Kunafa naameh', desc: 'Cheese kunafa in fine semolina with rose syrup.', price: 38, was: 45 },
+      { id: 'bakl', name: 'Baklava box', desc: 'Six pieces, pistachio and walnut.', price: 26 },
+    ] },
+  ],
+};
+['hum', 'kun', 'saj', 'brg', 'shw'].forEach(k => { MENU[k] = MENU.abu; });
+
+const GROUPS = {
+  req: [
+    { key: 'size', title: 'Choose a size', badge: 'Required · pick 1', opts: [
+      { id: 'reg', name: 'Regular', d: 0 }, { id: 'lg', name: 'Large', d: 12 },
+    ] },
+    { key: 'bread', title: 'Bread', badge: 'Required · pick 1', opts: [
+      { id: 'pita', name: 'Warm pita', d: 0 }, { id: 'saj', name: 'Saj wrap', d: 3 }, { id: 'none', name: 'No bread', d: 0 },
+    ] },
+  ],
+  opt: [
+    { key: 'extras', title: 'Add extras', badge: 'Optional', opts: [
+      { id: 'garlic', name: 'Extra garlic sauce', d: 4 }, { id: 'pickles', name: 'House pickles', d: 3 },
+      { id: 'sfries', name: 'Side of sumac fries', d: 9 }, { id: 'meat', name: 'Extra meat', d: 14 },
+    ] },
+    { key: 'remove', title: 'Remove ingredients', badge: 'Optional', opts: [
+      { id: 'onion', name: 'Onion', d: 0 }, { id: 'tomato', name: 'Tomato', d: 0 }, { id: 'sauce', name: 'Garlic sauce', d: 0 },
+    ] },
+  ],
+};
+
+const STEPS = ['Order received', 'Restaurant confirmed', 'Preparing your food', 'Ready for pickup', 'On the way', 'Delivered'];
+const STEP_SUB = [
+  'Kaman has your order and is telling the restaurant.',
+  'Abu Kamel Grill accepted and started the clock.',
+  'The grill is on. This usually takes 12 minutes.',
+  'Packed and waiting for a courier.',
+  'Sami is 2 stops away from you.',
+  'Enjoy. Rate your order when you have a minute.',
+];
+
+const PAST = [
+  { id: 'o1', rest: 'Kunafa House', meta: '12 Sep · 2 items', status: 'Delivered in 22 min', total: 84 },
+  { id: 'o2', rest: 'Abu Kamel Grill', meta: '8 Sep · 3 items', status: 'Delivered in 31 min', total: 146 },
+  { id: 'o3', rest: 'Saj & Co', meta: '2 Sep · 1 item', status: 'Delivered in 19 min', total: 38 },
+];
+
+const ADDRS = [
+  { id: 'home', label: 'Home', line: 'Al-Mahoul St 1-3, Haifa', note: 'Third floor, blue door' },
+  { id: 'work', label: 'Work', line: 'Ha-Nassi Blvd 22, Haifa', note: 'Reception, ask for Celina' },
+  { id: 'mum', label: "Mum's place", line: 'Wadi Nisnas 8, Haifa', note: 'Ring twice' },
+];
+
+const PAYS = [
+  { id: 'cash', tag: '₪', label: 'Cash on delivery', sub: 'Pay the courier when it arrives' },
+  { id: 'visa', tag: 'VISA', label: 'Visa ·· 4417', sub: 'Expires 06/28' },
+  { id: 'apple', tag: '', label: 'Apple Pay', sub: 'Confirm with Face ID' },
+];
+
+const NOTIFS = [
+  { title: 'Your order is on the way', body: 'Sami picked up your order from Abu Kamel Grill.', when: '2 min ago', unread: true },
+  { title: '20% off sweets tonight', body: 'Kunafa House is running a promotion until 23:00.', when: '3 h ago', unread: true },
+  { title: 'Rate Kunafa House', body: 'How was the kunafa naameh? It helps other customers.', when: 'Yesterday', unread: false },
+  { title: 'New in your area', body: 'Saj & Co now delivers to Al-Mahoul St.', when: '4 days ago', unread: false },
+];
+
+const CUISINES = [
+  { name: 'Grills', ph: 'grill' }, { name: 'Burgers', ph: 'burger' }, { name: 'Sweets', ph: 'sweets' },
+  { name: 'Manakish', ph: 'saj' }, { name: 'Hummus', ph: 'hummus' }, { name: 'Juices', ph: 'juice' },
+  { name: 'Pizza', ph: 'pizza' }, { name: 'Coffee', ph: 'coffee' },
+];
+
+const FILTER_GROUPS = [
+  { key: 'cuisine', title: 'Cuisine', opts: ['Grills', 'Burgers', 'Sweets', 'Manakish', 'Levantine'] },
+  { key: 'rating', title: 'Rating', opts: ['4.0+', '4.5+', '4.8+'] },
+  { key: 'time', title: 'Delivery time', opts: ['Under 20 min', 'Under 30 min', 'Under 45 min'] },
+  { key: 'fee', title: 'Delivery fee', opts: ['Free', 'Under ₪10'] },
+  { key: 'extra', title: 'More', opts: ['Has offers', 'Open now'] },
+];
+
+class Component extends DCLogic {
+  state = {
+    screen: 'home', stack: [], tab: 'home',
+    restId: 'abu', menuCat: 'Popular', itemId: null, editIndex: null,
+    sel: { size: 'reg', bread: 'pita' }, extras: [], removed: [], qty: 1, note: '',
+    cart: [], promo: '', promoState: null,
+    query: '', filters: {},
+    favs: ['abu', 'kun'],
+    addrId: 'home', payId: 'cash', mode: 'Delivery', dropNote: '',
+    name: 'Celina Nassif', phone: '052 418 9034',
+    step: 2, toast: null, orderId: null, load: 'ready',
+  };
+
+  componentWillUnmount() { clearTimeout(this._t); clearInterval(this._i); }
+
+  go = (screen, opts) => {
+    const st = { screen, stack: [...this.state.stack, this.state.screen] };
+    this.setState(Object.assign(st, opts || {}));
+  };
+  back = () => {
+    const s = [...this.state.stack];
+    const prev = s.pop() || 'home';
+    this.setState({ screen: prev, stack: s });
+  };
+  tabTo = (tab, screen) => this.setState({ tab, screen, stack: [] });
+  flash = msg => {
+    clearTimeout(this._t);
+    this.setState({ toast: msg });
+    this._t = setTimeout(() => this.setState({ toast: null }), 2600);
+  };
+
+  rest = () => RESTS.find(r => r.id === this.state.restId) || RESTS[0];
+  allItems = () => {
+    const out = [];
+    Object.keys(MENU).forEach(rid => MENU[rid].forEach(c => c.items.forEach(i => out.push({ ...i, rid }))));
+    return out;
+  };
+  findItem = id => {
+    let f = null;
+    MENU[this.state.restId].forEach(c => c.items.forEach(i => { if (i.id === id) f = i; }));
+    return f || MENU.abu[0].items[0];
+  };
+
+  itemUnit = () => {
+    const it = this.findItem(this.state.itemId);
+    let p = it.price;
+    GROUPS.req.forEach(g => {
+      const o = g.opts.find(o => o.id === this.state.sel[g.key]);
+      if (o) p += o.d;
+    });
+    GROUPS.opt[0].opts.forEach(o => { if (this.state.extras.includes(o.id)) p += o.d; });
+    return p;
+  };
+
+  openItem = (id, rid) => {
+    const patch = { itemId: id, editIndex: null, sel: { size: 'reg', bread: 'pita' }, extras: [], removed: [], qty: 1, note: '' };
+    if (rid && rid !== this.state.restId) patch.restId = rid;
+    this.go('item', patch);
+  };
+
+  addToCart = () => {
+    const it = this.findItem(this.state.itemId);
+    const labels = [];
+    GROUPS.req.forEach(g => { const o = g.opts.find(o => o.id === this.state.sel[g.key]); if (o) labels.push(o.name); });
+    GROUPS.opt[0].opts.forEach(o => { if (this.state.extras.includes(o.id)) labels.push('+ ' + o.name); });
+    this.state.removed.forEach(id => {
+      const o = GROUPS.opt[1].opts.find(o => o.id === id);
+      if (o) labels.push('no ' + o.name.toLowerCase());
+    });
+    const line = { key: Date.now(), id: it.id, name: it.name, unit: this.itemUnit(), qty: this.state.qty, opts: labels.join(' · ') || 'No changes', note: this.state.note };
+    const cart = [...this.state.cart];
+    if (this.state.editIndex !== null) cart[this.state.editIndex] = line; else cart.push(line);
+    this.setState({ cart, screen: 'restaurant', stack: [], editIndex: null });
+    this.flash(this.state.editIndex !== null ? 'Item updated' : it.name + ' added');
+  };
+
+  subtotal = () => this.state.cart.reduce((s, c) => s + c.unit * c.qty, 0);
+  discount = () => (this.state.promoState === 'ok' ? this.subtotal() * 0.1 : 0);
+  feeNow = () => {
+    if (this.state.mode === 'Pickup') return 0;
+    const r = this.rest();
+    return this.subtotal() >= 60 && r.fee === 0 ? 0 : r.fee;
+  };
+  total = () => Math.max(0, this.subtotal() - this.discount() + this.feeNow());
+
+  reorder = (label) => {
+    const src = MENU.abu[0].items;
+    this.setState({
+      restId: 'abu',
+      cart: [
+        { key: 1, id: 'wrap', name: src[2].name, unit: 35, qty: 2, opts: 'Regular · Saj wrap · + House pickles', note: '' },
+        { key: 2, id: 'lemon', name: 'Fresh mint lemonade', unit: 12, qty: 1, opts: 'No changes', note: '' },
+      ],
+      screen: 'cart', stack: ['home'], tab: 'home',
+    });
+    this.flash((label || 'Your usual') + ' is back in the cart');
+  };
+
+  placeOrder = () => {
+    clearInterval(this._i);
+    this.setState({ screen: 'tracking', stack: [], step: 0, tab: 'orders' });
+    this._i = setInterval(() => {
+      this.setState(s => {
+        if (s.step >= 4) { clearInterval(this._i); return { step: s.step }; }
+        return { step: s.step + 1 };
+      });
+    }, 3200);
+  };
+
+  toggleFav = id => this.setState(s => ({ favs: s.favs.includes(id) ? s.favs.filter(f => f !== id) : [...s.favs, id] }));
+
+  pickFilter = (k, v) => this.setState(s => {
+    const f = { ...s.filters };
+    if (f[k] === v) delete f[k]; else f[k] = v;
+    return { filters: f, screen: s.screen === 'filters' ? 'explore' : s.screen };
+  });
+
+  search = q => this.setState({ query: q });
+
+  restCard = r => ({
+    id: r.id, name: r.name, cuisine: r.cuisine, rating: r.rating.toFixed(1),
+    meta: r.time + ' · ' + (r.fee === 0 ? 'Free delivery' : NIS(r.fee) + ' delivery'),
+    promo: r.promo || '', hasPromo: !!r.promo, isFav: this.state.favs.includes(r.id), notFav: !this.state.favs.includes(r.id),
+    open: () => this.go('restaurant', { restId: r.id, menuCat: 'Popular' }),
+    fav: () => this.toggleFav(r.id),
+  });
+
+  renderVals() {
+    const s = this.state;
+    const p = this.props;
+    const isRTL = (p.direction || 'LTR') === 'RTL';
+    const plat = p.platform || 'iPhone';
+    const ios = plat === 'iPhone';
+    const scr = s.screen;
+    const r = this.rest();
+    const load = p.dataState || 'Ready';
+    const isLoading = load === 'Loading' && (scr === 'home' || scr === 'explore');
+    const isError = load === 'Error' && (scr === 'home' || scr === 'explore');
+    const busy = isLoading || isError;
+
+    const eta = ['19:40', '19:40', '19:45', '19:45', '19:52', 'Delivered'][s.step];
+    const filterKeys = Object.keys(s.filters);
+
+    const q = s.query.trim().toLowerCase();
+    const restHits = q ? RESTS.filter(x => (x.name + ' ' + x.cuisine + ' ' + x.tags.join(' ')).toLowerCase().includes(q)) : [];
+    const dishHits = q ? this.allItems().filter(i => i.name.toLowerCase().includes(q)).slice(0, 4) : [];
+
+    const cat = MENU[s.restId].find(c => c.cat === s.menuCat) || MENU[s.restId][0];
+
+    const titles = {
+      cart: 'Your cart', checkout: 'Checkout', orderDetail: 'Order ' + (s.orderId || '#KM-4821'),
+      favorites: 'Favorites', addresses: 'Saved addresses', payments: 'Payment methods', notifications: 'Notifications',
+    };
+
+    const addr = ADDRS.find(a => a.id === s.addrId) || ADDRS[0];
+    const sub = this.subtotal(), disc = this.discount(), fee = this.feeNow(), tot = this.total();
+
+    const priceRows = [
+      { label: 'Subtotal', value: NIS(sub), color: '#201e1d' },
+      s.mode === 'Pickup'
+        ? { label: 'Pickup', value: 'Free', color: '#56633f' }
+        : { label: 'Delivery fee', value: fee === 0 ? 'Free' : NIS(fee), color: fee === 0 ? '#56633f' : '#201e1d' },
+    ];
+    if (disc > 0) priceRows.push({ label: 'Promo KAMAN10', value: '−' + NIS(disc), color: '#56633f' });
+
+    let cta = null;
+    if (scr === 'item') cta = { label: 'Add to cart', price: NIS(this.itemUnit() * s.qty), action: this.addToCart };
+    else if (scr === 'cart' && s.cart.length) cta = { label: 'Go to checkout', price: NIS(tot), action: () => this.go('checkout') };
+    else if (scr === 'checkout') cta = { label: 'Place order', price: NIS(tot), action: this.placeOrder, note: s.cart.length + ' items from ' + r.name, note2: s.mode };
+    else if (scr === 'restaurant' && s.cart.length) cta = { label: 'View cart (' + s.cart.reduce((a, c) => a + c.qty, 0) + ')', price: NIS(tot), action: () => this.go('cart') };
+
+    const navScreens = ['home', 'explore', 'orders', 'profile', 'favorites'];
+    const cartCount = s.cart.reduce((a, c) => a + c.qty, 0);
+
+    const tabDef = [
+      { key: 'home', label: 'Home', screen: 'home' },
+      { key: 'explore', label: 'Explore', screen: 'explore' },
+      { key: 'orders', label: 'Orders', screen: 'orders' },
+      { key: 'profile', label: 'Profile', screen: 'profile' },
+    ];
+
+    return {
+      dirVal: isRTL ? 'rtl' : 'ltr',
+      isLTR: !isRTL, isRTL,
+      frameName: ios ? 'IOSDevice' : 'AndroidDevice',
+      fw: ios ? 402 : 412, fh: ios ? 874 : 892,
+      topPad: ios ? '54px' : '0px',
+      navPadB: ios ? '28px' : '10px',
+      ctaPadB: ios ? '30px' : '16px',
+
+      isLoading, isError, retry: () => this.flash('Reconnected — switch the tweak back to Ready'),
+
+      isHome: scr === 'home' && !busy,
+      isExplore: scr === 'explore' && !busy,
+      isFilters: scr === 'filters', isLocation: scr === 'location',
+      isRestaurant: scr === 'restaurant', isItem: scr === 'item',
+      isCart: scr === 'cart', isCheckout: scr === 'checkout', isTracking: scr === 'tracking',
+      isOrders: scr === 'orders', isOrderDetail: scr === 'orderDetail',
+      isFavorites: scr === 'favorites', isProfile: scr === 'profile',
+      isAddresses: scr === 'addresses', isPayments: scr === 'payments', isNotifications: scr === 'notifications',
+
+      showHeader: !!titles[scr] && !busy,
+      title: titles[scr] || '',
+      back: this.back,
+
+      addressLabel: addr.label + ' · ' + addr.line.split(',')[0],
+      addressLine: addr.line + ' — ' + addr.note,
+      addrHeading: s.mode === 'Pickup' ? 'Pick up from' : 'Delivery address',
+
+      cats: CUISINES.slice(0, 6).map(c => ({ ...c, go: () => this.setState({ screen: 'explore', tab: 'explore', query: c.name, stack: [] }) })),
+      cuisineTiles: CUISINES.map(c => ({ ...c, go: () => this.search(c.name) })),
+      recents: ['Kunafa', 'Shawarma', 'Hummus', 'Free delivery'].map(x => ({ q: x, go: () => this.search(x) })),
+
+      again: [
+        { name: 'Shawarma wrap ×2', sub: 'Abu Kamel Grill', cta: 'Reorder ₪82', reorder: () => this.reorder('Shawarma wrap') },
+        { name: 'Kunafa naameh', sub: 'Kunafa House · 12 Sep', cta: 'Reorder ₪38', reorder: () => this.reorder('Kunafa naameh') },
+      ],
+      popular: RESTS.slice(0, 3).map(this.restCard),
+      recommended: RESTS.slice(2).map(this.restCard),
+
+      query: s.query, onQuery: e => this.search(e.target.value),
+      hasQuery: !!s.query, clearQuery: () => this.search(''),
+      exploreIdle: !q, exploreResults: !!q,
+      noResults: !!q && restHits.length === 0 && dishHits.length === 0,
+      hasRestHits: restHits.length > 0, hasDishHits: dishHits.length > 0,
+      restCount: restHits.length + ' places', dishCount: dishHits.length + ' dishes',
+      restHits: restHits.map(this.restCard),
+      dishHits: dishHits.map(d => ({
+        name: d.name, rest: (RESTS.find(x => x.id === d.rid) || RESTS[0]).name, price: NIS(d.price),
+        open: () => this.openItem(d.id, d.rid),
+      })),
+      clearAll: () => this.setState({ query: '', filters: {} }),
+
+      openFilters: () => this.go('filters'),
+      openLocation: () => this.go('location'),
+      openNotifications: () => this.go('notifications'),
+      goExplore: () => this.tabTo('explore', 'explore'),
+      goOrders: () => this.tabTo('orders', 'orders'),
+      goHome: () => this.tabTo('home', 'home'),
+      goCart: () => this.go('cart'),
+      goFavorites: () => this.go('favorites'),
+      goAddresses: () => this.go('addresses'),
+      goTracking: () => this.go('tracking'),
+
+      hasFilters: filterKeys.length > 0, filterCount: filterKeys.length,
+      activeFilters: filterKeys.map(k => ({ label: s.filters[k], clear: () => this.pickFilter(k, s.filters[k]) })),
+      clearFilters: () => this.setState({ filters: {} }),
+      filterGroups: FILTER_GROUPS.map(g => ({
+        title: g.title,
+        opts: g.opts.map(o => ({ label: o, on: s.filters[g.key] === o, off: s.filters[g.key] !== o, pick: () => this.pickFilter(g.key, o) })),
+      })),
+
+      addresses: ADDRS.map(a => ({
+        label: a.label, line: a.line, note: a.note,
+        on: a.id === s.addrId, off: a.id !== s.addrId,
+        pick: () => { this.setState({ addrId: a.id }); this.back(); },
+      })),
+
+      rName: r.name, rCuisine: r.cuisine, rRating: r.rating.toFixed(1), rReviews: r.reviews,
+      rTime: r.time, rFee: r.fee === 0 ? 'Free delivery' : NIS(r.fee) + ' delivery', rMin: NIS(r.min) + ' minimum',
+      rHasPromo: !!r.promo, rPromo: r.promo || '',
+      curFav: s.favs.includes(r.id), curNotFav: !s.favs.includes(r.id),
+      favCurrent: () => this.toggleFav(r.id),
+      menuCats: MENU[s.restId].map(c => ({ name: c.cat, on: c.cat === s.menuCat, off: c.cat !== s.menuCat, pick: () => this.setState({ menuCat: c.cat }) })),
+      menuItems: cat.items.map(i => ({
+        name: i.name, desc: i.desc, price: NIS(i.price), best: !!i.best,
+        was: i.was ? NIS(i.was) : '', wasShown: !!i.was,
+        open: () => this.openItem(i.id),
+      })),
+
+      itemName: this.findItem(s.itemId).name,
+      itemDesc: this.findItem(s.itemId).desc,
+      itemBase: NIS(this.findItem(s.itemId).price),
+      reqGroups: GROUPS.req.map(g => ({
+        title: g.title, badge: g.badge,
+        opts: g.opts.map(o => ({
+          name: o.name, delta: o.d === 0 ? 'Included' : '+' + NIS(o.d),
+          on: s.sel[g.key] === o.id, off: s.sel[g.key] !== o.id,
+          pick: () => this.setState(st => ({ sel: { ...st.sel, [g.key]: o.id } })),
+        })),
+      })),
+      optGroups: GROUPS.opt.map(g => ({
+        title: g.title, badge: g.badge,
+        opts: g.opts.map(o => {
+          const list = g.key === 'extras' ? s.extras : s.removed;
+          const on = list.includes(o.id);
+          return {
+            name: o.name, delta: g.key === 'extras' ? '+' + NIS(o.d) : '', on, off: !on,
+            pick: () => this.setState(st => {
+              const cur = g.key === 'extras' ? st.extras : st.removed;
+              const next = cur.includes(o.id) ? cur.filter(x => x !== o.id) : [...cur, o.id];
+              return g.key === 'extras' ? { extras: next } : { removed: next };
+            }),
+          };
+        }),
+      })),
+      qty: s.qty,
+      incQty: () => this.setState(st => ({ qty: Math.min(20, st.qty + 1) })),
+      decQty: () => this.setState(st => ({ qty: Math.max(1, st.qty - 1) })),
+      note: s.note, onNote: e => this.setState({ note: e.target.value }),
+
+      cart: s.cart.map((c, i) => ({
+        name: c.name, opts: c.opts, qty: c.qty, total: NIS(c.unit * c.qty),
+        note: c.note, hasNote: !!c.note,
+        inc: () => this.setState(st => { const n = [...st.cart]; n[i] = { ...n[i], qty: n[i].qty + 1 }; return { cart: n }; }),
+        dec: () => this.setState(st => { const n = [...st.cart]; if (n[i].qty <= 1) { n.splice(i, 1); } else { n[i] = { ...n[i], qty: n[i].qty - 1 }; } return { cart: n }; }),
+        remove: () => { this.setState(st => ({ cart: st.cart.filter((_, j) => j !== i) })); this.flash(c.name + ' removed'); },
+        edit: () => this.go('item', { itemId: c.id, editIndex: i, qty: c.qty, note: c.note }),
+      })),
+      cartEmpty: s.cart.length === 0, cartFull: s.cart.length > 0,
+      cartRestName: r.name, cartRestMeta: r.time + ' · ' + (r.fee === 0 ? 'Free delivery' : NIS(r.fee) + ' delivery'),
+      addMore: () => this.go('restaurant'),
+      reorderLast: () => this.reorder('Shawarma wrap'),
+
+      promo: s.promo, onPromo: e => this.setState({ promo: e.target.value, promoState: null }),
+      applyPromo: () => this.setState(st => ({ promoState: st.promo.trim().toUpperCase() === 'KAMAN10' ? 'ok' : 'bad' })),
+      promoOk: s.promoState === 'ok', promoBad: s.promoState === 'bad',
+
+      priceRows, grandTotal: NIS(tot),
+      modes: ['Delivery', 'Pickup'].map(m => ({ label: m, on: s.mode === m, off: s.mode !== m, pick: () => this.setState({ mode: m }) })),
+      payments: PAYS.map(x => ({ tag: x.tag || 'Pay', label: x.label, sub: x.sub, on: x.id === s.payId, off: x.id !== s.payId, pick: () => this.setState({ payId: x.id }) })),
+      dropNote: s.dropNote, onDropNote: e => this.setState({ dropNote: e.target.value }),
+      name: s.name, onName: e => this.setState({ name: e.target.value }),
+      phone: s.phone, onPhone: e => this.setState({ phone: e.target.value }),
+
+      eta, etaNote: s.step >= 5 ? '' : 'estimated',
+      trackTitle: STEPS[s.step], trackSub: STEP_SUB[s.step], courierName: 'Sami H.',
+      nextStep: () => this.setState(st => ({ step: Math.min(5, st.step + 1) })),
+      trackBars: STEPS.map((_, i) => ({ color: i <= s.step ? (i === s.step ? '#c67139' : '#7a8a5e') : '#dcd3c4' })),
+      trackSteps: STEPS.map((name, i) => ({
+        name, time: i < s.step ? '19:' + (28 + i * 3) : i === s.step ? 'now' : '',
+        done: i < s.step, now: i === s.step, todo: i > s.step,
+        tail: i < STEPS.length - 1, tailColor: i < s.step ? '#7a8a5e' : '#dcd3c4',
+        color: i > s.step ? '#a19786' : '#201e1d',
+      })),
+
+      pastOrders: PAST.map(o => ({
+        rest: o.rest, meta: o.meta, status: o.status, total: NIS(o.total),
+        open: () => this.go('orderDetail', { orderId: '#KM-48' + o.id.slice(1) }),
+        reorder: () => this.reorder(o.rest + ' order'),
+      })),
+      odRest: 'Kunafa House', odMeta: '12 Sep 2026 · 19:24 · Visa ·· 4417',
+      odStatus: 'Delivered in 22 minutes',
+      odItems: [
+        { qty: '1×', name: 'Kunafa naameh', opts: 'Large · extra pistachio', price: '₪50' },
+        { qty: '2×', name: 'Turkish coffee', opts: 'Medium sugar', price: '₪22' },
+      ],
+      odRows: [
+        { label: 'Subtotal', value: '₪72', color: '#201e1d' },
+        { label: 'Delivery fee', value: '₪9', color: '#201e1d' },
+        { label: 'Promo SWEET20', value: '−₪14.40', color: '#56633f' },
+      ],
+      odTotal: '₪66.60',
+      reorderDetail: () => this.reorder('Kunafa House order'),
+
+      favList: RESTS.filter(x => s.favs.includes(x.id)).map(this.restCard),
+      favEmpty: s.favs.length === 0, favFull: s.favs.length > 0, favCount: s.favs.length,
+
+      profileRows: [
+        { label: 'Account information', sub: 'Name, phone, email', go: () => this.flash('Account screen — out of scope for this pass') },
+        { label: 'Saved addresses', sub: ADDRS.length + ' saved', go: () => this.go('addresses') },
+        { label: 'Payment methods', sub: 'Cash, Visa ·· 4417', go: () => this.go('payments') },
+        { label: 'Language', sub: 'English · العربية · עברית', go: () => this.flash('Language lives in the Tweaks panel here') },
+        { label: 'Notifications', sub: '2 unread', go: () => this.go('notifications') },
+        { label: 'Support', sub: 'Chat with us, order help', go: () => this.flash('Support chat — out of scope for this pass') },
+        { label: 'Settings', sub: 'Appearance, data, permissions', go: () => this.flash('Settings — out of scope for this pass') },
+      ],
+      notifications: NOTIFS.map(n => ({ ...n, read: !n.unread })),
+
+      hasToast: !!s.toast, toast: s.toast || '',
+      hasCta: !!cta, ctaLabel: cta ? cta.label : '', ctaPrice: cta ? cta.price : '',
+      hasCtaPrice: !!(cta && cta.price), ctaAction: cta ? cta.action : () => {},
+      hasCtaNote: !!(cta && cta.note), ctaNote: cta && cta.note ? cta.note : '', ctaNote2: cta && cta.note2 ? cta.note2 : '',
+
+      showNav: navScreens.includes(scr) && !cta,
+      tabs: tabDef.map(t => {
+        const active = s.tab === t.key;
+        return {
+          label: t.label, color: active ? '#8c491a' : '#82796a',
+          pillBg: active ? '#ffe1d0' : 'transparent',
+          isHome: t.key === 'home', isExplore: t.key === 'explore', isOrders: t.key === 'orders', isProfile: t.key === 'profile',
+          badge: t.key === 'orders' && cartCount > 0, badgeText: String(cartCount),
+          go: () => this.tabTo(t.key, t.screen),
+        };
+      }),
+    };
+  }
+}
+</script>
+</body>
+</html>
