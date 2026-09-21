@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaman — live prototype</title>
+  <meta name="description" content="Shareable Kaman customer-app prototype: motion flow, layout options, and screen inventory.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --ink: #201e1d;
+      --cream: #f5ead8;
+      --accent: #c67139;
+      --muted: #6d665e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Figtree, -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+    }
+    .card {
+      width: min(560px, 100%);
+      background: #fff;
+      border: 1px solid rgba(32, 30, 29, 0.08);
+      border-radius: 28px;
+      padding: 40px 36px 32px;
+      box-shadow: 0 16px 40px rgba(32, 30, 29, 0.06);
+    }
+    .mark {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--ink);
+      color: var(--cream);
+      display: grid;
+      place-items: center;
+      font-family: Caprasimo, Georgia, serif;
+      font-size: 28px;
+      position: relative;
+      margin-bottom: 22px;
+    }
+    .mark::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      transform: rotate(45deg);
+    }
+    h1 {
+      font-family: Caprasimo, Georgia, serif;
+      font-size: 36px;
+      line-height: 1.1;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    p.lead {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .primary {
+      display: block;
+      text-align: center;
+      background: var(--ink);
+      color: var(--cream);
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 16px 20px;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+    .primary:hover { background: #2c2927; }
+    .links {
+      display: grid;
+      gap: 10px;
+    }
+    .links a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: var(--ink);
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .links a span {
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="mark" aria-hidden="true">K</div>
+    <h1>Kaman prototype</h1>
+    <p class="lead">Interactive customer-app prototype. Open the motion flow first, then the layout options and earlier screen inventory if you want more coverage.</p>
+    <a class="primary" href="kaman-export/kaman-prototype.html">Open live prototype</a>
+    <div class="links">
+      <a href="kaman-export/kaman-layout-options.html">Layout options <span>1a–1d side by side</span></a>
+      <a href="kaman-export/kaman-screens-v1.html">Screen inventory <span>15-screen static pass</span></a>
+    </div>
+  </main>
+</body>
+</html>
